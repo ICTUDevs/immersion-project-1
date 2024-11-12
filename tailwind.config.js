@@ -10,7 +10,10 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.vue',
+        "./node_modules/flowbite/**/*.js"
     ],
+
+    darkMode: 'class',
 
     theme: {
         extend: {
@@ -20,5 +23,5 @@ export default {
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [forms, typography,  require('flowbite/plugin')],
 };

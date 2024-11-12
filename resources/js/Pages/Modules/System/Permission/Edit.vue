@@ -1,0 +1,97 @@
+<template>
+    <AppLayout title="System Permission">
+        <template #header>
+            <h2
+                class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight"
+            >
+                Edit Permission: {{ props.permissions.name }}
+            </h2>
+            <p class="mt-1 text-sm text-gray-500">
+                Use this form to edit a permission.
+            </p>
+        </template>
+
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div
+                    class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg"
+                >
+                    <form class="p-4 md:p-5" @submit.prevent="submit">
+                        <div class="flex items-center w-full gap-3 px-10">
+                            <div class="grid gap-4 mb-4 grid-cols-2 w-full">
+                                <div class="col-span-2">
+                                    <label
+                                        for="name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                    >Permission Name</label
+                                    >
+                                    <input
+                                        type="text"
+                                        v-model="form.name"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                        placeholder="ex. Create User Account"
+                                    />
+                                    <span class="text-red-600">{{ form.errors.name }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-10">
+                            <Link
+                                :href="route('system.permission')"
+                                class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mr-4"
+                            >Cancel
+                            </Link
+                            >
+                            <button
+                                type="submit"
+                                class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                :disabled="form.processing"
+                            >
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </AppLayout>
+</template>
+
+<script setup>
+import AppLayout from "@/Layouts/AppLayout.vue";
+import {toast} from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
+import {useForm, Link} from "@inertiajs/vue3";
+
+const props = defineProps(
+    {
+        permissions: {
+            type: Object,
+            required: true,
+        },
+        hashed_id: {
+            type: String,
+            required: true,
+        },
+    }
+);
+
+const form = useForm({
+    name: props.permissions.name,
+});
+
+const submit = () => {
+    form.put(route("system.permission.update", props.hashed_id), {
+        preserveScroll: true,
+        onSuccess: (page) => {
+            form.reset();
+            if (page.props.flash.message) {
+                toast.success(page.props.flash.message, {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000,
+                });
+            }
+        },
+    });
+};
+</script>

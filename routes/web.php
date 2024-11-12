@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\SystemController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -21,4 +22,18 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::prefix('system')
+    ->name('system.')
+    ->controller(SystemController::class)
+    ->group(fn () => [
+       Route::get('user', 'user')->name('user'),
+       Route::get('permission', 'permission')->name('permission'),
+       Route::get('permission/create', 'createPermission')->name('permission.create'),
+       Route::get('permission/edit/{hashedId}', 'editPermission')->name('permission.edit'),
+
+       Route::post('permission', 'storePermission')->name('permission.store'),
+
+       Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
+    ]);
 });
