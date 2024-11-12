@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -19,9 +20,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
 
     Route::prefix('system')
         ->name('system.')
@@ -47,4 +45,26 @@ Route::middleware([
             Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
             Route::put('user/update/{hashedId}', 'updateUser')->name('user.update'),
         ]);
+
+    Route::prefix('attendance')
+        ->name('attendance.')
+        ->controller(AttendanceController::class)
+        ->group(fn() => [
+
+            Route::get('index', 'index')->name('index'),
+
+
+            Route::get('create', 'create')->name('create'),
+            Route::get('edit/{hashedId}', 'edit')->name('edit'),
+
+            Route::post('store', 'store')->name('store'),
+
+            Route::put('update/{hashedId}', 'update')->name('update'),
+
+            Route::delete('delete/{hashedId}', 'destroy')->name('delete'),
+        ]);
+
+    Route::controller(AttendanceController::class)->group(fn() => [
+        Route::get('/', 'dashboard')->name('dashboard'),
+    ]);
 });
