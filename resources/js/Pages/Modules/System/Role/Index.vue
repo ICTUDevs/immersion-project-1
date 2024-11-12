@@ -54,9 +54,9 @@
                                         >
                                             <li>
                                                 <Link
-                                                    :href="route('system.permission.create')"
+                                                    :href="route('system.role.create')"
                                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                                >New Permission
+                                                >New Role
                                                 </Link>
                                             </li>
                                         </ul>
@@ -85,29 +85,35 @@
                                 <th scope="col" class="px-6 py-3">
                                     Name
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-right">
                                     Date Created
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-6 py-3 text-center">
                                     Action
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr
-                                v-for="permission in permissions.data"
-                                :key="permission.id"
+                                v-for="role in roles.data"
+                                :key="role.id"
                                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                             >
                                 <td class="px-6 py-4">
-                                    {{ permission.name }}
+                                    {{ role.name }}
                                 </td>
-                                <td class="px-6 py-4">
-                                    {{ getDate(permission.created_at) }}
+                                <td class="px-6 py-4 text-right">
+                                    {{ getDate(role.created_at) }}
                                 </td>
-                                <td class="px-6 py-4">
-                                    <Link :href="route('system.permission.edit', permission.hashed_id)"
-                                          class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-4">Edit
+                                <td class="px-6 py-4 text-center">
+                                    <Link :href="route('system.role.edit', role.hashed_id)"
+                                          class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-4"
+                                    >
+                                        Edit
+                                    </Link>
+                                    <Link :href="route('system.role.permission', role.hashed_id)"
+                                          class="font-medium text-sky-600 dark:text-red-500 hover:underline mr-4">Assign
+                                        Permission
                                     </Link>
                                     <a href="#" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</a>
                                 </td>
@@ -133,7 +139,7 @@ onMounted(() => {
 
 const props = defineProps(
     {
-        permissions: {
+        roles: {
             type: Array,
             required: true
         }

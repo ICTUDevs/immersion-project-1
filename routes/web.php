@@ -24,16 +24,27 @@ Route::middleware([
     })->name('dashboard');
 
     Route::prefix('system')
-    ->name('system.')
-    ->controller(SystemController::class)
-    ->group(fn () => [
-       Route::get('user', 'user')->name('user'),
-       Route::get('permission', 'permission')->name('permission'),
-       Route::get('permission/create', 'createPermission')->name('permission.create'),
-       Route::get('permission/edit/{hashedId}', 'editPermission')->name('permission.edit'),
+        ->name('system.')
+        ->controller(SystemController::class)
+        ->group(fn() => [
+            Route::get('user', 'user')->name('user'),
+            Route::get('user/{hashedId}', 'editUser')->name('user.edit'),
 
-       Route::post('permission', 'storePermission')->name('permission.store'),
 
-       Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
-    ]);
+            Route::get('permission', 'permission')->name('permission'),
+            Route::get('permission/create', 'createPermission')->name('permission.create'),
+            Route::get('permission/edit/{hashedId}', 'editPermission')->name('permission.edit'),
+
+            Route::get('role', 'role')->name('role'),
+            Route::get('role/create', 'createRole')->name('role.create'),
+            Route::get('role/edit/{hashedId}', 'editRole')->name('role.edit'),
+            Route::get('role/permission/{hashedId}', 'viewPermission')->name('role.permission'),
+
+            Route::post('permission', 'storePermission')->name('permission.store'),
+            Route::post('role', 'storeRole')->name('role.store'),
+
+            Route::put('role/{hashedId}', 'assignPermission')->name('role.permission.update'),
+            Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
+            Route::put('user/update/{hashedId}', 'updateUser')->name('user.update'),
+        ]);
 });
