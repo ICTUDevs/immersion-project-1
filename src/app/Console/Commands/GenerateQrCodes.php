@@ -28,19 +28,16 @@ class GenerateQrCodes extends Command
      */
     public function handle()
     {
-        $types = ['am', 'pm'];
         $writer = new PngWriter();
 
-        foreach ($types as $type) {
-            $qrCode = new QrCode($type . '-' . now()->toDateString());
-            $qrCodeData = $writer->write($qrCode)->getString();
-            $encodedQrCodeData = base64_encode($qrCodeData);
+        $qrCode = new QrCode(now()->toDateString());
+        $qrCodeData = $writer->write($qrCode)->getString();
+        $encodedQrCodeData = base64_encode($qrCodeData);
 
-            qrcodeModel::create([
-                'type' => $type,
-                'code' => $encodedQrCodeData,
-            ]);
-        }
+        qrcodeModel::create([
+            'type' => now()->toDateString(),
+            'code' => $encodedQrCodeData,
+        ]);
 
         $this->info('QR codes generated successfully.');
     }

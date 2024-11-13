@@ -22,8 +22,9 @@
     "dependencies": {
         "@heroicons/vue": "^2.1.5",
         "flowbite": "^2.5.2",
-        "vue-qrcode-reader": "^5.5.11",
+        "html5-qrcode": "^2.3.8",
         "vue-select": "^4.0.0-beta.6",
+        "vue3-qrcode-reader": "^0.0.1",
         "vue3-toastify": "^0.2.4"
     }
 }

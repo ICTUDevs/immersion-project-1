@@ -1,8 +1,0 @@
-FROM mysql:latest
-
-ENV MYSQL_ROOT_PASSWORD=attendance@2024!
-ENV MYSQL_DATABASE=attendance
-ENV MYSQL_USER=ictudev
-ENV MYSQL_PASSWORD=attendance@2024!
-
-EXPOSE 3306

@@ -1,39 +1,81 @@
+version: '3'
+
+networks:
+  laravel:
+
 services:
-    web:
-        image: nginx:latest
-        ports:
-            - "6080:6080"
-        volumes:
-            - .:/var/www/html
-            - ./nginx.conf:/etc/nginx/conf.d/default.conf
-        depends_on:
-            - php-fpm
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - laravel
 
-    php-fpm:
-        build:
-            context: .
-            dockerfile: Dockerfile
-        volumes:
-            - .:/var/www/html
+  mysql:
+    image: mysql:5.7.29
+    container_name: mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: attendance
+      MYSQL_USER: ictudev
+      MYSQL_PASSWORD: attendance@2024!
+      MYSQL_ROOT_PASSWORD: attendance@2024!
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - laravel
 
-    db:
-        build:
-            context: .
-            dockerfile: mysql/Dockerfile
-        ports:
-            - "5306:5306"
-        volumes:
-            - .:/var/www/html/mysql
-        environment:
-            MYSQL_ROOT_PASSWORD: attendance@2024!
-            MYSQL_DATABASE: attendance
-            MYSQL_USER: ictudev
-            MYSQL_PASSWORD: attendance@2024!
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "9000:9000"
+    networks:
+      - laravel
 
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        ports:
-            - "5080:80"
-        environment:
-            PMA_HOST: db
-            MYSQL_ROOT_PASSWORD: attendance@2024!
+  composer:
+    image: composer:latest
+    container_name: composer
+    volumes:
+      - ./src:/var/www/html
+    working_dir: /var/www/html
+    depends_on:
+      - php
+    networks:
+      - laravel
+
+  npm:
+    image: node:13.7
+    container_name: npm
+    volumes:
+      - ./src:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: ['npm']
+
+  artisan:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: artisan
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - mysql
+    working_dir: /var/www/html
+    entrypoint: ['php', '/var/www/html/artisan']
+    networks:
+      - laravel

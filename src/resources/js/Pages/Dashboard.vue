@@ -70,8 +70,8 @@ onUnmounted(() => {
                         </h1>
                         <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                             Scan the QR Code to store your login or logout</p>
-                        <div v-for="qr in qrcode" :key="qr.id" class="flex justify-center">
-                            <img :src="'data:image/png;base64,' + qr.code" :alt="qr.type"/>
+                        <div class="flex justify-center">
+                            <img :src="'data:image/png;base64,' + qrcode.code" :alt="qrcode.type"/>
                         </div>
                     </div>
                 </div>

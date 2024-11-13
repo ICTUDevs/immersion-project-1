@@ -28,23 +28,27 @@ class AttendanceController extends Controller
 
     public function dashboard()
     {
-        $currentHour = now()->hour;
-        $currentDate = now()->toDateString();
-        $type = $currentHour < 12 ? 'am' : 'pm';
-
-        $qrCode = qrcode::where('type', $type)
-            ->whereDate('created_at', $currentDate)
-            ->latest()
-            ->first();
-        $qrcodes = collect([$qrCode])->filter();
+        $QrCode = qrcode::latest()->first();
 
         return inertia('Dashboard', [
-            'qrcode' => $qrcodes,
+            'qrcode' => $QrCode,
         ]);
     }
 
     public function scanner()
     {
         return inertia('Modules/Attendance/Scanner');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'user_id' => 'required',
+        ]);
+
+        attendance::updateOrCreate([
+            'user_id' => $request->user_id,
+            'date' => now()->toDateString(),
+        ]);
     }
 }
