@@ -66,6 +66,6 @@ Route::middleware([
         ]);
 
     Route::controller(AttendanceController::class)->group(fn() => [
-        Route::get('/', 'dashboard')->name('dashboard'),
+        Route::get('/dashboard', 'dashboard')->name('dashboard'),
     ]);
 });

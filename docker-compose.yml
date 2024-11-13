@@ -19,7 +19,7 @@ services:
       - laravel
 
   mysql:
-    image: mysql:5.7.29
+    image: mysql:latest
     container_name: mysql
     restart: unless-stopped
     tty: true
@@ -59,7 +59,7 @@ services:
       - laravel
 
   npm:
-    image: node:13.7
+    image: node:latest
     container_name: npm
     volumes:
       - ./src:/var/www/html
@@ -77,5 +77,16 @@ services:
       - mysql
     working_dir: /var/www/html
     entrypoint: ['php', '/var/www/html/artisan']
+    networks:
+      - laravel
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pmyadmin
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: attendance@2024!
+    ports:
+      - "8181:80"
     networks:
       - laravel

@@ -1,9 +1,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import axios from 'axios';
-import {Html5Qrcode} from "html5-qrcode";
-import {onMounted} from 'vue';
-
+import { Html5Qrcode } from "html5-qrcode";
+import { onMounted } from 'vue';
 
 const props = defineProps({
     scannedqrcodes: {
@@ -15,9 +13,10 @@ const props = defineProps({
 let html5Qrcode;
 const createscanqrcode = () => {
     html5Qrcode = new Html5Qrcode("qrcode-stream");
-    const config = {fps: 10, qrbox: {width: 250, height: 250}};
+    const config = { fps: 10, qrbox: { width: 250, height: 250 } };
 
-    html5Qrcode.start({facingMode: "environment"}, config, onScanSucess);
+    html5Qrcode.start({ facingMode: "environment" }, config, onScanSucess)
+        .catch(onError);
 }
 
 const onScanSucess = (decodeResult) => {
@@ -27,20 +26,20 @@ const onScanSucess = (decodeResult) => {
     window.location.href = '/';
 };
 
-const onInit = (promise) => {
-    promise.catch(error => {
-        console.error('Error initializing camera:', error);
-        alert('Failed to initialize camera');
-    });
-};
-
 const onError = (error) => {
     console.error('Camera error:', error);
     alert('Camera error: ' + error.message);
 };
 
 onMounted(() => {
-    createscanqrcode();
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(() => {
+            createscanqrcode();
+        })
+        .catch(error => {
+            console.error('Error accessing camera:', error);
+            alert('Failed to access camera');
+        });
 });
 
 const stopscanning = () => {
@@ -61,11 +60,9 @@ const stopscanning = () => {
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg text-center">
                     <div class="p-8">
                         <div class="w-full justify-center flex">
-                            <div id="qrcode-stream" class="w-1/2 h-1/2">
-                                <!-- <qrcode-stream @decode="onDecode" @init="onInit" @error="onError"/> -->
+                            <div id="qrcode-stream" class="w-full h-64">
                                 {{ scannedqrcodes }}
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -73,3 +70,12 @@ const stopscanning = () => {
         </div>
     </AppLayout>
 </template>
+
+<style scoped>
+#qrcode-stream {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+}
+</style>
