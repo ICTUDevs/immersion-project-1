@@ -52,6 +52,7 @@ Route::middleware([
         ->group(fn() => [
 
             Route::get('index', 'index')->name('index'),
+            Route::get('scanner', 'scanner')->name('scanner'),
 
 
             Route::get('create', 'create')->name('create'),

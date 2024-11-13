@@ -53,6 +53,12 @@ const logout = () => {
                                 </NavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('attendance.scanner')"
+                                         :active="route().current('attendance.scanner')">
+                                    Scanner
+                                </NavLink>
+                            </div>
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('attendance.index')"
                                          :active="route().current('attendance.index')">
                                     Attendance
@@ -247,6 +253,10 @@ const logout = () => {
                     <div class="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('attendance.scanner')"
+                                           :active="route().current('attendance.scanner')">
+                            Scanner
                         </ResponsiveNavLink>
                     </div>
 

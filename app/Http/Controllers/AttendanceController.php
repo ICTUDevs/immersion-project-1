@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\attendance;
+use App\Models\qrcode;
 use Illuminate\Http\Request;
 use Vinkla\Hashids\Facades\Hashids;
 
@@ -27,6 +28,23 @@ class AttendanceController extends Controller
 
     public function dashboard()
     {
-        return inertia('Dashboard');
+        $currentHour = now()->hour;
+        $currentDate = now()->toDateString();
+        $type = $currentHour < 12 ? 'am' : 'pm';
+
+        $qrCode = qrcode::where('type', $type)
+            ->whereDate('created_at', $currentDate)
+            ->latest()
+            ->first();
+        $qrcodes = collect([$qrCode])->filter();
+
+        return inertia('Dashboard', [
+            'qrcode' => $qrcodes,
+        ]);
+    }
+
+    public function scanner()
+    {
+        return inertia('Modules/Attendance/Scanner');
     }
 }
