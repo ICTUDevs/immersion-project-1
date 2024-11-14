@@ -1,8 +1,10 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import { QrcodeStream } from "vue3-qrcode-reader";
-// import { onMounted } from 'vue';
 import { ref, computed } from "vue";
+import { useForm } from "@inertiajs/vue3";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 const prop = defineProps({
     users: {
@@ -11,19 +13,39 @@ const prop = defineProps({
     },
 });
 
+const form = useForm({
+    user_id: prop.users.id,
+    date: "",
+});
+
 const result = ref("");
 
 const onDetect = async (detectedCodesPromise) => {
     try {
         const detectedCodes = await detectedCodesPromise;
         result.value = detectedCodes.content;
-
-        window.location.href = `/dashboard`;
+        form.date = detectedCodes.content;
+        submit();
     } catch (error) {
         console.error('Error detecting codes:', error);
         result.value = 'Error detecting codes';
     }
 }
+
+const submit = () => {
+    form.post(route("attendance.store"), {
+        preserveScroll: true,
+        onSuccess: (page) => {
+            form.reset();
+            if (page.props.flash.message) {
+                toast.success(page.props.flash.message, {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000,
+                });
+            }
+        },
+    });
+};
 
 /*** select camera ***/
 

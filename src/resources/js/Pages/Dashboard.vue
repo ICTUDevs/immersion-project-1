@@ -4,6 +4,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 
 const props = defineProps({
     qrcode: Array,
+    users: Array,
 });
 
 const currentDate = ref(new Date());
@@ -54,7 +55,9 @@ onUnmounted(() => {
 <template>
     <AppLayout title="Dashboard">
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            <h2
+                class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight"
+            >
                 Dashboard
             </h2>
         </template>
@@ -111,13 +114,15 @@ onUnmounted(() => {
                                     <ul
                                         role="list"
                                         class="divide-y divide-gray-200 dark:divide-gray-700"
+                                        v-for="(item, index) in users"
+                                        :key="item.id"
                                     >
                                         <li class="py-3 sm:py-4">
                                             <div class="flex items-center">
                                                 <div class="flex-shrink-0">
                                                     <img
                                                         class="w-8 h-8 rounded-full"
-                                                        src="/docs/images/people/profile-picture-1.jpg"
+                                                        :src="item.profile_photo_url"
                                                         alt="Neil image"
                                                     />
                                                 </div>
@@ -127,138 +132,20 @@ onUnmounted(() => {
                                                     <p
                                                         class="text-sm font-medium text-gray-900 truncate dark:text-white"
                                                     >
-                                                        Neil Sims
+                                                        {{ item.name }}
                                                     </p>
                                                     <p
                                                         class="text-sm text-gray-500 truncate dark:text-gray-400"
                                                     >
-                                                        email@windster.com
+                                                        {{ item.email }}
                                                     </p>
                                                 </div>
                                                 <div
                                                     class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
                                                 >
-                                                    $320
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="py-3 sm:py-4">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img
-                                                        class="w-8 h-8 rounded-full"
-                                                        src="/docs/images/people/profile-picture-3.jpg"
-                                                        alt="Bonnie image"
-                                                    />
-                                                </div>
-                                                <div
-                                                    class="flex-1 min-w-0 ms-4"
-                                                >
-                                                    <p
-                                                        class="text-sm font-medium text-gray-900 truncate dark:text-white"
-                                                    >
-                                                        Bonnie Green
-                                                    </p>
-                                                    <p
-                                                        class="text-sm text-gray-500 truncate dark:text-gray-400"
-                                                    >
-                                                        email@windster.com
-                                                    </p>
-                                                </div>
-                                                <div
-                                                    class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
-                                                >
-                                                    $3467
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="py-3 sm:py-4">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img
-                                                        class="w-8 h-8 rounded-full"
-                                                        src="/docs/images/people/profile-picture-2.jpg"
-                                                        alt="Michael image"
-                                                    />
-                                                </div>
-                                                <div
-                                                    class="flex-1 min-w-0 ms-4"
-                                                >
-                                                    <p
-                                                        class="text-sm font-medium text-gray-900 truncate dark:text-white"
-                                                    >
-                                                        Michael Gough
-                                                    </p>
-                                                    <p
-                                                        class="text-sm text-gray-500 truncate dark:text-gray-400"
-                                                    >
-                                                        email@windster.com
-                                                    </p>
-                                                </div>
-                                                <div
-                                                    class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
-                                                >
-                                                    $67
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="py-3 sm:py-4">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img
-                                                        class="w-8 h-8 rounded-full"
-                                                        src="/docs/images/people/profile-picture-4.jpg"
-                                                        alt="Lana image"
-                                                    />
-                                                </div>
-                                                <div
-                                                    class="flex-1 min-w-0 ms-4"
-                                                >
-                                                    <p
-                                                        class="text-sm font-medium text-gray-900 truncate dark:text-white"
-                                                    >
-                                                        Lana Byrd
-                                                    </p>
-                                                    <p
-                                                        class="text-sm text-gray-500 truncate dark:text-gray-400"
-                                                    >
-                                                        email@windster.com
-                                                    </p>
-                                                </div>
-                                                <div
-                                                    class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
-                                                >
-                                                    $367
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="pt-3 pb-0 sm:pt-4">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img
-                                                        class="w-8 h-8 rounded-full"
-                                                        src="/docs/images/people/profile-picture-5.jpg"
-                                                        alt="Thomas image"
-                                                    />
-                                                </div>
-                                                <div
-                                                    class="flex-1 min-w-0 ms-4"
-                                                >
-                                                    <p
-                                                        class="text-sm font-medium text-gray-900 truncate dark:text-white"
-                                                    >
-                                                        Thomes Lean
-                                                    </p>
-                                                    <p
-                                                        class="text-sm text-gray-500 truncate dark:text-gray-400"
-                                                    >
-                                                        email@windster.com
-                                                    </p>
-                                                </div>
-                                                <div
-                                                    class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
-                                                >
-                                                    $2367
+                                                    <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400">
+                                                        on duty
+                                                    </span>
                                                 </div>
                                             </div>
                                         </li>
