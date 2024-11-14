@@ -6,6 +6,7 @@ networks:
 services:
   nginx:
     image: nginx:stable-alpine
+    restart: unless-stopped
     container_name: nginx
     ports:
       - "6080:80"
@@ -40,6 +41,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: php
+    restart: unless-stopped
     volumes:
       - ./src:/var/www/html
     ports:
@@ -47,46 +49,30 @@ services:
     networks:
       - laravel
 
-  composer:
-    image: composer:latest
-    container_name: composer
-    volumes:
-      - ./src:/var/www/html
-    working_dir: /var/www/html
-    depends_on:
-      - php
-    networks:
-      - laravel
-
-  npm:
-    image: node:latest
-    container_name: npm
-    volumes:
-      - ./src:/var/www/html
-    working_dir: /var/www/html
-    entrypoint: ['npm']
-
-  artisan:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: artisan
-    volumes:
-      - ./src:/var/www/html
-    depends_on:
-      - mysql
-    working_dir: /var/www/html
-    entrypoint: ['php', '/var/www/html/artisan']
-    networks:
-      - laravel
-
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: pmyadmin
+    restart: unless-stopped
     environment:
       PMA_HOST: mysql
       MYSQL_ROOT_PASSWORD: attendance@2024!
     ports:
       - "8181:80"
+    networks:
+      - laravel
+
+
+  supervisord:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: supervisord
+    restart: unless-stopped
+    entrypoint: ['/usr/local/bin/entrypoint.sh']
+    volumes:
+      - ./src:/var/www/html
+      - ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
+    depends_on:
+      - php
     networks:
       - laravel

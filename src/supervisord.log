@@ -1,0 +1,1218 @@
+2024-11-14 06:25:47,883 INFO Set uid to user 0 succeeded
+2024-11-14 06:25:47,885 INFO supervisord started with pid 1
+2024-11-14 06:25:48,890 INFO spawned: 'artisan' with pid 7
+2024-11-14 06:25:48,894 INFO spawned: 'composer' with pid 8
+2024-11-14 06:25:48,898 INFO spawned: 'laravel-scheduler' with pid 9
+2024-11-14 06:25:48,902 INFO spawned: 'npm' with pid 10
+2024-11-14 06:25:48,906 INFO spawned: 'qrcode' with pid 11
+2024-11-14 06:25:49,156 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:25:49,184 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:25:49,220 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:25:50,224 INFO spawned: 'artisan' with pid 47
+2024-11-14 06:25:50,225 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:25:50,228 INFO spawned: 'laravel-scheduler' with pid 48
+2024-11-14 06:25:50,229 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:25:50,232 INFO spawned: 'qrcode' with pid 49
+2024-11-14 06:25:50,526 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:25:50,545 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:25:50,558 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:25:50,790 INFO Set uid to user 0 succeeded
+2024-11-14 06:25:50,792 INFO supervisord started with pid 1
+2024-11-14 06:25:51,796 INFO spawned: 'artisan' with pid 7
+2024-11-14 06:25:51,801 INFO spawned: 'composer' with pid 8
+2024-11-14 06:25:51,804 INFO spawned: 'laravel-scheduler' with pid 9
+2024-11-14 06:25:51,806 INFO spawned: 'npm' with pid 10
+2024-11-14 06:25:51,810 INFO spawned: 'qrcode' with pid 11
+2024-11-14 06:25:52,088 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:25:52,135 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:25:52,138 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:25:52,249 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:25:53,142 INFO spawned: 'artisan' with pid 47
+2024-11-14 06:25:53,143 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:25:53,147 INFO spawned: 'laravel-scheduler' with pid 48
+2024-11-14 06:25:53,148 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:25:53,151 INFO spawned: 'qrcode' with pid 49
+2024-11-14 06:25:53,252 INFO spawned: 'artisan' with pid 56
+2024-11-14 06:25:53,255 INFO spawned: 'laravel-scheduler' with pid 57
+2024-11-14 06:25:53,261 INFO spawned: 'npm' with pid 58
+2024-11-14 06:25:53,266 INFO spawned: 'qrcode' with pid 59
+2024-11-14 06:25:53,497 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:25:53,545 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:25:53,583 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:25:53,684 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:25:53,696 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:25:53,726 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:25:54,731 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:25:55,246 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:25:56,144 INFO spawned: 'artisan' with pid 56
+2024-11-14 06:25:56,147 INFO spawned: 'laravel-scheduler' with pid 57
+2024-11-14 06:25:56,153 INFO spawned: 'npm' with pid 58
+2024-11-14 06:25:56,160 INFO spawned: 'qrcode' with pid 59
+2024-11-14 06:25:56,523 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:25:56,562 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:25:56,574 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:25:56,688 INFO spawned: 'artisan' with pid 76
+2024-11-14 06:25:56,689 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:25:56,927 INFO spawned: 'laravel-scheduler' with pid 79
+2024-11-14 06:25:56,935 INFO spawned: 'npm' with pid 80
+2024-11-14 06:25:56,938 INFO spawned: 'qrcode' with pid 81
+2024-11-14 06:25:56,939 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:25:56,940 INFO gave up: artisan entered FATAL state, too many start retries too quickly
+2024-11-14 06:25:57,213 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:25:57,289 INFO gave up: laravel-scheduler entered FATAL state, too many start retries too quickly
+2024-11-14 06:25:57,304 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:25:57,575 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:25:58,224 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:25:58,224 INFO gave up: qrcode entered FATAL state, too many start retries too quickly
+2024-11-14 06:25:59,268 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:25:59,555 INFO spawned: 'artisan' with pid 80
+2024-11-14 06:25:59,563 INFO spawned: 'laravel-scheduler' with pid 81
+2024-11-14 06:25:59,589 INFO spawned: 'qrcode' with pid 85
+2024-11-14 06:25:59,680 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:25:59,817 INFO spawned: 'npm' with pid 88
+2024-11-14 06:25:59,826 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:25:59,873 INFO gave up: artisan entered FATAL state, too many start retries too quickly
+2024-11-14 06:25:59,919 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:25:59,922 INFO gave up: laravel-scheduler entered FATAL state, too many start retries too quickly
+2024-11-14 06:25:59,942 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:26:00,181 INFO gave up: qrcode entered FATAL state, too many start retries too quickly
+2024-11-14 06:26:00,271 INFO spawned: 'composer' with pid 107
+2024-11-14 06:26:00,639 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:01,321 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:01,321 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:01,565 INFO spawned: 'composer' with pid 107
+2024-11-14 06:26:01,641 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:01,643 INFO spawned: 'npm' with pid 127
+2024-11-14 06:26:02,645 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:02,802 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:03,112 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:04,117 INFO spawned: 'npm' with pid 127
+2024-11-14 06:26:04,771 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:05,120 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:05,773 INFO spawned: 'npm' with pid 138
+2024-11-14 06:26:06,777 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:07,313 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:08,315 INFO spawned: 'npm' with pid 138
+2024-11-14 06:26:08,953 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:09,317 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:09,956 INFO spawned: 'npm' with pid 149
+2024-11-14 06:26:10,959 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:11,500 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:11,602 INFO spawned: 'composer' with pid 160
+2024-11-14 06:26:11,620 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:11,823 INFO spawned: 'npm' with pid 178
+2024-11-14 06:26:12,140 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:12,826 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:12,826 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:13,144 INFO spawned: 'composer' with pid 171
+2024-11-14 06:26:13,208 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:13,364 INFO spawned: 'npm' with pid 189
+2024-11-14 06:26:14,367 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:14,367 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:15,069 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:16,040 INFO spawned: 'npm' with pid 191
+2024-11-14 06:26:16,591 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:17,174 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:17,358 INFO spawned: 'npm' with pid 202
+2024-11-14 06:26:18,489 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:19,503 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:19,749 INFO spawned: 'npm' with pid 211
+2024-11-14 06:26:20,129 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:20,751 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:20,754 INFO spawned: 'npm' with pid 217
+2024-11-14 06:26:21,132 INFO spawned: 'composer' with pid 224
+2024-11-14 06:26:21,133 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:22,461 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:22,461 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:22,464 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:22,508 INFO spawned: 'composer' with pid 235
+2024-11-14 06:26:22,978 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:23,717 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:23,982 INFO spawned: 'npm' with pid 244
+2024-11-14 06:26:24,238 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:24,984 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:25,241 INFO spawned: 'npm' with pid 255
+2024-11-14 06:26:26,244 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:27,178 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:28,182 INFO spawned: 'npm' with pid 255
+2024-11-14 06:26:28,480 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:29,183 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:29,483 INFO spawned: 'npm' with pid 266
+2024-11-14 06:26:30,485 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:31,532 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:32,536 INFO spawned: 'npm' with pid 266
+2024-11-14 06:26:32,746 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:33,552 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:33,569 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:33,750 INFO spawned: 'npm' with pid 277
+2024-11-14 06:26:34,189 INFO spawned: 'composer' with pid 288
+2024-11-14 06:26:34,750 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:34,869 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:35,410 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:35,452 INFO spawned: 'composer' with pid 299
+2024-11-14 06:26:35,751 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:36,685 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:36,756 INFO spawned: 'npm' with pid 308
+2024-11-14 06:26:36,976 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:37,758 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:37,980 INFO spawned: 'npm' with pid 319
+2024-11-14 06:26:38,983 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:40,082 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:41,086 INFO spawned: 'npm' with pid 319
+2024-11-14 06:26:41,488 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:42,183 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:42,316 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:42,490 INFO spawned: 'npm' with pid 330
+2024-11-14 06:26:42,796 INFO spawned: 'composer' with pid 341
+2024-11-14 06:26:43,526 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:43,541 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:44,020 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:44,165 INFO spawned: 'composer' with pid 352
+2024-11-14 06:26:44,337 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:45,340 INFO spawned: 'npm' with pid 361
+2024-11-14 06:26:45,393 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:45,644 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:46,342 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:46,649 INFO spawned: 'npm' with pid 372
+2024-11-14 06:26:47,651 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:48,516 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:48,813 INFO spawned: 'npm' with pid 372
+2024-11-14 06:26:49,935 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:50,023 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:51,027 INFO spawned: 'npm' with pid 383
+2024-11-14 06:26:52,030 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:52,078 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:52,083 INFO spawned: 'npm' with pid 387
+2024-11-14 06:26:53,369 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:53,755 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:53,755 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:26:53,757 INFO spawned: 'composer' with pid 405
+2024-11-14 06:26:54,343 INFO spawned: 'composer' with pid 405
+2024-11-14 06:26:54,361 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:54,565 INFO spawned: 'npm' with pid 423
+2024-11-14 06:26:54,980 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:55,491 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:55,567 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:55,567 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:56,494 INFO spawned: 'npm' with pid 425
+2024-11-14 06:26:57,499 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:26:57,752 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:26:58,558 INFO spawned: 'npm' with pid 436
+2024-11-14 06:26:59,683 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:00,797 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:00,978 INFO spawned: 'npm' with pid 436
+2024-11-14 06:27:01,841 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:01,852 INFO spawned: 'npm' with pid 454
+2024-11-14 06:27:02,004 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:02,020 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:02,575 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:02,727 INFO spawned: 'composer' with pid 458
+2024-11-14 06:27:03,525 INFO spawned: 'composer' with pid 469
+2024-11-14 06:27:03,528 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:03,954 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:04,299 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:04,746 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:05,302 INFO spawned: 'npm' with pid 478
+2024-11-14 06:27:05,303 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:06,304 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:06,307 INFO spawned: 'npm' with pid 489
+2024-11-14 06:27:07,310 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:08,562 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:09,566 INFO spawned: 'npm' with pid 489
+2024-11-14 06:27:09,863 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:10,599 INFO spawned: 'npm' with pid 500
+2024-11-14 06:27:10,762 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:11,252 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:11,254 INFO spawned: 'composer' with pid 511
+2024-11-14 06:27:11,606 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:11,606 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:12,315 INFO spawned: 'composer' with pid 522
+2024-11-14 06:27:12,481 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:12,821 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:13,535 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:13,825 INFO spawned: 'npm' with pid 531
+2024-11-14 06:27:14,046 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:14,828 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:15,048 INFO spawned: 'npm' with pid 542
+2024-11-14 06:27:16,050 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:17,075 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:18,077 INFO spawned: 'npm' with pid 542
+2024-11-14 06:27:19,224 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:19,339 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:19,417 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:19,421 INFO spawned: 'npm' with pid 553
+2024-11-14 06:27:19,729 INFO spawned: 'composer' with pid 564
+2024-11-14 06:27:20,401 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:20,947 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:21,115 INFO spawned: 'composer' with pid 575
+2024-11-14 06:27:21,116 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:21,274 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:22,277 INFO spawned: 'npm' with pid 584
+2024-11-14 06:27:22,322 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:23,280 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:23,662 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:24,666 INFO spawned: 'npm' with pid 595
+2024-11-14 06:27:25,432 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:26,159 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:26,436 INFO spawned: 'npm' with pid 595
+2024-11-14 06:27:27,647 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:27,860 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:28,015 INFO spawned: 'npm' with pid 606
+2024-11-14 06:27:28,016 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:28,177 INFO spawned: 'composer' with pid 617
+2024-11-14 06:27:29,015 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:29,031 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:29,395 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:29,761 INFO spawned: 'composer' with pid 628
+2024-11-14 06:27:30,013 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:31,000 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:31,017 INFO spawned: 'npm' with pid 637
+2024-11-14 06:27:31,291 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:32,020 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:32,294 INFO spawned: 'npm' with pid 648
+2024-11-14 06:27:33,296 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:34,239 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:35,191 INFO spawned: 'npm' with pid 648
+2024-11-14 06:27:35,561 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:36,190 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:36,564 INFO spawned: 'npm' with pid 659
+2024-11-14 06:27:36,831 INFO spawned: 'composer' with pid 670
+2024-11-14 06:27:36,835 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:37,738 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:38,054 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:38,102 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:38,278 INFO spawned: 'composer' with pid 681
+2024-11-14 06:27:38,314 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:39,318 INFO spawned: 'npm' with pid 690
+2024-11-14 06:27:39,505 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:39,797 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:40,321 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:40,801 INFO spawned: 'npm' with pid 701
+2024-11-14 06:27:41,804 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:42,482 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:43,485 INFO spawned: 'npm' with pid 701
+2024-11-14 06:27:44,010 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:44,509 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:45,014 INFO spawned: 'npm' with pid 712
+2024-11-14 06:27:45,260 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:46,196 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:46,271 INFO spawned: 'composer' with pid 723
+2024-11-14 06:27:46,315 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:46,728 INFO spawned: 'composer' with pid 734
+2024-11-14 06:27:46,746 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:47,748 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:47,749 INFO spawned: 'npm' with pid 743
+2024-11-14 06:27:47,953 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:48,228 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:48,751 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:49,232 INFO spawned: 'npm' with pid 754
+2024-11-14 06:27:50,236 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:51,065 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:52,069 INFO spawned: 'npm' with pid 754
+2024-11-14 06:27:52,465 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:53,072 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:53,468 INFO spawned: 'npm' with pid 765
+2024-11-14 06:27:54,497 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:54,513 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:54,890 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:27:55,173 INFO spawned: 'composer' with pid 787
+2024-11-14 06:27:55,316 INFO spawned: 'composer' with pid 776
+2024-11-14 06:27:55,343 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:55,559 INFO spawned: 'npm' with pid 794
+2024-11-14 06:27:56,401 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:56,562 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:56,562 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:56,654 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:57,657 INFO spawned: 'npm' with pid 807
+2024-11-14 06:27:58,662 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:27:58,713 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:27:59,716 INFO spawned: 'npm' with pid 807
+2024-11-14 06:28:00,719 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:00,839 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:01,630 INFO spawned: 'npm' with pid 818
+2024-11-14 06:28:02,756 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:03,024 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:04,027 INFO spawned: 'npm' with pid 818
+2024-11-14 06:28:04,927 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:05,167 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:05,233 INFO spawned: 'npm' with pid 838
+2024-11-14 06:28:05,553 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:05,596 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:05,791 INFO spawned: 'composer' with pid 840
+2024-11-14 06:28:06,601 INFO spawned: 'composer' with pid 851
+2024-11-14 06:28:06,602 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:07,013 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:07,304 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:07,933 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:08,309 INFO spawned: 'npm' with pid 860
+2024-11-14 06:28:08,704 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:09,316 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:09,706 INFO spawned: 'npm' with pid 871
+2024-11-14 06:28:10,708 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:11,536 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:12,541 INFO spawned: 'npm' with pid 871
+2024-11-14 06:28:12,967 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:13,605 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:13,931 INFO spawned: 'npm' with pid 882
+2024-11-14 06:28:14,190 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:14,193 INFO spawned: 'composer' with pid 893
+2024-11-14 06:28:14,948 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:14,948 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:15,416 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:15,625 INFO spawned: 'composer' with pid 904
+2024-11-14 06:28:15,699 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:16,701 INFO spawned: 'npm' with pid 913
+2024-11-14 06:28:16,840 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:17,211 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:17,703 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:18,215 INFO spawned: 'npm' with pid 924
+2024-11-14 06:28:19,221 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:20,871 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:21,299 INFO spawned: 'npm' with pid 924
+2024-11-14 06:28:21,439 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:22,292 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:22,442 INFO spawned: 'npm' with pid 935
+2024-11-14 06:28:22,983 INFO spawned: 'composer' with pid 946
+2024-11-14 06:28:22,983 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:23,534 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:23,899 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:24,143 INFO spawned: 'composer' with pid 957
+2024-11-14 06:28:24,225 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:24,529 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:25,374 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:25,533 INFO spawned: 'npm' with pid 966
+2024-11-14 06:28:25,815 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:26,535 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:26,818 INFO spawned: 'npm' with pid 977
+2024-11-14 06:28:27,821 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:28,766 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:29,771 INFO spawned: 'npm' with pid 977
+2024-11-14 06:28:30,300 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:31,069 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:31,304 INFO spawned: 'npm' with pid 988
+2024-11-14 06:28:31,445 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:32,448 INFO spawned: 'composer' with pid 999
+2024-11-14 06:28:32,523 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:32,650 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:32,978 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:33,005 INFO spawned: 'composer' with pid 1010
+2024-11-14 06:28:33,980 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:33,983 INFO spawned: 'npm' with pid 1019
+2024-11-14 06:28:34,232 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:34,515 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:34,989 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:35,520 INFO spawned: 'npm' with pid 1030
+2024-11-14 06:28:36,522 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:38,205 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:38,751 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:39,212 INFO spawned: 'npm' with pid 1030
+2024-11-14 06:28:39,755 INFO spawned: 'npm' with pid 1041
+2024-11-14 06:28:40,528 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:40,924 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:40,924 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:40,926 INFO spawned: 'composer' with pid 1052
+2024-11-14 06:28:41,486 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:42,164 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:42,488 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:42,490 INFO spawned: 'composer' with pid 1063
+2024-11-14 06:28:42,974 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:43,492 INFO spawned: 'npm' with pid 1072
+2024-11-14 06:28:43,976 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:43,977 INFO spawned: 'npm' with pid 1083
+2024-11-14 06:28:44,494 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:44,981 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:46,812 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:47,252 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:47,815 INFO spawned: 'npm' with pid 1083
+2024-11-14 06:28:48,256 INFO spawned: 'npm' with pid 1094
+2024-11-14 06:28:48,902 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:49,020 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:49,261 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:49,485 INFO spawned: 'composer' with pid 1105
+2024-11-14 06:28:50,693 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:28:50,734 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:51,091 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:51,467 INFO spawned: 'composer' with pid 1116
+2024-11-14 06:28:51,493 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:51,708 INFO spawned: 'npm' with pid 1134
+2024-11-14 06:28:52,095 INFO spawned: 'npm' with pid 1125
+2024-11-14 06:28:52,710 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:52,710 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:53,098 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:54,866 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:55,269 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:55,752 INFO spawned: 'npm' with pid 1136
+2024-11-14 06:28:55,869 INFO spawned: 'npm' with pid 1147
+2024-11-14 06:28:56,873 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:57,161 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:28:59,056 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:59,068 INFO spawned: 'npm' with pid 1154
+2024-11-14 06:28:59,238 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:28:59,323 INFO spawned: 'npm' with pid 1162
+2024-11-14 06:29:00,038 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:00,752 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:00,752 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:01,038 INFO spawned: 'composer' with pid 1180
+2024-11-14 06:29:01,039 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:01,755 INFO spawned: 'composer' with pid 1169
+2024-11-14 06:29:02,272 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:02,284 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:02,537 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:03,285 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:03,288 INFO spawned: 'npm' with pid 1189
+2024-11-14 06:29:03,540 INFO spawned: 'npm' with pid 1200
+2024-11-14 06:29:04,290 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:04,544 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:06,542 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:06,799 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:07,442 INFO spawned: 'npm' with pid 1211
+2024-11-14 06:29:07,546 INFO spawned: 'npm' with pid 1200
+2024-11-14 06:29:08,549 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:08,564 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:09,967 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:10,824 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:10,880 INFO spawned: 'composer' with pid 1222
+2024-11-14 06:29:10,898 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:11,047 INFO spawned: 'npm' with pid 1231
+2024-11-14 06:29:11,116 INFO spawned: 'npm' with pid 1240
+2024-11-14 06:29:11,418 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:12,119 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:12,119 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:12,425 INFO spawned: 'composer' with pid 1244
+2024-11-14 06:29:12,426 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:13,729 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:14,262 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:14,293 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:15,265 INFO spawned: 'npm' with pid 1264
+2024-11-14 06:29:15,296 INFO spawned: 'npm' with pid 1253
+2024-11-14 06:29:16,268 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:16,516 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:18,542 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:18,568 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:18,648 INFO spawned: 'npm' with pid 1268
+2024-11-14 06:29:19,365 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:19,545 INFO spawned: 'npm' with pid 1275
+2024-11-14 06:29:20,316 INFO spawned: 'composer' with pid 1286
+2024-11-14 06:29:20,320 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:20,595 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:20,610 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:21,238 INFO spawned: 'composer' with pid 1297
+2024-11-14 06:29:21,536 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:21,845 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:22,460 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:22,848 INFO spawned: 'npm' with pid 1306
+2024-11-14 06:29:22,983 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:23,850 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:23,987 INFO spawned: 'npm' with pid 1317
+2024-11-14 06:29:24,990 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:26,028 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:27,034 INFO spawned: 'npm' with pid 1317
+2024-11-14 06:29:27,416 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:28,138 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:28,420 INFO spawned: 'npm' with pid 1328
+2024-11-14 06:29:28,683 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:28,685 INFO spawned: 'composer' with pid 1339
+2024-11-14 06:29:29,541 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:29,659 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:29,903 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:30,146 INFO spawned: 'composer' with pid 1350
+2024-11-14 06:29:30,176 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:31,179 INFO spawned: 'npm' with pid 1359
+2024-11-14 06:29:31,369 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:31,637 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:32,182 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:32,641 INFO spawned: 'npm' with pid 1370
+2024-11-14 06:29:33,645 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:34,420 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:35,423 INFO spawned: 'npm' with pid 1370
+2024-11-14 06:29:35,924 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:36,739 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:36,928 INFO spawned: 'npm' with pid 1381
+2024-11-14 06:29:37,098 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:38,054 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:38,102 INFO spawned: 'composer' with pid 1392
+2024-11-14 06:29:38,453 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:38,594 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:38,622 INFO spawned: 'composer' with pid 1403
+2024-11-14 06:29:39,595 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:39,599 INFO spawned: 'npm' with pid 1412
+2024-11-14 06:29:39,844 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:40,090 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:40,601 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:41,092 INFO spawned: 'npm' with pid 1423
+2024-11-14 06:29:42,095 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:42,936 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:43,017 INFO spawned: 'npm' with pid 1423
+2024-11-14 06:29:44,072 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:44,558 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:45,561 INFO spawned: 'npm' with pid 1434
+2024-11-14 06:29:46,267 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:46,275 INFO spawned: 'npm' with pid 1441
+2024-11-14 06:29:46,844 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:46,962 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:47,233 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:47,345 INFO spawned: 'composer' with pid 1456
+2024-11-14 06:29:47,964 INFO spawned: 'composer' with pid 1456
+2024-11-14 06:29:47,969 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:48,575 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:48,894 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:49,214 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:49,802 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:49,897 INFO spawned: 'npm' with pid 1476
+2024-11-14 06:29:50,805 INFO spawned: 'npm' with pid 1476
+2024-11-14 06:29:50,899 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:51,808 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:53,135 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:54,139 INFO spawned: 'npm' with pid 1487
+2024-11-14 06:29:54,272 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:55,159 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:55,275 INFO spawned: 'npm' with pid 1487
+2024-11-14 06:29:55,538 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:55,815 INFO spawned: 'composer' with pid 1509
+2024-11-14 06:29:56,477 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:56,607 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:29:57,040 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:57,051 INFO spawned: 'composer' with pid 1509
+2024-11-14 06:29:57,332 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:58,283 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:58,336 INFO spawned: 'npm' with pid 1529
+2024-11-14 06:29:58,587 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:29:58,595 INFO spawned: 'npm' with pid 1529
+2024-11-14 06:29:59,585 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:29:59,597 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:01,690 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:01,886 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:02,694 INFO spawned: 'npm' with pid 1540
+2024-11-14 06:30:02,890 INFO spawned: 'npm' with pid 1540
+2024-11-14 06:30:03,697 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:04,568 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:04,809 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:30:05,813 INFO spawned: 'composer' with pid 1562
+2024-11-14 06:30:05,974 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:06,049 INFO spawned: 'npm' with pid 1580
+2024-11-14 06:30:06,218 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:06,445 INFO spawned: 'npm' with pid 1551
+2024-11-14 06:30:07,054 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:07,054 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:07,461 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:07,488 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:30:08,109 INFO spawned: 'composer' with pid 1573
+2024-11-14 06:30:09,180 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:09,340 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:09,654 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:10,185 INFO spawned: 'npm' with pid 1593
+2024-11-14 06:30:10,656 INFO spawned: 'npm' with pid 1593
+2024-11-14 06:30:11,187 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:11,659 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:13,475 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:14,069 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:14,479 INFO spawned: 'npm' with pid 1604
+2024-11-14 06:30:15,073 INFO spawned: 'npm' with pid 1604
+2024-11-14 06:30:15,678 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:16,222 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:16,608 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:30:16,785 INFO spawned: 'composer' with pid 1626
+2024-11-14 06:30:17,425 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:30:17,689 INFO spawned: 'composer' with pid 1626
+2024-11-14 06:30:17,712 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:17,912 INFO spawned: 'npm' with pid 1644
+2024-11-14 06:30:18,002 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:18,325 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:18,914 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:18,914 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:19,328 INFO spawned: 'npm' with pid 1646
+2024-11-14 06:30:20,330 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:21,132 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:22,135 INFO spawned: 'npm' with pid 1657
+2024-11-14 06:30:22,490 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:23,138 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:23,494 INFO spawned: 'npm' with pid 1657
+2024-11-14 06:30:24,618 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:25,376 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:26,814 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:27,123 INFO spawned: 'npm' with pid 1677
+2024-11-14 06:30:27,486 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:30:28,490 INFO spawned: 'composer' with pid 1690
+2024-11-14 06:30:28,491 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:29,778 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:30,334 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:31,338 INFO spawned: 'npm' with pid 1710
+2024-11-14 06:30:32,341 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:34,479 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:35,483 INFO spawned: 'npm' with pid 1721
+2024-11-14 06:30:36,696 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:36,821 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:30:37,125 INFO spawned: 'composer' with pid 1743
+2024-11-14 06:30:38,356 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:38,642 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:39,646 INFO spawned: 'npm' with pid 1763
+2024-11-14 06:30:40,648 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:42,765 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:43,769 INFO spawned: 'npm' with pid 1774
+2024-11-14 06:30:44,978 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:45,094 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:30:45,405 INFO spawned: 'composer' with pid 1796
+2024-11-14 06:30:46,635 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:46,902 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:47,906 INFO spawned: 'npm' with pid 1816
+2024-11-14 06:30:48,908 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:51,009 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:52,013 INFO spawned: 'npm' with pid 1827
+2024-11-14 06:30:53,113 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:53,483 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:30:53,637 INFO spawned: 'composer' with pid 1849
+2024-11-14 06:30:54,871 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:55,166 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:56,170 INFO spawned: 'npm' with pid 1869
+2024-11-14 06:30:57,173 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:30:59,268 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:30:59,961 INFO spawned: 'npm' with pid 1880
+2024-11-14 06:31:01,078 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:31:03,070 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:31:03,147 INFO spawned: 'npm' with pid 1895
+2024-11-14 06:31:03,857 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:31:04,771 INFO spawned: 'composer' with pid 1913
+2024-11-14 06:31:04,773 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:31:06,008 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:31:06,301 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:31:07,305 INFO spawned: 'npm' with pid 1933
+2024-11-14 06:31:08,307 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:42:39,621 INFO Set uid to user 0 succeeded
+2024-11-14 06:42:39,624 INFO supervisord started with pid 8
+2024-11-14 06:42:40,629 INFO spawned: 'artisan' with pid 11
+2024-11-14 06:42:40,633 INFO spawned: 'composer' with pid 12
+2024-11-14 06:42:40,637 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-14 06:42:40,643 INFO spawned: 'npm' with pid 14
+2024-11-14 06:42:40,646 INFO spawned: 'qrcode' with pid 15
+2024-11-14 06:42:40,910 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:42:40,922 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:42:40,957 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:42:41,962 INFO spawned: 'artisan' with pid 51
+2024-11-14 06:42:41,963 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:42:41,967 INFO spawned: 'laravel-scheduler' with pid 52
+2024-11-14 06:42:41,968 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:42:41,971 INFO spawned: 'qrcode' with pid 53
+2024-11-14 06:42:42,219 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:42:42,265 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:42:42,278 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:42:43,847 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:42:44,851 INFO spawned: 'artisan' with pid 60
+2024-11-14 06:42:44,854 INFO spawned: 'laravel-scheduler' with pid 61
+2024-11-14 06:42:44,858 INFO spawned: 'npm' with pid 62
+2024-11-14 06:42:44,862 INFO spawned: 'qrcode' with pid 63
+2024-11-14 06:42:45,111 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:42:45,136 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:42:45,178 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:42:46,180 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:42:47,988 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:42:48,993 INFO spawned: 'artisan' with pid 80
+2024-11-14 06:42:48,996 INFO spawned: 'laravel-scheduler' with pid 81
+2024-11-14 06:42:49,000 INFO spawned: 'npm' with pid 82
+2024-11-14 06:42:49,003 INFO spawned: 'qrcode' with pid 83
+2024-11-14 06:42:49,261 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:42:49,261 INFO gave up: artisan entered FATAL state, too many start retries too quickly
+2024-11-14 06:42:49,274 WARN exited: laravel-scheduler (exit status 1; not expected)
+2024-11-14 06:42:49,316 INFO gave up: laravel-scheduler entered FATAL state, too many start retries too quickly
+2024-11-14 06:42:49,329 WARN exited: qrcode (exit status 1; not expected)
+2024-11-14 06:42:49,668 INFO gave up: qrcode entered FATAL state, too many start retries too quickly
+2024-11-14 06:42:50,296 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:42:50,662 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:42:51,665 INFO spawned: 'composer' with pid 111
+2024-11-14 06:42:52,125 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:42:53,127 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:42:53,130 INFO spawned: 'npm' with pid 131
+2024-11-14 06:42:54,131 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:42:56,227 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:42:57,231 INFO spawned: 'npm' with pid 142
+2024-11-14 06:42:58,233 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:00,295 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:01,298 INFO spawned: 'npm' with pid 153
+2024-11-14 06:43:02,298 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:02,313 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:43:02,934 INFO spawned: 'composer' with pid 175
+2024-11-14 06:43:04,161 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:04,401 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:05,405 INFO spawned: 'npm' with pid 195
+2024-11-14 06:43:06,407 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:08,459 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:09,463 INFO spawned: 'npm' with pid 206
+2024-11-14 06:43:10,649 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:10,772 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:43:11,100 INFO spawned: 'composer' with pid 228
+2024-11-14 06:43:12,337 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:12,592 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:13,597 INFO spawned: 'npm' with pid 248
+2024-11-14 06:43:14,599 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:16,724 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:17,728 INFO spawned: 'npm' with pid 259
+2024-11-14 06:43:18,738 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:19,465 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:43:20,469 INFO spawned: 'composer' with pid 281
+2024-11-14 06:43:20,912 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:21,914 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:21,917 INFO spawned: 'npm' with pid 301
+2024-11-14 06:43:22,919 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:24,975 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:24,982 INFO spawned: 'npm' with pid 312
+2024-11-14 06:43:25,985 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:28,087 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:28,390 INFO spawned: 'npm' with pid 332
+2024-11-14 06:43:28,764 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:43:29,767 INFO spawned: 'composer' with pid 345
+2024-11-14 06:43:29,768 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:31,010 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:31,510 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:32,513 INFO spawned: 'npm' with pid 365
+2024-11-14 06:43:33,516 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:35,559 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:36,563 INFO spawned: 'npm' with pid 376
+2024-11-14 06:43:37,655 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:37,672 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:43:38,177 INFO spawned: 'composer' with pid 398
+2024-11-14 06:43:39,421 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:39,720 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:40,723 INFO spawned: 'npm' with pid 418
+2024-11-14 06:43:41,878 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:43,866 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:44,870 INFO spawned: 'npm' with pid 429
+2024-11-14 06:43:46,131 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:46,507 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:43:46,537 INFO spawned: 'composer' with pid 451
+2024-11-14 06:43:47,754 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:48,084 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:49,089 INFO spawned: 'npm' with pid 471
+2024-11-14 06:43:50,091 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:52,214 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:53,218 INFO spawned: 'npm' with pid 482
+2024-11-14 06:43:54,284 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:54,638 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:43:54,891 INFO spawned: 'composer' with pid 504
+2024-11-14 06:43:56,114 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:43:56,426 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:43:57,430 INFO spawned: 'npm' with pid 524
+2024-11-14 06:43:58,433 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:00,607 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:01,610 INFO spawned: 'npm' with pid 535
+2024-11-14 06:44:02,608 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:03,332 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:44:04,335 INFO spawned: 'composer' with pid 557
+2024-11-14 06:44:04,764 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:05,765 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:05,768 INFO spawned: 'npm' with pid 577
+2024-11-14 06:44:06,770 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:08,908 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:09,394 INFO spawned: 'npm' with pid 588
+2024-11-14 06:44:10,512 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:12,467 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:12,573 INFO spawned: 'npm' with pid 603
+2024-11-14 06:44:13,299 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:44:14,210 INFO spawned: 'composer' with pid 621
+2024-11-14 06:44:14,211 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:15,438 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:15,754 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:16,759 INFO spawned: 'npm' with pid 641
+2024-11-14 06:44:17,761 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:19,935 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:20,939 INFO spawned: 'npm' with pid 652
+2024-11-14 06:44:22,078 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:22,451 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:44:22,573 INFO spawned: 'composer' with pid 674
+2024-11-14 06:44:23,793 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:24,065 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:25,070 INFO spawned: 'npm' with pid 694
+2024-11-14 06:44:26,072 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:28,143 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:29,147 INFO spawned: 'npm' with pid 705
+2024-11-14 06:44:30,250 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:30,618 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:44:30,769 INFO spawned: 'composer' with pid 727
+2024-11-14 06:44:31,996 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:32,235 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:33,238 INFO spawned: 'npm' with pid 747
+2024-11-14 06:44:34,240 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:36,357 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:36,750 INFO spawned: 'npm' with pid 758
+2024-11-14 06:44:37,867 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:39,825 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:39,933 INFO spawned: 'npm' with pid 773
+2024-11-14 06:44:40,661 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:44:41,543 INFO spawned: 'composer' with pid 791
+2024-11-14 06:44:41,547 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:42,766 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:43,075 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:44,079 INFO spawned: 'npm' with pid 811
+2024-11-14 06:44:45,081 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:47,301 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:48,305 INFO spawned: 'npm' with pid 822
+2024-11-14 06:44:49,442 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:49,812 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:44:49,945 INFO spawned: 'composer' with pid 844
+2024-11-14 06:44:51,160 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:51,427 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:52,431 INFO spawned: 'npm' with pid 864
+2024-11-14 06:44:53,433 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:55,510 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:56,254 INFO spawned: 'npm' with pid 875
+2024-11-14 06:44:57,374 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:44:59,343 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:44:59,442 INFO spawned: 'npm' with pid 890
+2024-11-14 06:45:00,156 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:45:01,085 INFO spawned: 'composer' with pid 908
+2024-11-14 06:45:01,086 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:02,316 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:02,591 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:03,596 INFO spawned: 'npm' with pid 928
+2024-11-14 06:45:04,598 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:06,748 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:07,753 INFO spawned: 'npm' with pid 939
+2024-11-14 06:45:08,950 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:09,654 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:45:10,657 INFO spawned: 'composer' with pid 961
+2024-11-14 06:45:10,867 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:10,898 INFO spawned: 'npm' with pid 979
+2024-11-14 06:45:11,899 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:11,899 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:14,026 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:14,821 INFO spawned: 'npm' with pid 992
+2024-11-14 06:45:15,939 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:17,939 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:18,005 INFO spawned: 'npm' with pid 1007
+2024-11-14 06:45:18,720 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:45:19,665 INFO spawned: 'composer' with pid 1025
+2024-11-14 06:45:19,666 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:20,891 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:21,230 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:22,234 INFO spawned: 'npm' with pid 1045
+2024-11-14 06:45:23,236 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:25,338 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:26,342 INFO spawned: 'npm' with pid 1056
+2024-11-14 06:45:27,426 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:27,794 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:45:27,962 INFO spawned: 'composer' with pid 1078
+2024-11-14 06:45:29,205 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:29,499 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:30,504 INFO spawned: 'npm' with pid 1098
+2024-11-14 06:45:31,506 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:33,579 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:34,583 INFO spawned: 'npm' with pid 1109
+2024-11-14 06:45:35,674 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:36,041 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:45:36,209 INFO spawned: 'composer' with pid 1131
+2024-11-14 06:45:37,433 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:37,715 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:38,719 INFO spawned: 'npm' with pid 1151
+2024-11-14 06:45:39,721 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:41,818 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:42,823 INFO spawned: 'npm' with pid 1162
+2024-11-14 06:45:43,944 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:44,312 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:45:44,452 INFO spawned: 'composer' with pid 1184
+2024-11-14 06:45:45,683 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:45,951 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:46,955 INFO spawned: 'npm' with pid 1204
+2024-11-14 06:45:47,957 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:50,106 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:51,110 INFO spawned: 'npm' with pid 1215
+2024-11-14 06:45:52,270 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:52,391 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:45:52,727 INFO spawned: 'composer' with pid 1237
+2024-11-14 06:45:53,950 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:54,216 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:55,220 INFO spawned: 'npm' with pid 1257
+2024-11-14 06:45:56,222 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:45:58,287 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:45:59,291 INFO spawned: 'npm' with pid 1268
+2024-11-14 06:46:00,332 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:00,686 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:46:00,911 INFO spawned: 'composer' with pid 1290
+2024-11-14 06:46:02,146 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:02,382 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:03,387 INFO spawned: 'npm' with pid 1310
+2024-11-14 06:46:04,389 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:06,544 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:07,548 INFO spawned: 'npm' with pid 1321
+2024-11-14 06:46:08,779 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:09,135 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:46:09,158 INFO spawned: 'composer' with pid 1343
+2024-11-14 06:46:10,396 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:10,660 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:11,664 INFO spawned: 'npm' with pid 1363
+2024-11-14 06:46:12,666 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:14,749 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:15,753 INFO spawned: 'npm' with pid 1374
+2024-11-14 06:46:16,947 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:17,313 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:46:17,386 INFO spawned: 'composer' with pid 1396
+2024-11-14 06:46:18,601 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:18,907 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:19,911 INFO spawned: 'npm' with pid 1416
+2024-11-14 06:46:20,913 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:23,029 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:24,032 INFO spawned: 'npm' with pid 1427
+2024-11-14 06:46:25,057 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:25,774 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:46:26,778 INFO spawned: 'composer' with pid 1449
+2024-11-14 06:46:27,164 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:28,166 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:28,169 INFO spawned: 'npm' with pid 1469
+2024-11-14 06:46:29,171 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:31,297 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:32,301 INFO spawned: 'npm' with pid 1480
+2024-11-14 06:46:33,304 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:34,813 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:46:35,399 INFO spawned: 'composer' with pid 1502
+2024-11-14 06:46:35,422 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:35,642 INFO spawned: 'npm' with pid 1520
+2024-11-14 06:46:36,644 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:36,644 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:38,782 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:39,787 INFO spawned: 'npm' with pid 1533
+2024-11-14 06:46:40,789 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:42,920 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:43,924 INFO spawned: 'npm' with pid 1544
+2024-11-14 06:46:45,250 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:45,618 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:46:46,622 INFO spawned: 'composer' with pid 1566
+2024-11-14 06:46:47,032 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:48,034 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:48,037 INFO spawned: 'npm' with pid 1586
+2024-11-14 06:46:49,039 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:51,180 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:52,184 INFO spawned: 'npm' with pid 1597
+2024-11-14 06:46:53,187 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:54,671 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:46:55,294 INFO spawned: 'composer' with pid 1619
+2024-11-14 06:46:55,310 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:55,538 INFO spawned: 'npm' with pid 1637
+2024-11-14 06:46:56,541 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:56,541 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:46:58,643 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:46:59,647 INFO spawned: 'npm' with pid 1650
+2024-11-14 06:47:00,649 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:02,744 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:03,747 INFO spawned: 'npm' with pid 1661
+2024-11-14 06:47:04,857 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:05,567 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:47:06,571 INFO spawned: 'composer' with pid 1683
+2024-11-14 06:47:06,864 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:07,865 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:07,868 INFO spawned: 'npm' with pid 1703
+2024-11-14 06:47:08,870 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:10,943 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:11,947 INFO spawned: 'npm' with pid 1714
+2024-11-14 06:47:12,950 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:14,430 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:47:15,003 INFO spawned: 'composer' with pid 1736
+2024-11-14 06:47:15,027 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:15,245 INFO spawned: 'npm' with pid 1754
+2024-11-14 06:47:16,247 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:16,247 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:18,351 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:19,355 INFO spawned: 'npm' with pid 1767
+2024-11-14 06:47:20,671 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:22,480 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:22,491 INFO spawned: 'npm' with pid 1780
+2024-11-14 06:47:23,443 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:47:24,116 INFO spawned: 'composer' with pid 1800
+2024-11-14 06:47:24,116 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:25,342 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:25,592 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:26,597 INFO spawned: 'npm' with pid 1820
+2024-11-14 06:47:27,599 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:29,791 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:30,795 INFO spawned: 'npm' with pid 1831
+2024-11-14 06:47:31,829 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:32,554 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:47:33,558 INFO spawned: 'composer' with pid 1853
+2024-11-14 06:47:33,911 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:34,913 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:34,916 INFO spawned: 'npm' with pid 1873
+2024-11-14 06:47:35,918 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:37,995 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:38,006 INFO spawned: 'npm' with pid 1884
+2024-11-14 06:47:39,011 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:41,138 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:41,390 INFO spawned: 'npm' with pid 1904
+2024-11-14 06:47:41,755 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:47:42,759 INFO spawned: 'composer' with pid 1917
+2024-11-14 06:47:42,760 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:44,017 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:44,508 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:45,512 INFO spawned: 'npm' with pid 1937
+2024-11-14 06:47:46,514 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:48,600 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:49,603 INFO spawned: 'npm' with pid 1948
+2024-11-14 06:47:50,769 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:50,890 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:47:51,262 INFO spawned: 'composer' with pid 1970
+2024-11-14 06:47:52,495 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:52,746 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:53,750 INFO spawned: 'npm' with pid 1990
+2024-11-14 06:47:54,752 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:56,859 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:47:57,862 INFO spawned: 'npm' with pid 2001
+2024-11-14 06:47:58,980 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:47:59,094 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:47:59,478 INFO spawned: 'composer' with pid 2023
+2024-11-14 06:48:00,709 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:00,961 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:01,965 INFO spawned: 'npm' with pid 2043
+2024-11-14 06:48:02,967 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:05,188 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:06,192 INFO spawned: 'npm' with pid 2054
+2024-11-14 06:48:07,275 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:07,997 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:48:09,000 INFO spawned: 'composer' with pid 2076
+2024-11-14 06:48:09,300 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:10,302 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:10,305 INFO spawned: 'npm' with pid 2096
+2024-11-14 06:48:11,307 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:13,483 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:14,487 INFO spawned: 'npm' with pid 2107
+2024-11-14 06:48:15,489 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:17,085 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:48:17,602 INFO spawned: 'composer' with pid 2129
+2024-11-14 06:48:17,627 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:17,843 INFO spawned: 'npm' with pid 2147
+2024-11-14 06:48:18,845 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:18,845 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:20,926 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:21,829 INFO spawned: 'npm' with pid 2160
+2024-11-14 06:48:22,946 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:25,002 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:25,004 INFO spawned: 'npm' with pid 2175
+2024-11-14 06:48:25,718 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:48:26,679 INFO spawned: 'composer' with pid 2193
+2024-11-14 06:48:26,680 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:27,914 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:28,160 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:29,164 INFO spawned: 'npm' with pid 2213
+2024-11-14 06:48:30,166 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:32,263 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:33,267 INFO spawned: 'npm' with pid 2224
+2024-11-14 06:48:34,373 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:35,083 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:48:36,086 INFO spawned: 'composer' with pid 2246
+2024-11-14 06:48:36,375 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:37,376 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:37,379 INFO spawned: 'npm' with pid 2266
+2024-11-14 06:48:38,380 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:40,497 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:41,500 INFO spawned: 'npm' with pid 2277
+2024-11-14 06:48:42,502 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:44,243 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:48:44,644 INFO spawned: 'composer' with pid 2299
+2024-11-14 06:48:44,668 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:44,887 INFO spawned: 'npm' with pid 2317
+2024-11-14 06:48:45,889 INFO success: composer entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:45,889 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:48,022 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:49,027 INFO spawned: 'npm' with pid 2330
+2024-11-14 06:48:50,029 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:52,167 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:48:53,171 INFO spawned: 'npm' with pid 2341
+2024-11-14 06:48:54,331 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:48:54,700 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:48:54,819 INFO spawned: 'composer' with pid 2363
+2024-11-14 06:48:58,040 INFO Set uid to user 0 succeeded
+2024-11-14 06:48:58,042 INFO supervisord started with pid 8
+2024-11-14 06:48:59,048 INFO spawned: 'artisan' with pid 11
+2024-11-14 06:48:59,052 INFO spawned: 'composer' with pid 12
+2024-11-14 06:48:59,056 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-14 06:48:59,060 INFO spawned: 'npm' with pid 14
+2024-11-14 06:48:59,063 INFO spawned: 'qrcode' with pid 15
+2024-11-14 06:48:59,272 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:48:59,275 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:48:59,275 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:48:59,275 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:48:59,275 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:48:59,306 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:48:59,422 INFO exited: qrcode (exit status 0; expected)
+2024-11-14 06:49:00,089 INFO exited: laravel-scheduler (exit status 0; expected)
+2024-11-14 06:49:00,721 INFO spawned: 'laravel-scheduler' with pid 55
+2024-11-14 06:49:00,962 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:49:02,471 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:49:09,062 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:50:00,103 INFO exited: laravel-scheduler (exit status 0; expected)
+2024-11-14 06:50:01,108 INFO spawned: 'laravel-scheduler' with pid 117
+2024-11-14 06:50:01,354 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:51:00,941 INFO Set uid to user 0 succeeded
+2024-11-14 06:51:00,943 INFO supervisord started with pid 8
+2024-11-14 06:51:01,947 INFO spawned: 'artisan' with pid 11
+2024-11-14 06:51:01,951 INFO spawned: 'composer' with pid 12
+2024-11-14 06:51:01,955 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-14 06:51:01,960 INFO spawned: 'npm' with pid 14
+2024-11-14 06:51:01,963 INFO spawned: 'qrcode' with pid 15
+2024-11-14 06:51:02,171 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:51:02,171 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:51:02,172 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:51:02,173 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:51:02,211 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:51:02,307 INFO exited: qrcode (exit status 0; expected)
+2024-11-14 06:51:03,632 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:51:05,189 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:51:12,014 INFO exited: composer (exit status 0; expected)
+2024-11-14 06:52:00,094 INFO exited: laravel-scheduler (exit status 0; expected)
+2024-11-14 06:52:01,099 INFO spawned: 'laravel-scheduler' with pid 110
+2024-11-14 06:52:02,717 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:53:00,059 INFO exited: laravel-scheduler (exit status 0; expected)
+2024-11-14 06:53:01,064 INFO spawned: 'laravel-scheduler' with pid 161
+2024-11-14 06:53:02,746 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:54:00,081 INFO exited: laravel-scheduler (exit status 0; expected)
+2024-11-14 06:54:01,085 INFO spawned: 'laravel-scheduler' with pid 212
+2024-11-14 06:54:01,356 WARN exited: laravel-scheduler (exit status 0; not expected)
+2024-11-14 06:54:02,361 INFO spawned: 'laravel-scheduler' with pid 215
+2024-11-14 06:54:02,621 WARN exited: laravel-scheduler (exit status 0; not expected)
+2024-11-14 06:54:04,627 INFO spawned: 'laravel-scheduler' with pid 218
+2024-11-14 06:54:04,886 WARN exited: laravel-scheduler (exit status 0; not expected)
+2024-11-14 06:54:07,893 INFO spawned: 'laravel-scheduler' with pid 221
+2024-11-14 06:54:08,166 WARN exited: laravel-scheduler (exit status 0; not expected)
+2024-11-14 06:54:09,167 INFO gave up: laravel-scheduler entered FATAL state, too many start retries too quickly
+2024-11-14 06:58:32,398 INFO Set uid to user 0 succeeded
+2024-11-14 06:58:32,400 INFO supervisord started with pid 8
+2024-11-14 06:58:33,405 INFO spawned: 'artisan' with pid 11
+2024-11-14 06:58:33,409 INFO spawned: 'composer' with pid 12
+2024-11-14 06:58:33,414 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-14 06:58:33,418 INFO spawned: 'npm' with pid 14
+2024-11-14 06:58:33,421 INFO spawned: 'qrcode' with pid 15
+2024-11-14 06:58:33,641 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:58:33,642 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:58:33,642 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:58:33,643 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 06:58:33,664 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 06:58:33,797 INFO exited: qrcode (exit status 0; expected)
+2024-11-14 06:58:34,798 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 06:58:36,560 INFO exited: npm (exit status 0; expected)
+2024-11-14 06:58:43,125 INFO exited: composer (exit status 0; expected)
+2024-11-14 07:02:04,542 INFO Set uid to user 0 succeeded
+2024-11-14 07:02:04,544 INFO supervisord started with pid 8
+2024-11-14 07:02:05,549 INFO spawned: 'artisan' with pid 11
+2024-11-14 07:02:05,554 INFO spawned: 'composer' with pid 12
+2024-11-14 07:02:05,558 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-14 07:02:05,562 INFO spawned: 'npm' with pid 14
+2024-11-14 07:02:05,566 INFO spawned: 'qrcode' with pid 15
+2024-11-14 07:02:05,775 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 07:02:05,776 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 07:02:05,777 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 07:02:05,778 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 07:02:05,802 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 07:02:05,941 INFO exited: qrcode (exit status 0; expected)
+2024-11-14 07:02:06,942 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 07:02:08,762 INFO exited: npm (exit status 0; expected)
+2024-11-14 07:02:15,729 INFO exited: composer (exit status 0; expected)
+2024-11-14 07:04:22,806 INFO Set uid to user 0 succeeded
+2024-11-14 07:04:22,808 INFO supervisord started with pid 8
+2024-11-14 07:04:23,813 INFO spawned: 'artisan' with pid 11
+2024-11-14 07:04:23,817 INFO spawned: 'composer' with pid 12
+2024-11-14 07:04:23,822 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-14 07:04:23,827 INFO spawned: 'npm' with pid 14
+2024-11-14 07:04:23,830 INFO spawned: 'qrcode' with pid 15
+2024-11-14 07:04:24,059 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 07:04:24,059 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 07:04:24,059 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 07:04:24,060 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-14 07:04:24,068 WARN exited: artisan (exit status 1; not expected)
+2024-11-14 07:04:24,190 INFO exited: qrcode (exit status 0; expected)
+2024-11-14 07:04:25,192 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-14 07:04:27,049 INFO exited: npm (exit status 0; expected)
+2024-11-14 07:04:33,973 INFO exited: composer (exit status 0; expected)

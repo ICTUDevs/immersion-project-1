@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schedule;
 
-app(Schedule::class)->command('generate:qr-codes')->everyFiveSeconds();
+
+// Schedule::command('generate:qr-codes')->dailyAt('07:30');
