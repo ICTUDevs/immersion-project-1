@@ -28,7 +28,9 @@ class AttendanceController extends Controller
 
     public function dashboard()
     {
-        $QrCode = qrcode::latest()->first();
+        $date = now()->toDateString();
+
+        $QrCode = qrcode::whereDate('created_at', $date)->latest()->first();
 
         return inertia('Dashboard', [
             'qrcode' => $QrCode,
@@ -37,7 +39,10 @@ class AttendanceController extends Controller
 
     public function scanner()
     {
-        return inertia('Modules/Attendance/Scanner');
+        $user = auth()->user();
+        return inertia('Modules/Attendance/Scanner', [
+            'users' => $user,
+        ]);
     }
 
     public function store(Request $request)

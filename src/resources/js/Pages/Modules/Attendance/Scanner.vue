@@ -4,6 +4,13 @@ import { QrcodeStream } from "vue3-qrcode-reader";
 // import { onMounted } from 'vue';
 import { ref, computed } from "vue";
 
+const prop = defineProps({
+    users: {
+        type: Array,
+        required: true,
+    },
+});
+
 const result = ref("");
 
 const onDetect = async (detectedCodesPromise) => {
