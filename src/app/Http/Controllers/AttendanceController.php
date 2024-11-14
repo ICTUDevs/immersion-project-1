@@ -65,13 +65,13 @@ class AttendanceController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->route('attendance.scanner')->with('message', $validator->errors());
+            return redirect()->route('attendance.scanner')->with('error', $validator->errors());
         }
 
         $currentDate = Carbon::today()->toDateString();
 
         if ($request->date !== $currentDate) {
-            return redirect()->route('attendance.scanner')->with('message', 'QR Code Expired.');
+            return redirect()->route('attendance.scanner')->with('error', 'QR Code Expired.');
         }
 
         $currentTime = now(); // This will use the configured timezone (Asia/Manila)
@@ -79,8 +79,8 @@ class AttendanceController extends Controller
         $formattedTime = $currentTime->format('H:i:s A');
 
         // Check if the current time is past 5 PM
-        if ($currentTime >= 17) {
-            return redirect()->route('attendance.scanner')->with('message', 'Time-in not allowed past 5 PM.');
+        if ($currentTime->hour >= 17) {
+            return redirect()->route('dashboard')->with('error', 'Time-in not allowed past 5 PM.');
         }
 
         $attendance = Attendance::firstOrNew([
@@ -132,6 +132,6 @@ class AttendanceController extends Controller
 
         $attendance->save();
 
-        return redirect()->route('dashboard')->with('message', $currentTime);
+        return redirect()->route('dashboard')->with('message', 'Attendance Successfull Saved.'. $currentTime->hour);
     }
 }

@@ -42,6 +42,11 @@ const submit = () => {
                     position: toast.POSITION.TOP_RIGHT,
                     autoClose: 2000,
                 });
+            }else{
+                toast.error(page.props.flash.error, {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000,
+                });
             }
         },
     });
