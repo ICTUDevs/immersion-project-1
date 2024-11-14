@@ -33,15 +33,13 @@ class AttendanceController extends Controller
     {
         $date = Carbon::today()->toDateString();
 
-        // Fetch users who have a time-in record for today
-        $usersWithTimeIn = User::whereHas('attendances', function ($query) use ($date) {
-            $query->whereDate('date', $date)
-                ->whereNotNull('am_time_in')
-                ->orWhereNotNull('pm_time_in')
-                ->where('status', 1);
-        })->get();
+        // Fetch users who have a time-in record for today with status 0
+        $usersWithTimeIn = Attendance::with('user')->where('status', 1)->where('date', $date)->get();
 
-        $QrCode = qrcode::whereDate('created_at', $date)->latest()->first();
+        dd($usersWithTimeIn);
+
+        // Fetch the latest QR code created today
+        $QrCode = QrCode::whereDate('created_at', $date)->latest()->first();
 
         return inertia('Dashboard', [
             'qrcode' => $QrCode,
@@ -78,15 +76,12 @@ class AttendanceController extends Controller
         $currentHour = $currentTime->hour;
         $formattedTime = $currentTime->format('H:i:s A');
 
-        // Check if the current time is past 5 PM
-        if ($currentTime->hour >= 17) {
-            return redirect()->route('dashboard')->with('error', 'Time-in not allowed past 5 PM.');
-        }
-
         $attendance = Attendance::firstOrNew([
             'user_id' => $request->user_id,
             'date' => $request->date,
         ]);
+
+        $formattedTime = $currentTime->format('h:i:s A'); // Format to 12-hour format
 
         if ($currentHour < 12) {
             // Morning
@@ -99,14 +94,36 @@ class AttendanceController extends Controller
             }
         } else {
             // Afternoon
-            if (is_null($attendance->pm_time_in)) {
+            if (is_null($attendance->am_time_in) && is_null($attendance->am_time_out) && $currentHour >= 12) {
+                // If both am_time_in and am_time_out are null and current time is past 12 PM, store time in pm_time_in
                 $attendance->pm_time_in = $formattedTime;
                 $attendance->status = 1;
+            } elseif (is_null($attendance->pm_time_in)) {
+                if (!is_null($attendance->am_time_in) && $currentHour >= 12 && $currentHour < 13) {
+                    // If am_time_in is not null and current time is past 12 PM but before 1 PM, store time in am_time_out
+                    $attendance->am_time_out = $formattedTime;
+                    $attendance->status = 0;
+                } elseif (is_null($attendance->am_time_out) && $currentHour >= 13) {
+                    // If current time is past 1 PM and am_time_out is still null, store time in pm_time_in
+                    $attendance->pm_time_in = $formattedTime;
+                    $attendance->status = 1;
+                }
             } elseif (is_null($attendance->pm_time_out) && $attendance->pm_time_in->diffInMinutes($currentTime) >= 15) {
                 $attendance->pm_time_out = $formattedTime;
                 $attendance->status = 0;
             }
         }
+
+        // Automatically set pm_time_in to current time if am_time_out is null and the current time is past 1 PM
+        if (is_null($attendance->am_time_out) && $currentHour >= 13 && is_null($attendance->pm_time_in)) {
+            $attendance->pm_time_in = $formattedTime;
+        }
+
+        // Automatically set pm_time_out to 5 PM if it is missing and the current time is past 5 PM
+        if (is_null($attendance->pm_time_out) && $currentHour >= 17) {
+            $attendance->pm_time_out = Carbon::createFromTime(17, 0, 0)->format('h:i:s A');
+        }
+
 
         // Calculate undertime
         $morningHours = 0;
@@ -132,6 +149,6 @@ class AttendanceController extends Controller
 
         $attendance->save();
 
-        return redirect()->route('dashboard')->with('message', 'Attendance Successfull Saved.'. $currentTime->hour);
+        return redirect()->route('dashboard')->with('message', 'Attendance Successfull Saved.' . $currentTime->hour);
     }
 }
