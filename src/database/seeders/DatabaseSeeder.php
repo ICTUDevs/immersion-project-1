@@ -16,10 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Web Support',
-            'email' => 'support.web@antiquespride.edu.ph',
-            'password' => bcrypt('Shinra23'),
-        ]);
+        $user = User::where('id', 1)->first();
+
+        $user->assignRole('superadmin');
     }
 }

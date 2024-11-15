@@ -8,6 +8,7 @@ import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 import { format } from "date-fns";
 import { initFlowbite } from "flowbite";
+import { io } from "socket.io";
 
 onMounted(() => {
     initFlowbite();
@@ -73,15 +74,6 @@ const fetchUsers = async () => {
         console.error("Error fetching users:", error);
     }
 };
-
-Echo.private("updates")
-    .listen("RefreshUser", (e) => {
-        console.log("RefreshUser event received:", e);
-        fetchUsers();
-    })
-    .error((error) => {
-        console.error("Error listening to channel:", error);
-    });
 
 const form = useForm({
     user_id: prop.users.id,
