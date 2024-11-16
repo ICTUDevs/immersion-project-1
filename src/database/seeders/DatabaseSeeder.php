@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'John Doe',
-            'email' => 'asloquinario@antiquespride.edu.ph',
+            'name' => 'Web Support',
+            'email' => 'support.web@antiquespride.edu.ph',
             'password' => bcrypt('Shinra23'),
         ]);
     }

@@ -21,45 +21,52 @@ Route::controller(GoogleController::class)->group(fn() => [
     Route::get('/auth/google/callback', 'handleGoogleCallback')
 ]);
 
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
 
-    Route::prefix('system')
-        ->name('system.')
-        ->controller(SystemController::class)
-        ->group(fn() => [
-            Route::get('user', 'user')->name('user'),
-            Route::get('create', 'createUser')->name('user.create'),
-            Route::get('user/{hashedId}', 'editUser')->name('user.edit'),
+    Route::middleware('isAdmin')->group(fn() => [
+        Route::prefix('system')
+            ->name('system.')
+            ->controller(SystemController::class)
+            ->group(fn() => [
+                Route::get('user', 'user')->name('user'),
+                Route::get('create', 'createUser')->name('user.create'),
+                Route::get('user/{hashedId}', 'editUser')->name('user.edit'),
 
 
-            Route::get('permission', 'permission')->name('permission'),
-            Route::get('permission/create', 'createPermission')->name('permission.create'),
-            Route::get('permission/edit/{hashedId}', 'editPermission')->name('permission.edit'),
+                Route::get('permission', 'permission')->name('permission'),
+                Route::get('permission/create', 'createPermission')->name('permission.create'),
+                Route::get('permission/edit/{hashedId}', 'editPermission')->name('permission.edit'),
 
-            Route::get('role', 'role')->name('role'),
-            Route::get('role/create', 'createRole')->name('role.create'),
-            Route::get('role/edit/{hashedId}', 'editRole')->name('role.edit'),
-            Route::get('role/permission/{hashedId}', 'viewPermission')->name('role.permission'),
+                Route::get('role', 'role')->name('role'),
+                Route::get('role/create', 'createRole')->name('role.create'),
+                Route::get('role/edit/{hashedId}', 'editRole')->name('role.edit'),
+                Route::get('role/permission/{hashedId}', 'viewPermission')->name('role.permission'),
 
-            Route::post('permission', 'storePermission')->name('permission.store'),
-            Route::post('role', 'storeRole')->name('role.store'),
-            Route::post('user', 'storeUser')->name('user.store'),
+                Route::post('permission', 'storePermission')->name('permission.store'),
+                Route::post('role', 'storeRole')->name('role.store'),
+                Route::post('user', 'storeUser')->name('user.store'),
 
-            Route::put('role/{hashedId}', 'assignPermission')->name('role.permission.update'),
-            Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
-            Route::put('user/update/{hashedId}', 'updateUser')->name('user.update'),
-        ]);
+                Route::put('role/{hashedId}', 'assignPermission')->name('role.permission.update'),
+                Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
+                Route::put('user/update/{hashedId}', 'updateUser')->name('user.update'),
+            ])
+    ]);
+
 
     Route::prefix('attendance')
         ->name('attendance.')
         ->controller(AttendanceController::class)
         ->group(fn() => [
 
-            Route::get('index', 'index')->name('index'),
+            Route::middleware('isAdmin')->group(fn() => [
+                Route::get('index', 'index')->name('index'),
+            ]),
             Route::get('scanner', 'scanner')->name('scanner'),
             Route::get('fetchUser', 'fetchUser')->name('fetchUser'),
 

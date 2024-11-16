@@ -29,10 +29,10 @@ const onDetect = async (detectedCodesPromise) => {
         submit();
         scannerVisible.value = false;
     } catch (error) {
-        console.error('Error detecting codes:', error);
-        result.value = 'Error detecting codes';
+        console.error("Error detecting codes:", error);
+        result.value = "Error detecting codes";
     }
-}
+};
 
 const submit = () => {
     form.post(route("attendance.store"), {
@@ -76,7 +76,7 @@ const onCameraReady = async () => {
     ];
 
     error.value = "";
-}
+};
 
 /*** track functions ***/
 
@@ -95,7 +95,7 @@ const paintOutline = (detectedCodes, ctx) => {
         ctx.closePath();
         ctx.stroke();
     }
-}
+};
 const paintBoundingBox = (detectedCodes, ctx) => {
     for (const detectedCode of detectedCodes) {
         const {
@@ -106,7 +106,7 @@ const paintBoundingBox = (detectedCodes, ctx) => {
         ctx.strokeStyle = "#007bff";
         ctx.strokeRect(x, y, width, height);
     }
-}
+};
 const paintCenterText = (detectedCodes, ctx) => {
     for (const detectedCode of detectedCodes) {
         const { boundingBox, rawValue } = detectedCode;
@@ -129,7 +129,7 @@ const paintCenterText = (detectedCodes, ctx) => {
         ctx.fillStyle = "#5cb984";
         ctx.fillText(rawValue, centerX, centerY);
     }
-}
+};
 const trackFunctionOptions = [
     { text: "nothing (default)", value: undefined },
     { text: "outline", value: paintOutline },
@@ -174,7 +174,7 @@ const onError = (err) => {
     } else {
         error.value += err.message;
     }
-}
+};
 </script>
 
 <style scoped>
@@ -207,10 +207,7 @@ const onError = (err) => {
                     <div class="p-8">
                         <div class="w-full justify-center flex">
                             <div>
-                                <button @click="scannerVisible = !scannerVisible" class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 disabled:opacity-50 transition ease-in-out duration-150" >
-                                    {{ scannerVisible ? 'Close Scanner' : 'Open Scanner' }}
-                                </button>
-                                <div v-if="scannerVisible" class="pt-10 rounded-full ">
+                                <div class="pb-10 rounded-full">
                                     <qrcode-stream
                                         :constraints="selectedConstraints"
                                         :track="trackFunctionSelected.value"
@@ -220,6 +217,12 @@ const onError = (err) => {
                                         @camera-on="onCameraReady"
                                     />
                                 </div>
+                                <Link
+                                    :href="route('dashboard')"
+                                    class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 disabled:opacity-50 transition ease-in-out duration-150"
+                                >
+                                    Close Scanner
+                                </Link>
                             </div>
                         </div>
                         <div v-if="error" class="error">{{ error }}</div>

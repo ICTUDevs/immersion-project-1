@@ -2,8 +2,9 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Http\Request;
 use Inertia\Middleware;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -36,7 +37,35 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
-            //
+            'isSuperadmin' => fn() => Auth::check() ? (function () {
+                $user = Auth::user();
+
+                if ($user->hasRole('superadmin')) {
+                    return true;
+                }
+
+                return false;
+            })() : false,
+
+            'isAdmin' => fn() => Auth::check() ? (function () {
+                $user = Auth::user();
+
+                if ($user->hasRole('administrator')) {
+                    return true;
+                }
+
+                return false;
+            })() : false,
+
+            'isOJT' => fn() => Auth::check() ? (function () {
+                $user = Auth::user();
+
+                if ($user->hasRole('ojt')) {
+                    return true;
+                }
+
+                return false;
+            })() : false
         ]);
     }
 }

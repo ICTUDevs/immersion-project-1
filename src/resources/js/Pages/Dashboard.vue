@@ -1,14 +1,23 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 import axios from "axios";
+import { QrcodeStream } from "vue3-qrcode-reader";
+import { router, useForm } from "@inertiajs/vue3";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
+import { format } from "date-fns";
+import { initFlowbite } from "flowbite";
 
-const props = defineProps({
-    qrcode: Array,
-    users: Array,
+onMounted(() => {
+    initFlowbite();
 });
 
-console.log(props.users);
+const prop = defineProps({
+    qrcode: Array,
+    users: Array,
+    user: Array,
+});
 
 const currentDate = ref(new Date());
 const formattedDate = ref(
@@ -54,25 +63,195 @@ onUnmounted(() => {
     clearInterval(intervalId);
 });
 
-const users = ref(props.users);
+const users = ref(prop.users);
 
 const fetchUsers = async () => {
     try {
-        const response = await axios.get('attendance/fetchUser');
+        const response = await axios.get("attendance/fetchUser");
         users.value = response.data;
     } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error("Error fetching users:", error);
     }
 };
 
-Echo.private('updates')
-    .listen('RefreshUser', (e) => {
-        console.log('RefreshUser event received:', e);
+Echo.private("updates")
+    .listen("RefreshUser", (e) => {
+        console.log("RefreshUser event received:", e);
         fetchUsers();
     })
     .error((error) => {
-        console.error('Error listening to channel:', error);
+        console.error("Error listening to channel:", error);
     });
+
+const form = useForm({
+    user_id: prop.users.id,
+    date: "",
+});
+
+const result = ref("");
+const scannerVisible = ref(false); // Ref to control the visibility of the scanner
+
+const onDetect = async (detectedCodesPromise) => {
+    try {
+        const detectedCodes = await detectedCodesPromise;
+        result.value = detectedCodes.content;
+        form.date = detectedCodes.content;
+        submit();
+        scannerVisible.value = false;
+    } catch (error) {
+        console.error("Error detecting codes:", error);
+        result.value = "Error detecting codes";
+    }
+};
+
+const submit = () => {
+    form.post(route("attendance.store"), {
+        preserveScroll: true,
+        onSuccess: (page) => {
+            form.reset();
+            if (page.props.flash.message) {
+                toast.success(page.props.flash.message, {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000,
+                });
+            } else {
+                toast.error(page.props.flash.error, {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000,
+                });
+            }
+        },
+    });
+};
+
+/*** select camera ***/
+
+const selectedConstraints = ref({ facingMode: "environment" });
+const defaultConstraintOptions = [
+    { label: "rear camera", constraints: { facingMode: "environment" } },
+    { label: "front camera", constraints: { facingMode: "user" } },
+];
+const constraintOptions = ref(defaultConstraintOptions);
+
+const onCameraReady = async () => {
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    const videoDevices = devices.filter(({ kind }) => kind === "videoinput");
+
+    constraintOptions.value = [
+        ...defaultConstraintOptions,
+        ...videoDevices.map(({ deviceId, label }) => ({
+            label: `${label} (ID: ${deviceId})`,
+            constraints: { deviceId },
+        })),
+    ];
+
+    error.value = "";
+};
+
+/*** track functions ***/
+
+const paintOutline = (detectedCodes, ctx) => {
+    for (const detectedCode of detectedCodes) {
+        const [firstPoint, ...otherPoints] = detectedCode.cornerPoints;
+
+        ctx.strokeStyle = "red";
+
+        ctx.beginPath();
+        ctx.moveTo(firstPoint.x, firstPoint.y);
+        for (const { x, y } of otherPoints) {
+            ctx.lineTo(x, y);
+        }
+        ctx.lineTo(firstPoint.x, firstPoint.y);
+        ctx.closePath();
+        ctx.stroke();
+    }
+};
+const paintBoundingBox = (detectedCodes, ctx) => {
+    for (const detectedCode of detectedCodes) {
+        const {
+            boundingBox: { x, y, width, height },
+        } = detectedCode;
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#007bff";
+        ctx.strokeRect(x, y, width, height);
+    }
+};
+const paintCenterText = (detectedCodes, ctx) => {
+    for (const detectedCode of detectedCodes) {
+        const { boundingBox, rawValue } = detectedCode;
+
+        const centerX = boundingBox.x + boundingBox.width / 2;
+        const centerY = boundingBox.y + boundingBox.height / 2;
+
+        const fontSize = Math.max(
+            12,
+            (50 * boundingBox.width) / ctx.canvas.width
+        );
+
+        ctx.font = `bold ${fontSize}px sans-serif`;
+        ctx.textAlign = "center";
+
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "#35495e";
+        ctx.strokeText(detectedCode.rawValue, centerX, centerY);
+
+        ctx.fillStyle = "#5cb984";
+        ctx.fillText(rawValue, centerX, centerY);
+    }
+};
+const trackFunctionOptions = [
+    { text: "nothing (default)", value: undefined },
+    { text: "outline", value: paintOutline },
+    { text: "centered text", value: paintCenterText },
+    { text: "bounding box", value: paintBoundingBox },
+];
+const trackFunctionSelected = ref(trackFunctionOptions[1]);
+
+/*** barcode formats ***/
+
+const barcodeFormats = ref({
+    qr_code: true,
+});
+const selectedBarcodeFormats = computed(() => {
+    return Object.keys(barcodeFormats.value).filter(
+        (format) => barcodeFormats.value[format]
+    );
+});
+
+/*** error handling ***/
+
+const error = ref("");
+
+const onError = (err) => {
+    error.value = `[${err.name}]: `;
+
+    if (err.name === "NotAllowedError") {
+        error.value += "you need to grant camera access permission";
+    } else if (err.name === "NotFoundError") {
+        error.value += "no camera on this device";
+    } else if (err.name === "NotSupportedError") {
+        error.value += "secure context required (HTTPS, localhost)";
+    } else if (err.name === "NotReadableError") {
+        error.value += "is the camera already in use?";
+    } else if (err.name === "OverconstrainedError") {
+        error.value += "installed cameras are not suitable";
+    } else if (err.name === "StreamApiNotSupportedError") {
+        error.value += "Stream API is not supported in this browser";
+    } else if (err.name === "InsecureContextError") {
+        error.value +=
+            "Camera access is only permitted in secure context. Use HTTPS or localhost rather than HTTP.";
+    } else {
+        error.value += err.message;
+    }
+};
+
+const formatTime = (datetime) => {
+    if (!datetime) {
+        return "";
+    }
+    return format(new Date(datetime), "hh:mm:ss a");
+};
 </script>
 
 <template>
@@ -87,14 +266,17 @@ Echo.private('updates')
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div
-                    class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg text-center"
+                    class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg"
                 >
-                    <div class="grid grid-flow-col grid-cols-2 gap-2">
+                    <div
+                        class="grid grid-flow-col grid-cols-2 gap-2 text-center"
+                        v-if="$page.props.isSuperadmin"
+                    >
                         <div class="p-8">
                             <h1
-                                class="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white"
+                                class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white"
                             >
-                                ICTU OJT Attendance Tracker
+                                Attendance Tracker
                             </h1>
                             <p
                                 class="mb-4 lg:text-xl font-normal text-gray-500 dark:text-gray-400"
@@ -164,6 +346,165 @@ Echo.private('updates')
                                             </div>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8" v-if="$page.props.isOJT">
+                        <div class="w-full justify-center flex">
+                            <div>
+                                <Link
+                                    :href="route('attendance.scanner')"
+                                    class="inline-flex items-end px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 disabled:opacity-50 transition ease-in-out duration-150"
+                                >
+                                    Open Scanner
+                                </Link>
+                            </div>
+                        </div>
+                        <div v-if="error" class="error">{{ error }}</div>
+                        <div class="pt-10" v-if="$page.props.isOJT">
+                            <div>
+                                <div class="relative overflow-x-auto">
+                                    <table
+                                        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                                    >
+                                        <thead
+                                            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
+                                        >
+                                            <tr>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 border text-center"
+                                                ></th>
+                                                <th
+                                                    scope="col"
+                                                    colspan="2"
+                                                    class="px-6 py-3 text-center border"
+                                                >
+                                                    AM
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    colspan="2"
+                                                    class="px-6 py-3 text-center border"
+                                                >
+                                                    PM
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    colspan="2"
+                                                    class="px-6 py-3 text-center border"
+                                                >
+                                                    Undertime / Late
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 border text-center"
+                                                >
+                                                    Log Date
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 border text-center"
+                                                >
+                                                    Arrival
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 border text-center"
+                                                >
+                                                    Departure
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 border text-center"
+                                                >
+                                                    Arrival
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 border text-center"
+                                                >
+                                                    Departure
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 border text-center"
+                                                >
+                                                    Hours
+                                                </th>
+                                                <th
+                                                    scope="col"
+                                                    class="px-6 py-3 border text-center"
+                                                >
+                                                    Minutes
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                v-for="(item, index) in user"
+                                                :key="item.id"
+                                                class="bg-white border dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                                            >
+                                                <td
+                                                    class="px-6 py-4 border text-center"
+                                                >
+                                                    {{ item.date }}
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 border text-center"
+                                                >
+                                                    {{
+                                                        formatTime(
+                                                            item.am_time_in
+                                                        )
+                                                    }}
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 border text-center"
+                                                >
+                                                    {{
+                                                        formatTime(
+                                                            item.am_time_out
+                                                        )
+                                                    }}
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 border text-center"
+                                                >
+                                                    {{
+                                                        formatTime(
+                                                            item.pm_time_in
+                                                        )
+                                                    }}
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 border text-center"
+                                                >
+                                                    {{
+                                                        formatTime(
+                                                            item.pm_time_out
+                                                        )
+                                                    }}
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 border text-center"
+                                                >
+                                                    {{ item.hours_under_time }}
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 border text-center"
+                                                >
+                                                    {{
+                                                        item.minutes_under_time
+                                                    }}
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

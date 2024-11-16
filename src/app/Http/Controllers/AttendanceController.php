@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\RefreshUser;
 use Carbon\Carbon;
-use App\Models\User;
 use App\Models\qrcode;
 use App\Models\attendance;
+use App\Events\RefreshUser;
 use Illuminate\Http\Request;
 use Vinkla\Hashids\Facades\Hashids;
 use Illuminate\Support\Facades\Validator;
@@ -34,17 +33,16 @@ class AttendanceController extends Controller
     {
         $date = Carbon::today()->toDateString();
 
-        // Fetch users who have a time-in record for today with status 0
-        $usersWithTimeIn = Attendance::with('user')->where('status', 1)->where('date', $date)->get();
-
-        // dd($usersWithTimeIn);
+        // Fetch users who have a time-in record for today with status 1
+        $usersWithTimeIn = attendance::with('user')->where('status', 1)->where('date', $date)->get();
+        $user = attendance::with('user')->where('user_id', auth()->user()->id)->orderBy('date', 'asc')->get();
 
         // Fetch the latest QR code created today
         $QrCode = QrCode::whereDate('created_at', $date)->latest()->first();
-
         return inertia('Dashboard', [
             'qrcode' => $QrCode,
             'users' => $usersWithTimeIn,
+            'user' => $user
         ]);
     }
 
@@ -56,7 +54,8 @@ class AttendanceController extends Controller
         ]);
     }
 
-    public function fetchUser(){
+    public function fetchUser()
+    {
         $date = Carbon::today()->toDateString();
 
         // Fetch users who have a time-in record for today with status 0
@@ -109,11 +108,7 @@ class AttendanceController extends Controller
             }
         } else {
             // Afternoon
-            if (is_null($attendance->am_time_in) && is_null($attendance->am_time_out) && $currentHour >= 12) {
-                // If both am_time_in and am_time_out are null and current time is past 12 PM, store time in pm_time_in
-                $attendance->pm_time_in = $formattedTime;
-                $attendance->status = 1;
-            } elseif (is_null($attendance->pm_time_in)) {
+            if (is_null($attendance->pm_time_in)) {
                 if (!is_null($attendance->am_time_in) && $currentHour >= 12 && $currentHour < 13 && is_null($attendance->am_time_out)) {
                     // If am_time_in is not null and current time is past 12 PM but before 1 PM, store time in am_time_out
                     $attendance->am_time_out = $formattedTime;
@@ -126,16 +121,9 @@ class AttendanceController extends Controller
                     // If current time is past 1 PM and am_time_out is still null, store time in pm_time_in
                     $attendance->pm_time_in = $formattedTime;
                     $attendance->status = 1;
-                } elseif (!is_null($attendance->am_time_out) && $attendance->am_time_out->diffInMinutes($currentTime) >= 15) {
-                    // If am_time_out is not null and there is a 15-minute interval, store time in pm_time_in
-                    $attendance->pm_time_in = $formattedTime;
-                    $attendance->status = 1;
-                } elseif (is_null($attendance->am_time_out) && $currentHour >= 13) {
-                    // If current time is past 1 PM and am_time_out is still null, store time in pm_time_in
-                    $attendance->pm_time_in = $formattedTime;
-                    $attendance->status = 1;
                 }
-            } elseif (is_null($attendance->pm_time_out) && $attendance->pm_time_in->diffInMinutes($currentTime) >= 15) {
+            } elseif (!is_null($attendance->pm_time_in) && is_null($attendance->pm_time_out) && $attendance->pm_time_in->diffInMinutes($currentTime) >= 15) {
+                // If pm_time_in is not null and there is a 15-minute interval, store time in pm_time_out
                 $attendance->pm_time_out = $formattedTime;
                 $attendance->status = 0;
             }
