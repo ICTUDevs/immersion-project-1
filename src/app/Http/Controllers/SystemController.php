@@ -27,6 +27,14 @@ class SystemController extends Controller
         ]);
     }
 
+    public function createUser()
+    {
+        $role = Role::all();
+        return inertia('Modules/System/User/Create', [
+            'roles' => $role,
+        ]);
+    }
+
     public function editUser($hashed_id)
     {
         $id = Hashids::decode($hashed_id)[0];
@@ -195,5 +203,30 @@ class SystemController extends Controller
         $role->syncPermissions($request->permission_id);
 
         return redirect()->route('system.role')->with('message', 'Permission assigned.');
+    }
+
+    public function storeUser(Request $request)
+    {
+        sleep(1);
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'roles' => 'required|array',
+        ]);
+
+        $email = $request->input('email');
+        $username = strstr($email, '@', true);
+        $currentYear = date('Y');
+        $password = bcrypt($username . '@' . $currentYear . '!');
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $password,
+        ]);
+
+        $user->assignRole($request->roles);
+
+        return redirect()->route('system.user')->with('message', 'Created successfully');
     }
 }

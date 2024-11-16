@@ -19,6 +19,7 @@ const form = useForm({
 });
 
 const result = ref("");
+const scannerVisible = ref(false); // Ref to control the visibility of the scanner
 
 const onDetect = async (detectedCodesPromise) => {
     try {
@@ -26,6 +27,7 @@ const onDetect = async (detectedCodesPromise) => {
         result.value = detectedCodes.content;
         form.date = detectedCodes.content;
         submit();
+        scannerVisible.value = false;
     } catch (error) {
         console.error('Error detecting codes:', error);
         result.value = 'Error detecting codes';
@@ -42,7 +44,7 @@ const submit = () => {
                     position: toast.POSITION.TOP_RIGHT,
                     autoClose: 2000,
                 });
-            }else{
+            } else {
                 toast.error(page.props.flash.error, {
                     position: toast.POSITION.TOP_RIGHT,
                     autoClose: 2000,
@@ -62,10 +64,6 @@ const defaultConstraintOptions = [
 const constraintOptions = ref(defaultConstraintOptions);
 
 const onCameraReady = async () => {
-    // NOTE: on iOS we can't invoke `enumerateDevices` before the user has given
-    // camera access permission. `QrcodeStream` internally takes care of
-    // requesting the permissions. The `camera-on` event should guarantee that this
-    // has happened.
     const devices = await navigator.mediaDevices.enumerateDevices();
     const videoDevices = devices.filter(({ kind }) => kind === "videoinput");
 
@@ -80,7 +78,7 @@ const onCameraReady = async () => {
     error.value = "";
 }
 
-/*** track functons ***/
+/*** track functions ***/
 
 const paintOutline = (detectedCodes, ctx) => {
     for (const detectedCode of detectedCodes) {
@@ -209,11 +207,10 @@ const onError = (err) => {
                     <div class="p-8">
                         <div class="w-full justify-center flex">
                             <div>
-                                <p class="decode-result">
-                                    Last result: <b>{{ result }}</b>
-                                </p>
-
-                                <div>
+                                <button @click="scannerVisible = !scannerVisible" class="inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 disabled:opacity-50 transition ease-in-out duration-150" >
+                                    {{ scannerVisible ? 'Close Scanner' : 'Open Scanner' }}
+                                </button>
+                                <div v-if="scannerVisible" class="pt-10 rounded-full ">
                                     <qrcode-stream
                                         :constraints="selectedConstraints"
                                         :track="trackFunctionSelected.value"
@@ -225,6 +222,7 @@ const onError = (err) => {
                                 </div>
                             </div>
                         </div>
+                        <div v-if="error" class="error">{{ error }}</div>
                     </div>
                 </div>
             </div>

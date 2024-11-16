@@ -1,11 +1,14 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
 import { ref, onMounted, onUnmounted } from "vue";
+import axios from "axios";
 
 const props = defineProps({
     qrcode: Array,
     users: Array,
 });
+
+console.log(props.users);
 
 const currentDate = ref(new Date());
 const formattedDate = ref(
@@ -50,6 +53,26 @@ onMounted(() => {
 onUnmounted(() => {
     clearInterval(intervalId);
 });
+
+const users = ref(props.users);
+
+const fetchUsers = async () => {
+    try {
+        const response = await axios.get('attendance/fetchUser');
+        users.value = response.data;
+    } catch (error) {
+        console.error('Error fetching users:', error);
+    }
+};
+
+Echo.private('updates')
+    .listen('RefreshUser', (e) => {
+        console.log('RefreshUser event received:', e);
+        fetchUsers();
+    })
+    .error((error) => {
+        console.error('Error listening to channel:', error);
+    });
 </script>
 
 <template>
@@ -118,34 +141,25 @@ onUnmounted(() => {
                                         :key="item.id"
                                     >
                                         <li class="py-3 sm:py-4">
-                                            <div class="flex items-center">
-                                                <div class="flex-shrink-0">
-                                                    <img
-                                                        class="w-8 h-8 rounded-full"
-                                                        :src="item.profile_photo_url"
-                                                        alt="Neil image"
-                                                    />
-                                                </div>
+                                            <div
+                                                class="flex items-center gap-2 border p-2 rounded-lg"
+                                            >
+                                                <img
+                                                    class="w-8 h-8 rounded-full"
+                                                    :src="
+                                                        item.user
+                                                            .profile_photo_url
+                                                    "
+                                                    alt="Neil image"
+                                                />
                                                 <div
-                                                    class="flex-1 min-w-0 ms-4"
+                                                    class="flex flex-column min-w-0 ms-4"
                                                 >
                                                     <p
                                                         class="text-sm font-medium text-gray-900 truncate dark:text-white"
                                                     >
-                                                        {{ item.name }}
+                                                        {{ item.user.name }}
                                                     </p>
-                                                    <p
-                                                        class="text-sm text-gray-500 truncate dark:text-gray-400"
-                                                    >
-                                                        {{ item.email }}
-                                                    </p>
-                                                </div>
-                                                <div
-                                                    class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
-                                                >
-                                                    <span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400">
-                                                        on duty
-                                                    </span>
                                                 </div>
                                             </div>
                                         </li>

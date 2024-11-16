@@ -1216,3 +1216,315 @@
 2024-11-14 07:04:25,192 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2024-11-14 07:04:27,049 INFO exited: npm (exit status 0; expected)
 2024-11-14 07:04:33,973 INFO exited: composer (exit status 0; expected)
+2024-11-15 01:06:33,071 INFO Set uid to user 0 succeeded
+2024-11-15 01:06:33,078 INFO supervisord started with pid 8
+2024-11-15 01:06:34,083 INFO spawned: 'artisan' with pid 11
+2024-11-15 01:06:34,085 INFO spawned: 'composer' with pid 12
+2024-11-15 01:06:34,087 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-15 01:06:34,090 INFO spawned: 'npm' with pid 14
+2024-11-15 01:06:34,093 INFO spawned: 'qrcode' with pid 16
+2024-11-15 01:06:34,315 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-15 01:06:34,316 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-15 01:06:34,316 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-15 01:06:34,316 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-15 01:06:35,117 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-15 01:06:35,133 WARN exited: artisan (exit status 1; not expected)
+2024-11-15 01:06:35,350 WARN exited: qrcode (exit status 1; not expected)
+2024-11-15 01:06:37,738 INFO exited: npm (exit status 0; expected)
+2024-11-15 01:06:48,820 INFO exited: composer (exit status 0; expected)
+2024-11-16 09:37:32,581 INFO Set uid to user 0 succeeded
+2024-11-16 09:37:32,584 INFO supervisord started with pid 8
+2024-11-16 09:37:33,598 INFO spawned: 'artisan' with pid 11
+2024-11-16 09:37:33,602 INFO spawned: 'composer' with pid 12
+2024-11-16 09:37:33,605 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-16 09:37:33,609 INFO spawned: 'npm' with pid 14
+2024-11-16 09:37:33,613 INFO spawned: 'qrcode' with pid 17
+2024-11-16 09:37:33,618 INFO spawned: 'queue-worker' with pid 20
+2024-11-16 09:37:33,622 INFO spawned: 'reverb' with pid 21
+2024-11-16 09:37:33,869 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:33,870 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:33,871 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:33,871 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:33,871 INFO success: queue-worker entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:33,872 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:34,744 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-16 09:37:34,771 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:34,825 INFO spawned: 'reverb' with pid 61
+2024-11-16 09:37:34,828 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:34,863 INFO exited: qrcode (exit status 0; expected)
+2024-11-16 09:37:35,291 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:35,765 INFO spawned: 'reverb' with pid 64
+2024-11-16 09:37:35,769 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:35,777 WARN exited: artisan (exit status 1; not expected)
+2024-11-16 09:37:36,083 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:36,224 INFO spawned: 'reverb' with pid 67
+2024-11-16 09:37:36,225 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:36,237 INFO exited: npm (exit status 0; expected)
+2024-11-16 09:37:36,532 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:37,536 INFO spawned: 'reverb' with pid 70
+2024-11-16 09:37:37,669 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:37,862 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:38,865 INFO spawned: 'reverb' with pid 73
+2024-11-16 09:37:39,221 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:39,227 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:40,231 INFO spawned: 'reverb' with pid 76
+2024-11-16 09:37:40,570 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:40,575 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:41,577 INFO spawned: 'reverb' with pid 79
+2024-11-16 09:37:41,959 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:41,965 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:42,560 INFO spawned: 'reverb' with pid 82
+2024-11-16 09:37:42,601 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:42,948 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:42,977 INFO spawned: 'reverb' with pid 89
+2024-11-16 09:37:42,982 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:43,397 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:43,398 INFO spawned: 'reverb' with pid 95
+2024-11-16 09:37:43,711 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:43,741 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:43,990 INFO spawned: 'reverb' with pid 102
+2024-11-16 09:37:44,057 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:44,071 INFO exited: composer (exit status 0; expected)
+2024-11-16 09:37:44,261 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:45,270 INFO spawned: 'reverb' with pid 105
+2024-11-16 09:37:45,538 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:45,543 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:46,552 INFO spawned: 'reverb' with pid 108
+2024-11-16 09:37:46,828 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:46,832 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:47,840 INFO spawned: 'reverb' with pid 111
+2024-11-16 09:37:48,101 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:48,105 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:49,111 INFO spawned: 'reverb' with pid 114
+2024-11-16 09:37:49,402 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:49,406 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:50,413 INFO spawned: 'reverb' with pid 117
+2024-11-16 09:37:50,678 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:50,682 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:51,693 INFO spawned: 'reverb' with pid 120
+2024-11-16 09:37:51,960 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:51,964 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:52,971 INFO spawned: 'reverb' with pid 123
+2024-11-16 09:37:53,245 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:53,249 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:54,255 INFO spawned: 'reverb' with pid 126
+2024-11-16 09:37:54,525 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:54,529 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:55,538 INFO spawned: 'reverb' with pid 129
+2024-11-16 09:37:55,804 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:55,808 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:56,816 INFO spawned: 'reverb' with pid 132
+2024-11-16 09:37:57,250 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:57,278 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:58,285 INFO spawned: 'reverb' with pid 135
+2024-11-16 09:37:58,588 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:58,592 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:37:59,605 INFO spawned: 'reverb' with pid 138
+2024-11-16 09:37:59,876 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:37:59,881 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:00,888 INFO spawned: 'reverb' with pid 141
+2024-11-16 09:38:01,147 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:01,151 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:02,155 INFO spawned: 'reverb' with pid 144
+2024-11-16 09:38:02,564 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:02,568 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:03,574 INFO spawned: 'reverb' with pid 147
+2024-11-16 09:38:04,063 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:04,072 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:05,077 INFO spawned: 'reverb' with pid 150
+2024-11-16 09:38:05,340 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:05,345 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:06,351 INFO spawned: 'reverb' with pid 153
+2024-11-16 09:38:06,617 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:06,621 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:07,629 INFO spawned: 'reverb' with pid 156
+2024-11-16 09:38:07,895 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:07,900 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:08,907 INFO spawned: 'reverb' with pid 159
+2024-11-16 09:38:09,165 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:09,170 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:10,177 INFO spawned: 'reverb' with pid 162
+2024-11-16 09:38:10,439 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:10,444 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:11,452 INFO spawned: 'reverb' with pid 165
+2024-11-16 09:38:11,713 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:11,717 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:12,721 INFO spawned: 'reverb' with pid 168
+2024-11-16 09:38:12,982 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:12,986 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:13,990 INFO spawned: 'reverb' with pid 171
+2024-11-16 09:38:14,238 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:14,242 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:15,247 INFO spawned: 'reverb' with pid 174
+2024-11-16 09:38:15,520 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:15,524 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:16,531 INFO spawned: 'reverb' with pid 177
+2024-11-16 09:38:16,802 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:16,807 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:17,817 INFO spawned: 'reverb' with pid 180
+2024-11-16 09:38:18,085 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:18,096 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:19,105 INFO spawned: 'reverb' with pid 183
+2024-11-16 09:38:19,552 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:19,560 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:20,570 INFO spawned: 'reverb' with pid 186
+2024-11-16 09:38:20,836 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:20,840 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:21,849 INFO spawned: 'reverb' with pid 189
+2024-11-16 09:38:22,171 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:22,176 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:23,182 INFO spawned: 'reverb' with pid 192
+2024-11-16 09:38:23,447 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:23,451 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:24,461 INFO spawned: 'reverb' with pid 195
+2024-11-16 09:38:24,745 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:24,750 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:25,757 INFO spawned: 'reverb' with pid 198
+2024-11-16 09:38:26,016 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:26,020 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:27,024 INFO spawned: 'reverb' with pid 201
+2024-11-16 09:38:27,320 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:27,327 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:28,334 INFO spawned: 'reverb' with pid 204
+2024-11-16 09:38:28,600 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:28,604 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:29,611 INFO spawned: 'reverb' with pid 207
+2024-11-16 09:38:29,874 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:29,878 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:30,885 INFO spawned: 'reverb' with pid 210
+2024-11-16 09:38:31,152 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:31,157 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:32,163 INFO spawned: 'reverb' with pid 213
+2024-11-16 09:38:32,431 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:32,436 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:33,443 INFO spawned: 'reverb' with pid 216
+2024-11-16 09:38:33,728 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:33,732 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:34,739 INFO spawned: 'reverb' with pid 219
+2024-11-16 09:38:34,996 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:35,002 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:36,011 INFO spawned: 'reverb' with pid 222
+2024-11-16 09:38:36,283 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:36,287 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:37,296 INFO spawned: 'reverb' with pid 225
+2024-11-16 09:38:37,559 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:37,563 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:38,570 INFO spawned: 'reverb' with pid 228
+2024-11-16 09:38:38,837 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:38,844 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:39,850 INFO spawned: 'reverb' with pid 231
+2024-11-16 09:38:40,111 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:40,115 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:41,120 INFO spawned: 'reverb' with pid 234
+2024-11-16 09:38:41,374 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:41,379 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:42,385 INFO spawned: 'reverb' with pid 237
+2024-11-16 09:38:42,650 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:42,655 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:43,663 INFO spawned: 'reverb' with pid 240
+2024-11-16 09:38:43,940 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:43,945 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:44,955 INFO spawned: 'reverb' with pid 243
+2024-11-16 09:38:45,231 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:45,236 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:46,241 INFO spawned: 'reverb' with pid 246
+2024-11-16 09:38:46,510 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:46,514 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:47,520 INFO spawned: 'reverb' with pid 249
+2024-11-16 09:38:47,767 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:47,772 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:48,777 INFO spawned: 'reverb' with pid 252
+2024-11-16 09:38:49,046 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:49,050 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:50,058 INFO spawned: 'reverb' with pid 255
+2024-11-16 09:38:50,318 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:50,323 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:51,326 INFO spawned: 'reverb' with pid 258
+2024-11-16 09:38:51,584 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:51,588 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:52,590 INFO spawned: 'reverb' with pid 261
+2024-11-16 09:38:52,961 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:52,965 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:53,970 INFO spawned: 'reverb' with pid 264
+2024-11-16 09:38:54,245 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:54,249 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:55,259 INFO spawned: 'reverb' with pid 267
+2024-11-16 09:38:55,542 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:55,547 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:56,552 INFO spawned: 'reverb' with pid 270
+2024-11-16 09:38:56,807 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:56,811 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:57,818 INFO spawned: 'reverb' with pid 273
+2024-11-16 09:38:58,088 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:58,093 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:38:59,096 INFO spawned: 'reverb' with pid 276
+2024-11-16 09:38:59,658 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:38:59,663 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:00,665 INFO spawned: 'reverb' with pid 279
+2024-11-16 09:39:01,441 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:01,446 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:02,452 INFO spawned: 'reverb' with pid 282
+2024-11-16 09:39:02,718 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:02,723 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:03,725 INFO spawned: 'reverb' with pid 285
+2024-11-16 09:39:04,006 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:04,011 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:05,019 INFO spawned: 'reverb' with pid 288
+2024-11-16 09:39:05,318 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:05,323 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:06,333 INFO spawned: 'reverb' with pid 291
+2024-11-16 09:39:06,595 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:06,599 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:07,603 INFO spawned: 'reverb' with pid 294
+2024-11-16 09:39:07,861 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:07,866 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:08,873 INFO spawned: 'reverb' with pid 297
+2024-11-16 09:39:09,136 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:09,140 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:10,147 INFO spawned: 'reverb' with pid 300
+2024-11-16 09:39:10,402 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:10,407 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:13,026 INFO Set uid to user 0 succeeded
+2024-11-16 09:39:13,029 INFO supervisord started with pid 8
+2024-11-16 09:39:14,036 INFO spawned: 'artisan' with pid 11
+2024-11-16 09:39:14,040 INFO spawned: 'composer' with pid 12
+2024-11-16 09:39:14,045 INFO spawned: 'laravel-scheduler' with pid 13
+2024-11-16 09:39:14,049 INFO spawned: 'npm' with pid 14
+2024-11-16 09:39:14,052 INFO spawned: 'qrcode' with pid 16
+2024-11-16 09:39:14,056 INFO spawned: 'queue-worker' with pid 20
+2024-11-16 09:39:14,059 INFO spawned: 'reverb' with pid 21
+2024-11-16 09:39:14,260 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:14,260 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:14,261 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:14,261 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:14,262 INFO success: queue-worker entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:14,262 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:39:14,836 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:39:14,890 INFO exited: qrcode (exit status 0; expected)
+2024-11-16 09:39:15,818 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-16 09:39:15,829 WARN exited: artisan (exit status 1; not expected)
+2024-11-16 09:39:16,263 INFO exited: npm (exit status 0; expected)
+2024-11-16 09:39:23,317 INFO exited: composer (exit status 0; expected)
+2024-11-16 09:40:15,042 WARN exited: queue-worker (exit status 1; not expected)
+2024-11-16 09:40:29,303 INFO Set uid to user 0 succeeded
+2024-11-16 09:40:29,307 INFO supervisord started with pid 9
+2024-11-16 09:40:30,315 INFO spawned: 'artisan' with pid 12
+2024-11-16 09:40:30,322 INFO spawned: 'composer' with pid 13
+2024-11-16 09:40:30,328 INFO spawned: 'laravel-scheduler' with pid 14
+2024-11-16 09:40:30,335 INFO spawned: 'npm' with pid 15
+2024-11-16 09:40:30,338 INFO spawned: 'qrcode' with pid 17
+2024-11-16 09:40:30,341 INFO spawned: 'queue-worker' with pid 19
+2024-11-16 09:40:30,354 INFO spawned: 'reverb' with pid 22
+2024-11-16 09:40:30,713 INFO success: artisan entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:40:30,715 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:40:30,715 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:40:30,715 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:40:30,716 INFO success: queue-worker entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:40:30,716 INFO success: reverb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-16 09:40:31,719 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-16 09:40:31,756 WARN exited: reverb (exit status 1; not expected)
+2024-11-16 09:40:31,780 WARN exited: artisan (exit status 1; not expected)
+2024-11-16 09:40:31,788 WARN exited: queue-worker (exit status 1; not expected)
+2024-11-16 09:40:31,846 WARN exited: qrcode (exit status 1; not expected)
+2024-11-16 09:40:33,403 INFO exited: npm (exit status 0; expected)
+2024-11-16 09:40:41,618 INFO exited: composer (exit status 0; expected)

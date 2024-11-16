@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\AttendanceController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\SystemController;
+use App\Http\Controllers\AttendanceController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -14,6 +15,11 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::controller(GoogleController::class)->group(fn() => [
+    Route::get('/auth/google/redirect', 'handleGoogleRedirect')->name('auth.google.redirect'),
+    Route::get('/auth/google/callback', 'handleGoogleCallback')
+]);
 
 Route::middleware([
     'auth:sanctum',
@@ -26,6 +32,7 @@ Route::middleware([
         ->controller(SystemController::class)
         ->group(fn() => [
             Route::get('user', 'user')->name('user'),
+            Route::get('create', 'createUser')->name('user.create'),
             Route::get('user/{hashedId}', 'editUser')->name('user.edit'),
 
 
@@ -40,6 +47,7 @@ Route::middleware([
 
             Route::post('permission', 'storePermission')->name('permission.store'),
             Route::post('role', 'storeRole')->name('role.store'),
+            Route::post('user', 'storeUser')->name('user.store'),
 
             Route::put('role/{hashedId}', 'assignPermission')->name('role.permission.update'),
             Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
@@ -53,6 +61,7 @@ Route::middleware([
 
             Route::get('index', 'index')->name('index'),
             Route::get('scanner', 'scanner')->name('scanner'),
+            Route::get('fetchUser', 'fetchUser')->name('fetchUser'),
 
 
             Route::get('create', 'create')->name('create'),
