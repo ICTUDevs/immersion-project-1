@@ -7,12 +7,15 @@ import InputError from "@/Components/InputError.vue";
 import InputLabel from "@/Components/InputLabel.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import TextInput from "@/Components/TextInput.vue";
+import { ref } from "vue";
 
 const props = defineProps({
     canResetPassword: Boolean,
     status: String,
     Oauth_status: Boolean,
 });
+
+const isLogin = ref(false);
 
 console.log(props.Oauth_status);
 
@@ -83,13 +86,10 @@ const submit = () => {
             <hr
                 class="w-full h-px my-6 bg-gray-200 border-0 dark:bg-gray-700"
             />
-            <span
-                class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900"
-                >or</span
-            >
+    
         </div>
 
-        <form @submit.prevent="submit">
+        <form @submit.prevent="submit" v-if="isLogin" >
             <div>
                 <InputLabel for="email" value="Email" />
                 <TextInput

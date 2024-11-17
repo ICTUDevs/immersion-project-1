@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center w-full gap-3 px-10">
+                        <div class="flex items-center w-full gap-3 px-10" v-if="$page.props.canAssignRole">
                             <div class="grid gap-4 mb-4 grid-cols-2 w-full">
                                 <div class="col-span-2">
                                     <label

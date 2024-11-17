@@ -54,7 +54,7 @@
                                             <Link
                                                 :href="route('system.user.create')"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                                >New Role
+                                                >New User
                                             </Link>
                                         </li>
                                     </ul>
@@ -166,6 +166,50 @@
                                 </tr>
                             </tbody>
                         </table>
+                         <!-- Pagination -->
+                         <div
+                            class="flex flex-row justify-between items-center mt-5 p-4 border rounded-sm"
+                        >
+                            <!-- Help text -->
+                            <span
+                                class="text-sm text-gray-700 dark:text-gray-400"
+                            >
+                                Showing
+                                <span
+                                    class="font-semibold text-gray-900 dark:text-white"
+                                    >{{ users.from }}</span
+                                >
+                                to
+                                <span
+                                    class="font-semibold text-gray-900 dark:text-white"
+                                    >{{ users.to }}</span
+                                >
+                                of
+                                <span
+                                    class="font-semibold text-gray-900 dark:text-white"
+                                    >{{ users.total }}</span
+                                >
+                                Entries
+                            </span>
+
+                            <nav aria-label="Page navigation example">
+                                <ul class="inline-flex -space-x-px text-sm">
+                                    <Link
+                                        v-for="link in users.links"
+                                        :key="link.label"
+                                        :href="link.url"
+                                        v-html="link.label"
+                                        :class="{
+                                            'text-slate-300 hover:text-slate-300 hover:bg-transparent pointer-events-none':
+                                                !link.url,
+                                            'text-blue-600 font-medium':
+                                                link.active,
+                                        }"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                                    ></Link>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>

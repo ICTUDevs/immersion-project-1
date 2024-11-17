@@ -59,7 +59,7 @@ const logout = () => {
                                 </NavLink>
                             </div>
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex" v-if="$page.props.isSuperadmin">
-                                <NavLink :href="route('system.user')" :active="route().current('system.user')">
+                                <NavLink :href="route('system.user')" :active="route().current('system.user') || route().current('system.user.create')">
                                     System User
                                 </NavLink>
                             </div>

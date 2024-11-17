@@ -65,7 +65,17 @@ class HandleInertiaRequests extends Middleware
                 }
 
                 return false;
-            })() : false
+            })() : false,
+
+            'canAssignRole' => fn() => Auth::check() ? (function () {
+                $user = Auth::user();
+
+                if ($user->can('can assign a role')) {
+                    return true;
+                }
+
+                return false;
+            })() : false,
         ]);
     }
 }
