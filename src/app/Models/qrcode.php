@@ -8,6 +8,7 @@ class qrcode extends Model
 {
     protected $fillable = [
         'type',
-        'code'
+        'code',
+        'qr_code',
     ];
 }

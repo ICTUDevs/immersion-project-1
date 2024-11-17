@@ -17,22 +17,7 @@ const form = useForm({
     user_id: prop.users.id,
     date: "",
 });
-
 const result = ref("");
-const scannerVisible = ref(false); // Ref to control the visibility of the scanner
-
-const onDetect = async (detectedCodesPromise) => {
-    try {
-        const detectedCodes = await detectedCodesPromise;
-        result.value = detectedCodes.content;
-        form.date = detectedCodes.content;
-        submit();
-        scannerVisible.value = false;
-    } catch (error) {
-        console.error("Error detecting codes:", error);
-        result.value = "Error detecting codes";
-    }
-};
 
 const submit = () => {
     form.post(route("attendance.store"), {
@@ -54,127 +39,40 @@ const submit = () => {
     });
 };
 
-/*** select camera ***/
+const paused = ref(false);
+const showScanConfirmation = ref(false);
 
-const selectedConstraints = ref({ facingMode: "environment" });
-const defaultConstraintOptions = [
-    { label: "rear camera", constraints: { facingMode: "environment" } },
-    { label: "front camera", constraints: { facingMode: "user" } },
-];
-const constraintOptions = ref(defaultConstraintOptions);
-
-const onCameraReady = async () => {
-    const devices = await navigator.mediaDevices.enumerateDevices();
-    const videoDevices = devices.filter(({ kind }) => kind === "videoinput");
-
-    constraintOptions.value = [
-        ...defaultConstraintOptions,
-        ...videoDevices.map(({ deviceId, label }) => ({
-            label: `${label} (ID: ${deviceId})`,
-            constraints: { deviceId },
-        })),
-    ];
-
-    error.value = "";
+const onCameraOn = () => {
+    showScanConfirmation.value = false;
 };
 
-/*** track functions ***/
+const onCameraOff = () => {
+    showScanConfirmation.value = true;
+};
 
-const paintOutline = (detectedCodes, ctx) => {
-    for (const detectedCode of detectedCodes) {
-        const [firstPoint, ...otherPoints] = detectedCode.cornerPoints;
+const onError = (error) => {
+    console.error(error);
+};
 
-        ctx.strokeStyle = "red";
-
-        ctx.beginPath();
-        ctx.moveTo(firstPoint.x, firstPoint.y);
-        for (const { x, y } of otherPoints) {
-            ctx.lineTo(x, y);
-        }
-        ctx.lineTo(firstPoint.x, firstPoint.y);
-        ctx.closePath();
-        ctx.stroke();
+const onDetect = async (detectedCodes) => {
+    try {
+        detectedCodes = await detectedCodes;
+        result.value = detectedCodes.content;
+        form.date = detectedCodes.content;
+        await timeout(500);
+        submit();
+    } catch (error) {
+        console.error("Error detecting codes:", error);
+        result.value = "Error detecting codes";
     }
 };
-const paintBoundingBox = (detectedCodes, ctx) => {
-    for (const detectedCode of detectedCodes) {
-        const {
-            boundingBox: { x, y, width, height },
-        } = detectedCode;
 
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "#007bff";
-        ctx.strokeRect(x, y, width, height);
-    }
+const timeout = (ms) => {
+    return new Promise((resolve) => {
+        window.setTimeout(resolve, ms);
+    });
 };
-const paintCenterText = (detectedCodes, ctx) => {
-    for (const detectedCode of detectedCodes) {
-        const { boundingBox, rawValue } = detectedCode;
 
-        const centerX = boundingBox.x + boundingBox.width / 2;
-        const centerY = boundingBox.y + boundingBox.height / 2;
-
-        const fontSize = Math.max(
-            12,
-            (50 * boundingBox.width) / ctx.canvas.width
-        );
-
-        ctx.font = `bold ${fontSize}px sans-serif`;
-        ctx.textAlign = "center";
-
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = "#35495e";
-        ctx.strokeText(detectedCode.rawValue, centerX, centerY);
-
-        ctx.fillStyle = "#5cb984";
-        ctx.fillText(rawValue, centerX, centerY);
-    }
-};
-const trackFunctionOptions = [
-    { text: "nothing (default)", value: undefined },
-    { text: "outline", value: paintOutline },
-    { text: "centered text", value: paintCenterText },
-    { text: "bounding box", value: paintBoundingBox },
-];
-const trackFunctionSelected = ref(trackFunctionOptions[1]);
-
-/*** barcode formats ***/
-
-const barcodeFormats = ref({
-    qr_code: true,
-});
-const selectedBarcodeFormats = computed(() => {
-    return Object.keys(barcodeFormats.value).filter(
-        (format) => barcodeFormats.value[format]
-    );
-});
-
-/*** error handling ***/
-
-const error = ref("");
-
-const onError = (err) => {
-    error.value = `[${err.name}]: `;
-
-    if (err.name === "NotAllowedError") {
-        error.value += "you need to grant camera access permission";
-    } else if (err.name === "NotFoundError") {
-        error.value += "no camera on this device";
-    } else if (err.name === "NotSupportedError") {
-        error.value += "secure context required (HTTPS, localhost)";
-    } else if (err.name === "NotReadableError") {
-        error.value += "is the camera already in use?";
-    } else if (err.name === "OverconstrainedError") {
-        error.value += "installed cameras are not suitable";
-    } else if (err.name === "StreamApiNotSupportedError") {
-        error.value += "Stream API is not supported in this browser";
-    } else if (err.name === "InsecureContextError") {
-        error.value +=
-            "Camera access is only permitted in secure context. Use HTTPS or localhost rather than HTTP.";
-    } else {
-        error.value += err.message;
-    }
-};
 </script>
 
 <style scoped>
@@ -187,35 +85,43 @@ const onError = (err) => {
     white-space: nowrap;
     display: inline-block;
 }
+.scan-confirmation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
 </style>
 
 <template>
     <AppLayout title="Scanner">
         <template #header>
-            <h2
-                class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight"
-            >
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 Scanner
             </h2>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div
-                    class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg text-center"
-                >
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg text-center">
                     <div class="p-8">
                         <div class="w-full justify-center flex">
                             <div>
                                 <div class="pb-10 rounded-full">
                                     <qrcode-stream
-                                        :constraints="selectedConstraints"
-                                        :track="trackFunctionSelected.value"
-                                        :formats="selectedBarcodeFormats"
-                                        @error="onError"
+                                        :paused="paused"
                                         @detect="onDetect"
-                                        @camera-on="onCameraReady"
-                                    />
+                                        @camera-on="onCameraOn"
+                                        @camera-off="onCameraOff"
+                                        @error="onError"
+                                    >
+                                        <div v-show="showScanConfirmation" class="scan-confirmation">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQWN-SLzk5eeEuA9zBJKzsM0qbvtLsKDfJ-w&s" alt="Checkmark" width="128" />
+                                        </div>
+                                    </qrcode-stream>
                                 </div>
                                 <Link
                                     :href="route('dashboard')"
@@ -232,12 +138,3 @@ const onError = (err) => {
         </div>
     </AppLayout>
 </template>
-
-<style scoped>
-#qrcode-stream {
-    width: 25%;
-    height: 25%;
-    max-width: 400px;
-    max-height: 400px;
-}
-</style>

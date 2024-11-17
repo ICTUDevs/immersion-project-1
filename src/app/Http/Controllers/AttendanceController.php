@@ -38,6 +38,8 @@ class AttendanceController extends Controller
         $usersWithTimeIn = attendance::with('user')->where('status', 1)->where('date', $date)->get();
         $user = attendance::with('user')->where('user_id', auth()->user()->id)->orderBy('date', 'asc')->get();
 
+
+
         // Fetch the latest QR code created today
         $QrCode = QrCode::whereDate('created_at', $date)->latest()->first();
         return inertia('Dashboard', [
@@ -69,7 +71,6 @@ class AttendanceController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'user_id' => 'required',
-            'date' => 'required|date',
         ]);
 
         if ($validator->fails()) {
@@ -78,7 +79,20 @@ class AttendanceController extends Controller
 
         $currentDate = Carbon::today()->toDateString();
 
-        if ($request->date !== $currentDate) {
+        $latestQRCode = qrcode::whereDate('created_at', $currentDate)->latest()->first();
+
+        if ($latestQRCode->qr_code !== $request->date) {
+            return redirect()->route('attendance.scanner')->with('error', 'Invalid QR Code.');
+        }
+
+        $qrCodeContent = $request->date;
+        $dateParts = explode('-', $qrCodeContent);
+        if (count($dateParts) < 3) {
+            return redirect()->route('attendance.scanner')->with('error', 'Invalid QR Code format.');
+        }
+        $currentDates = implode('-', array_slice($dateParts, 0, 3));
+
+        if ($currentDates !== $currentDate) {
             return redirect()->route('attendance.scanner')->with('error', 'QR Code Expired.');
         }
 
@@ -88,7 +102,7 @@ class AttendanceController extends Controller
 
         $attendance = Attendance::firstOrNew([
             'user_id' => $request->user_id,
-            'date' => $request->date,
+            'date' => $currentDate,
         ]);
 
         $formattedTime = $currentTime->format('h:i:s A'); // Format to 12-hour format
@@ -110,7 +124,11 @@ class AttendanceController extends Controller
         } else {
             // Afternoon
             if (is_null($attendance->pm_time_in)) {
-                if (!is_null($attendance->am_time_in) && $currentHour >= 12 && $currentHour < 13 && is_null($attendance->am_time_out)) {
+                if (is_null($attendance->am_time_in) && $currentHour >= 12 && $currentHour < 13 && is_null($attendance->am_time_out)) {
+                    // If am_time_in is not null and current time is past 12 PM but before 1 PM, store time in am_time_out
+                    $attendance->pm_time_in = $formattedTime;
+                    $attendance->status = 1;
+                } elseif (!is_null($attendance->am_time_in) && $currentHour >= 12 && $currentHour < 13 && is_null($attendance->am_time_out)) {
                     // If am_time_in is not null and current time is past 12 PM but before 1 PM, store time in am_time_out
                     $attendance->am_time_out = $formattedTime;
                     $attendance->status = 0;
