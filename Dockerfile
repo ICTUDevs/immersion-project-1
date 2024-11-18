@@ -19,7 +19,7 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 COPY run-scheduler.sh /usr/local/bin/run-scheduler.sh
 
-COPY delete-qr-code.sh /usr/local/bin/delete-qr-code.sh
+COPY run-delete-qr-code.sh /usr/local/bin/run-delete-qr-code.sh
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/run-scheduler.sh
