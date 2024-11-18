@@ -104,7 +104,7 @@ const formatTime = (datetime) => {
                 >
                     <div
                         class="grid grid-flow-col grid-cols-2 gap-2 text-center"
-                        v-if="$page.props.isSuperadmin"
+                        v-if="$page.props.isSuperAdmin || $page.props.isTimeKeeper"
                     >
                         <div class="p-8">
                             <h1

@@ -18,6 +18,7 @@
                             class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4"
                         >
                             <div
+                                v-if="$page.props.isSuperAdmin"
                                 class="flex flex-row items-center justify-between"
                             >
                                 <div>
@@ -167,6 +168,7 @@
                                             >Edit
                                         </Link>
                                         <a
+                                            v-if="$page.props.isSuperAdmin"
                                             role="button"
                                             @click="
                                                 () =>

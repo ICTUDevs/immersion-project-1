@@ -25,6 +25,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'isAdmin' => \App\Http\Middleware\AdminMiddleware::class,
             'sessionAdmin' => \App\Http\Middleware\SessionMiddleware::class,
             'isOJT' => \App\Http\Middleware\OJTMiddleware::class,
+            'isSuperadmin' => \App\Http\Middleware\SuperAdminMiddleware::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

@@ -29,39 +29,46 @@ Route::middleware([
     'verified',
 ])->group(function () {
 
-    Route::middleware('isAdmin')->group(fn() => [
-        Route::prefix('system')
-            ->name('system.')
-            ->controller(SystemController::class)
-            ->group(fn() => [
+
+    Route::prefix('system')
+        ->name('system.')
+        ->controller(SystemController::class)
+        ->group(fn() => [
+            Route::middleware('isAdmin')->group(fn() => [
                 Route::get('user', 'user')->name('user'),
-                Route::get('create', 'createUser')->name('user.create'),
                 Route::get('user/{hashedId}', 'editUser')->name('user.edit'),
+                Route::put('user/update/{hashedId}', 'updateUser')->name('user.update'),
+            ]),
+
+            Route::middleware('isSuperadmin')->group(fn() => [
+
+                Route::get('create', 'createUser')->name('user.create'),
+                Route::post('user', 'storeUser')->name('user.store'),
+                Route::delete('user/{hashedId}', 'destroyUser')->name('user.delete'),
 
 
                 Route::get('permission', 'permission')->name('permission'),
                 Route::get('permission/create', 'createPermission')->name('permission.create'),
                 Route::get('permission/edit/{hashedId}', 'editPermission')->name('permission.edit'),
 
+                Route::post('permission', 'storePermission')->name('permission.store'),
+                Route::delete('permission/{hashedId}', 'destroyPermission')->name('permission.delete'),
+                Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
+
                 Route::get('role', 'role')->name('role'),
                 Route::get('role/create', 'createRole')->name('role.create'),
                 Route::get('role/edit/{hashedId}', 'editRole')->name('role.edit'),
                 Route::get('role/permission/{hashedId}', 'viewPermission')->name('role.permission'),
 
-                Route::post('permission', 'storePermission')->name('permission.store'),
                 Route::post('role', 'storeRole')->name('role.store'),
-                Route::post('user', 'storeUser')->name('user.store'),
 
                 Route::put('role/{hashedId}', 'assignPermission')->name('role.permission.update'),
-                Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
-                Route::put('user/update/{hashedId}', 'updateUser')->name('user.update'),
 
 
-                Route::delete('user/{hashedId}', 'destroyUser')->name('user.delete'),
-                Route::delete('permission/{hashedId}', 'destroyPermission')->name('permission.delete'),
                 Route::delete('role/{hashedId}', 'destroyRole')->name('role.delete'),
-            ])
-    ]);
+            ]),
+
+        ]);
 
 
     Route::prefix('attendance')

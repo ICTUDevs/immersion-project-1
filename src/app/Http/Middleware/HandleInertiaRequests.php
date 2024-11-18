@@ -37,7 +37,7 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
-            'isSuperadmin' => fn() => Auth::check() ? (function () {
+            'isSuperAdmin' => fn() => Auth::check() ? (function () {
                 $user = Auth::user();
 
                 if ($user->hasRole('superadmin')) {
@@ -71,6 +71,16 @@ class HandleInertiaRequests extends Middleware
                 $user = Auth::user();
 
                 if ($user->can('can assign a role')) {
+                    return true;
+                }
+
+                return false;
+            })() : false,
+
+            'isTimeKeeper' => fn() => Auth::check() ? (function () {
+                $user = Auth::user();
+
+                if ($user->hasRole('timekeeper')) {
                     return true;
                 }
 

@@ -55,6 +55,7 @@
                                         Undertime / Late
                                     </th>
                                     <th
+                                        v-if="$page.props.isSuperAdmin"
                                         scope="col"
                                         colspan="2"
                                         class="px-6 py-3 text-center border"
@@ -101,6 +102,7 @@
                                         Minute(s)
                                     </th>
                                     <th
+                                        v-if="$page.props.isSuperAdmin"
                                         scope="col"
                                         class="px-6 py-3 border text-center"
                                     >
@@ -135,7 +137,7 @@
                                     <td class="px-6 py-4 border text-center">
                                         {{ user.minutes_under_time }}
                                     </td>
-                                    <td class="px-6 py-4 border text-center">
+                                    <td class="px-6 py-4 border text-center" v-if="$page.props.isSuperAdmin">
                                         <Link
                                             class="text-blue-600 hover:underline mx-1 dark:text-blue-400 dark:hover:text-blue-600"
                                             :href="
