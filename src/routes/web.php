@@ -55,6 +55,11 @@ Route::middleware([
                 Route::put('role/{hashedId}', 'assignPermission')->name('role.permission.update'),
                 Route::put('permission/{hashedId}', 'updatePermission')->name('permission.update'),
                 Route::put('user/update/{hashedId}', 'updateUser')->name('user.update'),
+
+
+                Route::delete('user/{hashedId}', 'destroyUser')->name('user.delete'),
+                Route::delete('permission/{hashedId}', 'destroyPermission')->name('permission.delete'),
+                Route::delete('role/{hashedId}', 'destroyRole')->name('role.delete'),
             ])
     ]);
 
@@ -80,7 +85,7 @@ Route::middleware([
             Route::put('update/{hashedId}', 'update')->name('update'),
             Route::put('log/update/{hashedId}/{hashed_id}', 'updateLog')->name('log.update'),
 
-            Route::delete('delete/{hashedId}', 'destroy')->name('delete'),
+            Route::delete('delete/{hashedId}/{hashed_id}', 'destroy')->name('delete'),
         ]);
 
     Route::controller(AttendanceController::class)->group(fn() => [

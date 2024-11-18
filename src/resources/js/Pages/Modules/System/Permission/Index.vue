@@ -18,7 +18,7 @@
                             class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4"
                         >
                             <div
-                                class="flex flex-row items-center justify-between mb-4"
+                                class="flex flex-row items-center justify-between"
                             >
                                 <div>
                                     <!-- Action Dropdown -->
@@ -91,7 +91,8 @@
                                     </svg>
                                 </div>
                                 <input
-                                    type="text"
+                                    type="search"
+                                    v-model="search"
                                     id="table-search"
                                     class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Search for items"
@@ -106,10 +107,7 @@
                             >
                                 <tr>
                                     <th scope="col" class="px-6 py-3">Name</th>
-                                    <th scope="col" class="px-6 py-3">
-                                        Date Created
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    <th scope="col" class="px-6 py-3 text-center">
                                         Action
                                     </th>
                                 </tr>
@@ -123,10 +121,7 @@
                                     <td class="px-6 py-4">
                                         {{ permission.name }}
                                     </td>
-                                    <td class="px-6 py-4">
-                                        {{ getDate(permission.created_at) }}
-                                    </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-6 py-4 text-center">
                                         <Link
                                             :href="
                                                 route(
@@ -138,7 +133,8 @@
                                             >Edit
                                         </Link>
                                         <a
-                                            href="#"
+                                            role="button"
+                                            @click="confirmDeletion(permission.hashed_id)"
                                             class="font-medium text-red-600 dark:text-red-500 hover:underline"
                                             >Delete</a
                                         >
@@ -194,13 +190,42 @@
                 </div>
             </div>
         </div>
+
+         <!-- Delete Account Confirmation Modal -->
+         <DialogModal :show="confirmingDeletion" @close="closeModal">
+            <template #title> Delete Permission </template>
+
+            <template #content>
+                Are you sure you want to delete this permission?
+            </template>
+
+            <template #footer>
+                <SecondaryButton @click="closeModal"> Cancel </SecondaryButton>
+
+                <DangerButton
+                    class="ms-3"
+                    :class="{ 'opacity-25': form.processing }"
+                    :disabled="form.processing"
+                    @click="destroy"
+                >
+                    Delete Permission
+                </DangerButton>
+            </template>
+        </DialogModal>
     </AppLayout>
 </template>
 
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
-import { onMounted } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { initFlowbite } from "flowbite";
+import { useForm, router } from "@inertiajs/vue3";
+import DialogModal from "@/Components/DialogModal.vue";
+import SecondaryButton from "@/Components/SecondaryButton.vue";
+import DangerButton from "@/Components/DangerButton.vue";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
+import { debounce } from "lodash";
 
 onMounted(() => {
     initFlowbite();
@@ -213,10 +238,50 @@ const props = defineProps({
     },
 });
 
-const getDate = (date) =>
-    new Date(date).toLocaleDateString("en-us", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
+const form = useForm({
+    id: "",
+});
+
+const search = ref("");
+
+watch(
+    search,
+    debounce(
+        (q) =>
+            router.get("/system/permission", { search: q }, { preserveState: true }),
+        500
+    )
+);
+
+const confirmingDeletion = ref(false);
+const permissionToDelete = ref(null);
+
+const confirmDeletion = (hashedId) => {
+    confirmingDeletion.value = true;
+    permissionToDelete.value = hashedId;
+};
+
+const closeModal = () => {
+    confirmingDeletion.value = false;
+    permissionToDelete.value = null;
+};
+
+const destroy = () => {
+    form.delete(
+        route("system.permission.delete", {
+            hashedId: permissionToDelete.value,
+        }),
+        {
+            preserveScroll: true,
+            onSuccess: () => {
+                closeModal();
+                toast.success("Permission deleted successfully", {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000,
+                });
+            },
+        }
+    );
+};
+
 </script>

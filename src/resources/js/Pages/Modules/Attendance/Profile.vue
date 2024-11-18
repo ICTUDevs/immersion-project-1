@@ -147,17 +147,13 @@
                                         >
                                             Edit
                                         </Link>
-                                        <Link
+                                        <a
+                                            role="button"
                                             class="text-red-600 hover:underline mx-1 dark:text-red-400 dark:hover:text-red-600"
-                                            :href="
-                                                route(
-                                                    'attendance.delete',
-                                                    user.hashed_id
-                                                )
-                                            "
+                                            @click="confirmDeletion"
                                         >
                                             Delete
-                                        </Link>
+                                        </a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -166,17 +162,42 @@
                 </div>
             </div>
         </div>
+
+        <!-- Delete Time Log Confirmation Modal -->
+        <DialogModal :show="confirmingDeletion" @close="closeModal">
+            <template #title> Delete Time Log </template>
+
+            <template #content>
+                Are you sure you want to delete this Time Log?
+            </template>
+
+            <template #footer>
+                <SecondaryButton @click="closeModal"> Cancel </SecondaryButton>
+
+                <DangerButton
+                    class="ms-3"
+                    :class="{ 'opacity-25': form.processing }"
+                    :disabled="form.processing"
+                    @click="destroy"
+                >
+                    Delete Time Log
+                </DangerButton>
+            </template>
+        </DialogModal>
     </AppLayout>
 </template>
 
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { initFlowbite } from "flowbite";
 import { format } from "date-fns";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
-import { usePage } from "@inertiajs/vue3";
+import { useForm } from "@inertiajs/vue3";
+import DialogModal from "@/Components/DialogModal.vue";
+import SecondaryButton from "@/Components/SecondaryButton.vue";
+import DangerButton from "@/Components/DangerButton.vue";
 
 const formatTime = (datetime) => {
     if (!datetime) {
@@ -207,11 +228,41 @@ const getDate = (date) =>
         day: "numeric",
     });
 
-
 if (props.flash.message !== null) {
     toast.success(props.flash.message, {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 2000,
     });
 }
+
+const confirmingDeletion = ref(false);
+
+const confirmDeletion = () => {
+    confirmingDeletion.value = true;
+};
+
+const closeModal = () => {
+    confirmingDeletion.value = false;
+};
+
+const form = useForm({ id: "" });
+
+const destroy = () => {
+    form.delete(
+        route("attendance.delete", {
+            hashedId: props.users.attendances[0].hashed_id,
+            hashed_id: props.users.hashed_id,
+        }),
+        {
+            preserveScroll: true,
+            onSuccess: () => {
+                closeModal();
+                toast.success("Time Log deleted successfully", {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000,
+                });
+            },
+        }
+    );
+};
 </script>

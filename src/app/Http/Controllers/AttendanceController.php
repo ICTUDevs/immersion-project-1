@@ -225,8 +225,6 @@ class AttendanceController extends Controller
 
     public function updateLog(Request $request, $hashedId, $hashed_id)
     {
-        // dd($request->all());
-
         $id = Hashids::decode($hashedId)[0];
         $attendance = attendance::findOrFail($id);
 
@@ -280,5 +278,16 @@ class AttendanceController extends Controller
         $attendance->save();
 
         return redirect()->route('attendance.profile', $hashed_id)->with('message', 'Attendance Log Updated.');
+    }
+
+    public function destroy($hashedId, $hashed_id)
+    {
+        $id = Hashids::decode($hashedId)[0];
+        $attendance = attendance::findOrFail($id);
+        $attendance->delete();
+
+        broadcast(new RefreshUser('new data received...'));
+
+        return redirect()->route('attendance.profile', $hashed_id)->with('message', 'Attendance Log Deleted.');
     }
 }

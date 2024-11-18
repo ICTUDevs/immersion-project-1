@@ -229,4 +229,27 @@ class SystemController extends Controller
 
         return redirect()->route('system.user')->with('message', 'Created successfully');
     }
+
+
+    public function destroyUser($hashedId){
+        $id = Hashids::decode($hashedId)[0];
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->route('system.user')->with('message', 'User deleted.');
+    }
+
+
+    public function destroyPermission($hashedId){
+        $id = Hashids::decode($hashedId)[0];
+        $permission = Permission::findOrFail($id);
+        $permission->delete();
+        return redirect()->route('system.permission')->with('message', 'Permission deleted.');
+    }
+
+    public function destroyRole($hashedId){
+        $id = Hashids::decode($hashedId)[0];
+        $role = Role::findOrFail($id);
+        $role->delete();
+        return redirect()->route('system.role')->with('message', 'Role deleted.');
+    }
 }
