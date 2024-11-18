@@ -4,7 +4,11 @@
             <h2
                 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight"
             >
-                Daily Time Record
+                Daily Time Record:
+                <span
+                    class="font-bold ms-1 uppercase text-blue-500 dark:text-gray-50"
+                    >{{ users.name }}</span
+                >
             </h2>
         </template>
 
@@ -29,7 +33,6 @@
                             >
                                 <tr>
                                     <th scope="col" class="px-6 py-3"></th>
-                                    <th scope="col" class="px-6 py-3"></th>
                                     <th
                                         scope="col"
                                         colspan="2"
@@ -51,14 +54,13 @@
                                     >
                                         Undertime / Late
                                     </th>
-                                </tr>
-                                <tr>
                                     <th
                                         scope="col"
-                                        class="px-6 py-3 border w-1/4"
-                                    >
-                                        Name
-                                    </th>
+                                        colspan="2"
+                                        class="px-6 py-3 text-center border"
+                                    ></th>
+                                </tr>
+                                <tr>
                                     <th scope="col" class="px-6 py-3 border">
                                         Log Date
                                     </th>
@@ -90,41 +92,30 @@
                                         scope="col"
                                         class="px-6 py-3 border text-center"
                                     >
-                                        Hours
+                                        Hour(s)
                                     </th>
                                     <th
                                         scope="col"
                                         class="px-6 py-3 border text-center"
                                     >
-                                        Minutes
+                                        Minute(s)
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        class="px-6 py-3 border text-center"
+                                    >
+                                        Action
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr
-                                    v-for="user in users.data"
+                                    v-for="user in users.attendances"
                                     :key="user.id"
                                     class="bg-white border dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                                 >
-                                    <th
-                                        scope="row"
-                                        class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
-                                    >
-                                        <img
-                                            class="w-10 h-10 rounded-full"
-                                            :src="user.user.profile_photo_url"
-                                            :alt="user.user.name"
-                                        />
-                                        <div class="ps-3">
-                                            <div
-                                                class="text-base font-semibold"
-                                            >
-                                                {{ user.user.name }}
-                                            </div>
-                                        </div>
-                                    </th>
-                                    <td class="px-6 py-4 border text-center">
-                                        {{ user.date }}
+                                    <td class="px-6 py-4 border">
+                                        {{ getDate(user.date) }}
                                     </td>
                                     <td class="px-6 py-4 border text-center">
                                         {{ formatTime(user.am_time_in) }}
@@ -144,6 +135,30 @@
                                     <td class="px-6 py-4 border text-center">
                                         {{ user.minutes_under_time }}
                                     </td>
+                                    <td class="px-6 py-4 border text-center">
+                                        <Link
+                                            class="text-blue-600 hover:underline mx-1 dark:text-blue-400 dark:hover:text-blue-600"
+                                            :href="
+                                                route(
+                                                    'attendance.log.edit',
+                                                    user.hashed_id
+                                                )
+                                            "
+                                        >
+                                            Edit
+                                        </Link>
+                                        <Link
+                                            class="text-red-600 hover:underline mx-1 dark:text-red-400 dark:hover:text-red-600"
+                                            :href="
+                                                route(
+                                                    'attendance.delete',
+                                                    user.hashed_id
+                                                )
+                                            "
+                                        >
+                                            Delete
+                                        </Link>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -159,12 +174,15 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import { onMounted } from "vue";
 import { initFlowbite } from "flowbite";
 import { format } from "date-fns";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
+import { usePage } from "@inertiajs/vue3";
 
 const formatTime = (datetime) => {
     if (!datetime) {
         return "";
     }
-    return format(new Date(datetime), "hh:mm:ss a");
+    return format(new Date(datetime), "hh:mm a");
 };
 
 onMounted(() => {
@@ -176,6 +194,10 @@ const props = defineProps({
         type: Array,
         required: true,
     },
+    flash: {
+        type: Object,
+        required: true,
+    },
 });
 
 const getDate = (date) =>
@@ -184,4 +206,12 @@ const getDate = (date) =>
         month: "long",
         day: "numeric",
     });
+
+
+if (props.flash.message !== null) {
+    toast.success(props.flash.message, {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 2000,
+    });
+}
 </script>

@@ -14,10 +14,10 @@ return new class extends Migration {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->date('date');
-            $table->timestamp('am_time_in')->nullable();
-            $table->timestamp('am_time_out')->nullable();
-            $table->timestamp('pm_time_in')->nullable();
-            $table->timestamp('pm_time_out')->nullable();
+            $table->time('am_time_in')->nullable();
+            $table->time('am_time_out')->nullable();
+            $table->time('pm_time_in')->nullable();
+            $table->time('pm_time_out')->nullable();
             $table->integer('hours_under_time')->nullable();
             $table->integer('minutes_under_time')->nullable();
             $table->tinyInteger('status')->default(0);

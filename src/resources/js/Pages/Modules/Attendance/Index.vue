@@ -13,57 +13,10 @@
                 <div
                     class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg"
                 >
-                    <div class="relative overflow-x-auto p-5">
+                    <div class="overflow-x-auto p-5">
                         <div
-                            class="flex flex-row items-center justify-between mb-4"
+                            class="flex flex-row items-center justify-end mb-4"
                         >
-                            <div>
-                                <!-- Action Dropdown -->
-                                <button
-                                    id="dropdownActionButton"
-                                    data-dropdown-toggle="dropdownAction"
-                                    class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                                    type="button"
-                                >
-                                    <span class="sr-only">Action button</span>
-                                    Action
-                                    <svg
-                                        class="w-2.5 h-2.5 ms-2.5"
-                                        aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 10 6"
-                                    >
-                                        <path
-                                            stroke="currentColor"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="m1 1 4 4 4-4"
-                                        />
-                                    </svg>
-                                </button>
-                                <!-- Dropdown menu -->
-                                <div
-                                    id="dropdownAction"
-                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                                >
-                                    <ul
-                                        class="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                        aria-labelledby="dropdownActionButton"
-                                    >
-                                        <li>
-                                            <Link
-                                                :href="
-                                                    route('system.user.create')
-                                                "
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                                >New User
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="relative">
                                 <div
                                     class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none"
@@ -111,7 +64,12 @@
                                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                                 >
                                     <td class="px-6 py-4">
-                                        {{ item.name }}
+                                        <Link
+                                        :href="route('attendance.profile', item.hashed_id)"
+                                        class="text-blue-600 hover:underline"
+                                        >
+                                            {{ item.name }}
+                                        </Link>
                                     </td>
                                 </tr>
                             </tbody>

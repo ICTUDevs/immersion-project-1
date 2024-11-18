@@ -65,11 +65,12 @@ Route::middleware([
         ->group(fn() => [
 
             Route::middleware('isAdmin')->group(fn() => [
-                Route::get('index', 'index')->name('index'),
+                Route::get('/', 'index')->name('index'),
             ]),
             Route::get('scanner', 'scanner')->name('scanner'),
             Route::get('fetchUser', 'fetchUser')->name('fetchUser'),
-
+            Route::get('profile/{hashedId}', 'profile')->name('profile'),
+            Route::get('manage/log/{hashedId}', 'editProfile')->name('log.edit'),
 
             Route::get('create', 'create')->name('create'),
             Route::get('edit/{hashedId}', 'edit')->name('edit'),
@@ -77,6 +78,7 @@ Route::middleware([
             Route::post('store', 'store')->name('store'),
 
             Route::put('update/{hashedId}', 'update')->name('update'),
+            Route::put('log/update/{hashedId}/{hashed_id}', 'updateLog')->name('log.update'),
 
             Route::delete('delete/{hashedId}', 'destroy')->name('delete'),
         ]);

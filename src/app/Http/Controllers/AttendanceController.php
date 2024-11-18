@@ -62,13 +62,15 @@ class AttendanceController extends Controller
         $date = Carbon::today()->toDateString();
 
         // Fetch users who have a time-in record for today with status 0
-        $usersWithTimeIn = Attendance::with('user')->where('status', 1)->where('date', $date)->get();
+        $usersWithTimeIn = attendance::with('user')->where('status', 1)->where('date', $date)->get();
 
         return response()->json($usersWithTimeIn);
     }
 
     public function store(Request $request)
     {
+
+        // dd($request->all());
         $validator = Validator::make($request->all(), [
             'user_id' => 'required',
         ]);
@@ -186,5 +188,97 @@ class AttendanceController extends Controller
         broadcast(new RefreshUser('new data received...'));
 
         return redirect()->route('dashboard')->with('message', 'Attendance Successfull Saved.');
+    }
+
+
+    public function profile($hashedId)
+    {
+        $id = Hashids::decode($hashedId)[0];
+        $user = User::with('attendances')->findOrFail($id);
+
+        $user->hashed_id = $hashedId;
+        $user->attendances->transform(function ($attendance) {
+            $attendance->hashed_id = Hashids::encode($attendance->id);
+            return $attendance;
+        });
+
+        return inertia('Modules/Attendance/Profile', [
+            'users' => $user,
+        ]);
+    }
+
+
+    public function editProfile($hashedId)
+    {
+        $id = Hashids::decode($hashedId)[0];
+        $user = attendance::with('user')->findOrFail($id);
+
+
+        $user->hashed_id = Hashids::encode($user->user_id);
+
+        return inertia('Modules/Attendance/EditUserLog', [
+            'dtr' => $user,
+            'hashedId' => $hashedId,
+        ]);
+    }
+
+
+    public function updateLog(Request $request, $hashedId, $hashed_id)
+    {
+        // dd($request->all());
+
+        $id = Hashids::decode($hashedId)[0];
+        $attendance = attendance::findOrFail($id);
+
+        $validator = Validator::make($request->all(), [
+            'am_time_in' => 'nullable',
+            'am_time_out' => 'nullable',
+            'pm_time_in' => 'nullable',
+            'pm_time_out' => 'nullable',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->with('error', $validator->errors());
+        }
+
+        $attendance->am_time_in = $request->am_time_in ? Carbon::parse($request->am_time_in)->format('Y-m-d H:i:s') : null;
+        $attendance->am_time_out = $request->am_time_out ? Carbon::parse($request->am_time_out)->format('Y-m-d H:i:s') : null;
+        $attendance->pm_time_in = $request->pm_time_in ? Carbon::parse($request->pm_time_in)->format('Y-m-d H:i:s') : null;
+        $attendance->pm_time_out = $request->pm_time_out ? Carbon::parse($request->pm_time_out)->format('Y-m-d H:i:s') : null;
+
+        // Calculate undertime
+        $morningMinutes = 0;
+        $afternoonMinutes = 0;
+
+        if ($attendance->am_time_in && $attendance->am_time_out) {
+            $am_start = Carbon::createFromTime(8, 0, 0, 'Asia/Manila');
+            $am_end = Carbon::createFromTime(12, 0, 0, 'Asia/Manila');
+            $am_in = Carbon::parse($attendance->am_time_in, 'Asia/Manila')->max($am_start);
+            $am_out = Carbon::parse($attendance->am_time_out, 'Asia/Manila')->min($am_end);
+            if ($am_in < $am_out) {
+                $morningMinutes = $am_in->diffInMinutes($am_out);
+            }
+        }
+
+        if ($attendance->pm_time_in && $attendance->pm_time_out) {
+            $pm_start = Carbon::createFromTime(13, 0, 0, 'Asia/Manila');
+            $pm_end = Carbon::createFromTime(17, 0, 0, 'Asia/Manila');
+            $pm_in = Carbon::parse($attendance->pm_time_in, 'Asia/Manila')->max($pm_start);
+            $pm_out = Carbon::parse($attendance->pm_time_out, 'Asia/Manila')->min($pm_end);
+            if ($pm_in < $pm_out) {
+                $afternoonMinutes = $pm_in->diffInMinutes($pm_out);
+            }
+        }
+
+        $totalMinutes = $morningMinutes + $afternoonMinutes;
+        $requiredMinutes = 8 * 60; // 8 hours in minutes
+        $undertimeMinutes = max(0, $requiredMinutes - $totalMinutes);
+
+        $attendance->hours_under_time = floor($undertimeMinutes / 60);
+        $attendance->minutes_under_time = $undertimeMinutes % 60;
+
+        $attendance->save();
+
+        return redirect()->route('attendance.profile', $hashed_id)->with('message', 'Attendance Log Updated.');
     }
 }

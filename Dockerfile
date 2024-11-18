@@ -19,8 +19,11 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 COPY run-scheduler.sh /usr/local/bin/run-scheduler.sh
 
+COPY delete-qr-code.sh /usr/local/bin/delete-qr-code.sh
+
 RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/run-scheduler.sh
+RUN chmod +x /usr/local/bin/delete-qr-code.sh
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
