@@ -16,13 +16,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Web Support',
-        //     'email' => 'support.web@antiquespride.edu.ph',
-        //     'password' => bcrypt('Shinra23'),
-        // ]);
+        User::factory()->create([
+            'name' => 'Web Support',
+            'email' => 'support.web@antiquespride.edu.ph',
+            'password' => bcrypt('Shinra23'),
+        ]);
 
-        $user = User::where('id', 19)->first();
+        $user = User::where('id', 1)->first();
 
         $user->assignRole('superadmin');
     }

@@ -11,6 +11,9 @@ RUN apt-get install -y supervisor nodejs npm
 
 RUN docker-php-ext-install pdo pdo_mysql bcmath
 
+RUN docker-php-ext-install pcntl
+RUN docker-php-ext-configure pcntl --enable-pcntl
+
 # Copy supervisord configuration
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
@@ -19,11 +22,18 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 COPY run-scheduler.sh /usr/local/bin/run-scheduler.sh
 
+COPY ssl/chain1.pem /etc/ssl/certs/chain1.pem
+COPY ssl/privkey1.pem /etc/ssl/private/privkey1.pem
+COPY ssl/fullchain1.pem /etc/ssl/certs/fullchain1.pem
+
 COPY run-delete-qr-code.sh /usr/local/bin/run-delete-qr-code.sh
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/run-scheduler.sh
 RUN chmod +x /usr/local/bin/run-delete-qr-code.sh
+RUN chmod 644 /etc/ssl/private/privkey1.pem
+RUN chmod 644 /etc/ssl/certs/chain1.pem
+RUN chmod 644 /etc/ssl/certs/fullchain1.pem
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 

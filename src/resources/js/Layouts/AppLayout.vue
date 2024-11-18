@@ -111,7 +111,7 @@ const classes = computed(() => {
                                     "
                                     :class="classes"
                                 >
-                                    Menu
+                                    System Configuration
                                     <svg
                                         class="w-2.5 h-2.5 ms-3"
                                         aria-hidden="true"
@@ -428,7 +428,7 @@ const classes = computed(() => {
                         <ul aria-labelledby="modules-menu-full-dropdown-button" v-if="$page.props.isSuperAdmin || $page.props.isAdmin">
                             <NavLinkMenu
                                 :href="route('system.user')"
-                                :active="route().current('system.user') || route('system.user.create') || route('system.user.edit')"
+                                :active="route().current('system.user') || route().current('system.user.create') || route().current('system.user.edit')"
                             >
                                 <div class="font-semibold">System User</div>
                                 <span
@@ -440,7 +440,7 @@ const classes = computed(() => {
                         <ul aria-labelledby="modules-menu-full-dropdown-button" v-if="$page.props.isSuperAdmin">
                             <NavLinkMenu
                                 :href="route('system.permission')"
-                                :active="route().current('system.permission') || route('system.permission.create') || route('system.permission.edit')"
+                                :active="route().current('system.permission') || route().current('system.permission.create') || route().current('system.permission.edit')"
                             >
                                 <div class="font-semibold">
                                     System Permission
@@ -454,7 +454,7 @@ const classes = computed(() => {
                         <ul aria-labelledby="modules-menu-full-dropdown-button" v-if="$page.props.isSuperAdmin">
                             <NavLinkMenu
                                 :href="route('system.role')"
-                                :active="route().current('system.role') || route('system.role.create') || route('system.role.edit')"
+                                :active="route().current('system.role') || route().current('system.role.create') || route().current('system.role.edit')"
                             >
                                 <div class="font-semibold">System Role</div>
                                 <span
