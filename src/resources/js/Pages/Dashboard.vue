@@ -103,22 +103,22 @@ const formatTime = (datetime) => {
                     class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg"
                 >
                     <div
-                        class="grid grid-flow-col grid-cols-2 gap-2 text-center"
+                        class="lg:flex lg:flex-row lg:gap-2 w-full  text-center md:flex md:flex-col md:gap-0"
                         v-if="$page.props.isSuperAdmin || $page.props.isTimeKeeper"
                     >
-                        <div class="p-8">
+                        <div class="p-8 w-full">
                             <h1
                                 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white"
                             >
                                 Attendance Tracker
                             </h1>
                             <p
-                                class="mb-4 lg:text-xl font-normal text-gray-500 dark:text-gray-400"
+                                class="mb-4 text-xl font-normal text-gray-500 dark:text-gray-400"
                             >
                                 {{ formattedDate }}
                             </p>
                             <h1
-                                class="mb-6 lg:text-2xl font-bold text-gray-500 dark:text-gray-400"
+                                class="mb-6 text-2xl font-bold text-gray-500 dark:text-gray-400"
                             >
                                 {{ formattedTime }}
                             </h1>
@@ -136,7 +136,7 @@ const formatTime = (datetime) => {
                                 />
                             </div>
                         </div>
-                        <div class="p-8 flex justify-center">
+                        <div class="p-8 flex justify-center w-full">
                             <div
                                 class="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
                             >

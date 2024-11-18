@@ -75,7 +75,7 @@ const classes = computed(() => {
 
                             <!-- Navigation Links -->
                             <div
-                                class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex"
+                                class="hidden space-x-8 md:-my-px md:ms-10 md:flex"
                             >
                                 <NavLink
                                     :href="route('dashboard')"
@@ -428,7 +428,7 @@ const classes = computed(() => {
                         <ul aria-labelledby="modules-menu-full-dropdown-button" v-if="$page.props.isSuperAdmin || $page.props.isAdmin">
                             <NavLinkMenu
                                 :href="route('system.user')"
-                                :active="route().current('system.user')"
+                                :active="route().current('system.user') || route('system.user.create') || route('system.user.edit')"
                             >
                                 <div class="font-semibold">System User</div>
                                 <span
@@ -440,7 +440,7 @@ const classes = computed(() => {
                         <ul aria-labelledby="modules-menu-full-dropdown-button" v-if="$page.props.isSuperAdmin">
                             <NavLinkMenu
                                 :href="route('system.permission')"
-                                :active="route().current('system.permission')"
+                                :active="route().current('system.permission') || route('system.permission.create') || route('system.permission.edit')"
                             >
                                 <div class="font-semibold">
                                     System Permission
@@ -454,7 +454,7 @@ const classes = computed(() => {
                         <ul aria-labelledby="modules-menu-full-dropdown-button" v-if="$page.props.isSuperAdmin">
                             <NavLinkMenu
                                 :href="route('system.role')"
-                                :active="route().current('system.role')"
+                                :active="route().current('system.role') || route('system.role.create') || route('system.role.edit')"
                             >
                                 <div class="font-semibold">System Role</div>
                                 <span
@@ -480,6 +480,30 @@ const classes = computed(() => {
                             :active="route().current('dashboard')"
                         >
                             Dashboard
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            :href="route('attendance.index')"
+                            :active="route().current('attendance.index') || route().current('attendance.profile') || route().current('attendance.log.edit')"
+                        >
+                            Attendance
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            :href="route('system.user')"
+                            :active="route().current('system.user') || route().current('system.user.create') || route().current('system.user.edit')"
+                        >
+                            System Users
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            :href="route('system.permission')"
+                            :active="route().current('system.permission') || route().current('system.permission.create') || route().current('system.permission.edit')"
+                        >
+                            System Permissions
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            :href="route('system.role')"
+                            :active="route().current('system.role') || route().current('system.role.create') || route().current('system.role.edit')"
+                        >
+                            System Roles
                         </ResponsiveNavLink>
                     </div>
 
