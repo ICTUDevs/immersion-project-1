@@ -8,12 +8,7 @@ use App\Http\Controllers\SystemController;
 use App\Http\Controllers\AttendanceController;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return redirect()->route('login');
 });
 
 Route::controller(GoogleController::class)->group(fn() => [
