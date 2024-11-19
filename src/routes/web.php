@@ -24,7 +24,6 @@ Route::middleware([
     'verified',
 ])->group(function () {
 
-
     Route::prefix('system')
         ->name('system.')
         ->controller(SystemController::class)

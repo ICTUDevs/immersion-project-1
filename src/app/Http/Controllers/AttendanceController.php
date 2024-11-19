@@ -162,11 +162,6 @@ class AttendanceController extends Controller
             $attendance->pm_time_in = $formattedTime;
         }
 
-        // Automatically set pm_time_out to 5 PM if it is missing and the current time is past 5 PM
-        if (is_null($attendance->pm_time_out) && $currentHour >= 17) {
-            $attendance->pm_time_out = Carbon::createFromTime(17, 0, 0)->format('h:i:s A');
-        }
-
 
         // Calculate undertime
         $morningHours = 0;

@@ -5,6 +5,9 @@ import axios from "axios";
 import "vue3-toastify/dist/index.css";
 import { format } from "date-fns";
 import { initFlowbite } from "flowbite";
+import { usePage } from "@inertiajs/vue3";
+
+const page = usePage();
 
 onMounted(() => {
     initFlowbite();
@@ -52,10 +55,21 @@ const updateDateTime = () => {
 
 let intervalId;
 
+const setExactInterval = (callback, interval) => {
+    const now = new Date();
+    const delay = interval - (now % interval);
+    setTimeout(() => {
+        callback();
+        setInterval(callback, interval);
+    }, delay);
+};
+
 onMounted(() => {
     intervalId = setInterval(updateDateTime, 1000);
-    intervalId = setInterval(fetchQRCode, 60000);
-    intervalId = setInterval(fetchUsers, 10000);
+    if (page.props.isSuperAdmin || page.props.isTimeKeeper) {
+        setExactInterval(fetchQRCode, 20000);
+        setExactInterval(fetchUsers, 3000);
+    }
 });
 
 onUnmounted(() => {
@@ -96,7 +110,7 @@ const formatTime = (datetime) => {
     if (!datetime) {
         return "";
     }
-    return format(new Date(datetime), "hh:mm:ss a");
+    return format(new Date(datetime), "hh:mm a");
 };
 </script>
 
@@ -172,23 +186,37 @@ const formatTime = (datetime) => {
                                     >
                                         <li class="py-3 sm:py-4">
                                             <div
-                                                class="flex items-center gap-2 border p-2 rounded-lg"
+                                                class="flex items-center gap-2 border p-2 rounded-lg justify-between"
                                             >
-                                                <img
-                                                    class="w-8 h-8 rounded-full"
-                                                    :src="
-                                                        item.user
-                                                            .profile_photo_url
-                                                    "
-                                                    alt="Neil image"
-                                                />
+                                                <div
+                                                    class="flex flex-column items-center gap-2 min-w-0"
+                                                >
+                                                    <img
+                                                        class="w-8 h-8 rounded-full"
+                                                        :src="
+                                                            item.user
+                                                                .profile_photo_url
+                                                        "
+                                                        alt="Neil image"
+                                                    />
+
+                                                    <p
+                                                        class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                                                    >
+                                                        {{ item.user.name }}
+                                                    </p>
+                                                </div>
                                                 <div
                                                     class="flex flex-column min-w-0 ms-4"
                                                 >
                                                     <p
                                                         class="text-sm font-medium text-gray-900 truncate dark:text-white"
                                                     >
-                                                        {{ item.user.name }}
+                                                        {{
+                                                            formatTime(
+                                                                item.updated_at
+                                                            )
+                                                        }}
                                                     </p>
                                                 </div>
                                             </div>

@@ -38132,3 +38132,46 @@
 2024-11-19 04:58:04,654 INFO success: reverb entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2024-11-19 04:58:06,576 INFO exited: npm (exit status 0; expected)
 2024-11-19 04:58:14,141 INFO exited: composer (exit status 0; expected)
+2024-11-19 13:24:43,360 INFO Set uid to user 0 succeeded
+2024-11-19 13:24:43,362 INFO supervisord started with pid 8
+2024-11-19 13:24:44,367 INFO spawned: 'composer' with pid 11
+2024-11-19 13:24:44,371 INFO spawned: 'laravel-scheduler' with pid 12
+2024-11-19 13:24:44,376 INFO spawned: 'npm' with pid 13
+2024-11-19 13:24:44,380 INFO spawned: 'qrcode' with pid 14
+2024-11-19 13:24:44,619 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 13:24:44,619 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 13:24:44,619 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 13:24:44,619 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 13:24:44,771 INFO exited: qrcode (exit status 0; expected)
+2024-11-19 13:24:47,793 INFO exited: npm (exit status 0; expected)
+2024-11-19 13:24:54,963 INFO exited: composer (exit status 0; expected)
+2024-11-19 15:31:24,517 INFO Set uid to user 0 succeeded
+2024-11-19 15:31:24,519 INFO supervisord started with pid 8
+2024-11-19 15:31:25,524 INFO spawned: 'composer' with pid 11
+2024-11-19 15:31:25,528 INFO spawned: 'laravel-scheduler' with pid 12
+2024-11-19 15:31:25,532 INFO spawned: 'npm' with pid 13
+2024-11-19 15:31:25,537 INFO spawned: 'qrcode' with pid 14
+2024-11-19 15:31:25,540 INFO spawned: 'queue-worker' with pid 16
+2024-11-19 15:31:25,768 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:31:25,773 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:31:25,774 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:31:25,774 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:31:25,774 INFO success: queue-worker entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:31:25,948 INFO exited: qrcode (exit status 0; expected)
+2024-11-19 15:31:28,762 INFO exited: npm (exit status 0; expected)
+2024-11-19 15:31:35,978 INFO exited: composer (exit status 0; expected)
+2024-11-19 15:48:28,992 INFO Set uid to user 0 succeeded
+2024-11-19 15:48:28,994 INFO supervisord started with pid 8
+2024-11-19 15:48:29,999 INFO spawned: 'composer' with pid 11
+2024-11-19 15:48:30,003 INFO spawned: 'laravel-scheduler' with pid 12
+2024-11-19 15:48:30,008 INFO spawned: 'npm' with pid 13
+2024-11-19 15:48:30,012 INFO spawned: 'qrcode' with pid 14
+2024-11-19 15:48:30,015 INFO spawned: 'queue-worker' with pid 16
+2024-11-19 15:48:30,259 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:48:30,260 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:48:30,260 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:48:30,260 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:48:30,260 INFO success: queue-worker entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-19 15:48:30,382 INFO exited: qrcode (exit status 0; expected)
+2024-11-19 15:48:33,277 INFO exited: npm (exit status 0; expected)
+2024-11-19 15:48:40,511 INFO exited: composer (exit status 0; expected)

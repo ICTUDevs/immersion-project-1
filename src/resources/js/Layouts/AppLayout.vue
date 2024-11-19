@@ -511,32 +511,37 @@ const classes = computed(() => {
                     <div
                         class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600"
                     >
-                        <div class="flex items-center px-4">
-                            <div
-                                v-if="
-                                    $page.props.jetstream.managesProfilePhotos
-                                "
-                                class="shrink-0 me-3"
-                            >
-                                <img
-                                    class="h-10 w-10 rounded-full object-cover"
-                                    :src="
-                                        $page.props.auth.user.profile_photo_url
-                                    "
-                                    :alt="$page.props.auth.user.name"
-                                />
-                            </div>
-
-                            <div>
+                        <div class="flex items-center px-4 justify-between">
+                            <div  class="flex flex-row items-center">
                                 <div
-                                    class="font-medium text-base text-gray-800 dark:text-gray-200"
+                                    v-if="
+                                        $page.props.jetstream.managesProfilePhotos
+                                    "
+                                    class="shrink-0 me-3"
                                 >
-                                    {{ $page.props.auth.user.name }}
+                                    <img
+                                        class="h-10 w-10 rounded-full object-cover"
+                                        :src="
+                                            $page.props.auth.user.profile_photo_url
+                                        "
+                                        :alt="$page.props.auth.user.name"
+                                    />
                                 </div>
-                                <div class="font-medium text-sm text-gray-500">
-                                    {{ $page.props.auth.user.email }}
+    
+                                <div>
+                                    <div
+                                        class="font-medium text-base text-gray-800 dark:text-gray-200"
+                                    >
+                                        {{ $page.props.auth.user.name }}
+                                    </div>
+                                    <div class="font-medium text-sm text-gray-500">
+                                        {{ $page.props.auth.user.email }}
+                                    </div>
                                 </div>
-                            </div>
+                            </div class="flex flex-row items-center">
+                            <ThemeToggle
+                                    class=" text-black dark:text-white"
+                                />
                         </div>
 
                         <div class="mt-3 space-y-1">
