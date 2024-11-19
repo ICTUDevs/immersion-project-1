@@ -67,6 +67,13 @@ class AttendanceController extends Controller
         return response()->json($usersWithTimeIn);
     }
 
+    public function fetchQrcode(){
+        $date = Carbon::today()->toDateString();
+
+        $QrCode = QrCode::whereDate('created_at', $date)->latest()->first();
+        return response()->json($QrCode);
+    }
+
     public function store(Request $request)
     {
 

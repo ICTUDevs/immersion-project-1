@@ -17,8 +17,6 @@ const props = defineProps({
 
 const isLogin = ref(false);
 
-console.log(props.Oauth_status);
-
 const form = useForm({
     email: "",
     password: "",

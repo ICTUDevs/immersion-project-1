@@ -78,6 +78,7 @@ Route::middleware([
             Route::get('fetchUser', 'fetchUser')->name('fetchUser'),
             Route::get('profile/{hashedId}', 'profile')->name('profile'),
             Route::get('manage/log/{hashedId}', 'editProfile')->name('log.edit'),
+            Route::get('fetchQRCode', 'fetchQrcode')->name('fetchQrcode'),
 
             Route::get('create', 'create')->name('create'),
             Route::get('edit/{hashedId}', 'edit')->name('edit'),

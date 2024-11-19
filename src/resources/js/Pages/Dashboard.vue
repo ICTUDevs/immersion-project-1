@@ -54,6 +54,8 @@ let intervalId;
 
 onMounted(() => {
     intervalId = setInterval(updateDateTime, 1000);
+    intervalId = setInterval(fetchQRCode, 60000);
+    intervalId = setInterval(fetchUsers, 10000);
 });
 
 onUnmounted(() => {
@@ -61,6 +63,7 @@ onUnmounted(() => {
 });
 
 const users = ref(prop.users);
+const qrcode = ref(prop.qrcode);
 
 const fetchUsers = async () => {
     try {
@@ -68,6 +71,15 @@ const fetchUsers = async () => {
         users.value = response.data;
     } catch (error) {
         console.error("Error fetching users:", error);
+    }
+};
+
+const fetchQRCode = async () => {
+    try {
+        const response = await axios.get("attendance/fetchQRCode");
+        qrcode.value = response.data;
+    } catch (error) {
+        console.error("Error fetching QR Code:", error);
     }
 };
 
@@ -103,8 +115,10 @@ const formatTime = (datetime) => {
                     class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg"
                 >
                     <div
-                        class="lg:flex lg:flex-row lg:gap-2 w-full  text-center md:flex md:flex-col md:gap-0"
-                        v-if="$page.props.isSuperAdmin || $page.props.isTimeKeeper"
+                        class="lg:flex lg:flex-row lg:gap-2 w-full text-center md:flex md:flex-col md:gap-0"
+                        v-if="
+                            $page.props.isSuperAdmin || $page.props.isTimeKeeper
+                        "
                     >
                         <div class="p-8 w-full">
                             <h1
@@ -118,7 +132,7 @@ const formatTime = (datetime) => {
                                 {{ formattedDate }}
                             </p>
                             <h1
-                                class="mb-6 text-2xl font-bold text-gray-500 dark:text-gray-400"
+                                class="mb-6 text-7xl font-bold text-gray-500 dark:text-gray-400"
                             >
                                 {{ formattedTime }}
                             </h1>
