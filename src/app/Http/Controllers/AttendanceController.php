@@ -104,6 +104,7 @@ class AttendanceController extends Controller
         if ($currentDates !== $currentDate) {
             return redirect()->route('attendance.scanner')->with('error', 'QR Code Expired.');
         }
+        
 
         $currentTime = now(); // This will use the configured timezone (Asia/Manila)
         $currentHour = $currentTime->hour;
@@ -119,6 +120,15 @@ class AttendanceController extends Controller
         // Check if all time-in fields are empty and it's already 5 PM or later
         if (is_null($attendance->am_time_in) && is_null($attendance->am_time_out) && is_null($attendance->pm_time_in) && is_null($attendance->pm_time_out) && $currentHour >= 17) {
             return redirect()->route('dashboard')->with('error', 'Cannot insert data after 5 PM if no time-in records exist.');
+        }
+
+        if (
+            ($attendance->am_time_in && $attendance->am_time_in->diffInMinutes($currentTime) < 15) ||
+            ($attendance->pm_time_in && $attendance->pm_time_in->diffInMinutes($currentTime) < 15) ||
+            ($attendance->am_time_out && $attendance->am_time_out->diffInMinutes($currentTime) < 15) ||
+            ($attendance->pm_time_out && $attendance->pm_time_out->diffInMinutes($currentTime) < 15)
+        ) {
+            return redirect()->route('dashboard')->with('error', 'Wait for at least 15 minutes before scanning again.');
         }
 
         if ($currentHour < 12) {
