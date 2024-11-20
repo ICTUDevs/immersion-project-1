@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev li
 
 RUN apt-get install -y supervisor nodejs npm
 
+RUN apt-get install -y git
+
 RUN docker-php-ext-install pdo pdo_mysql bcmath
 
 RUN docker-php-ext-install pcntl
@@ -29,6 +31,7 @@ RUN chmod +x /usr/local/bin/run-scheduler.sh
 RUN chmod +x /usr/local/bin/run-delete-qr-code.sh
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN git config --global --add safe.directory /var/www/html/vendor/laravel/framework 
 
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html

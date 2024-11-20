@@ -38175,3 +38175,48 @@
 2024-11-19 15:48:30,382 INFO exited: qrcode (exit status 0; expected)
 2024-11-19 15:48:33,277 INFO exited: npm (exit status 0; expected)
 2024-11-19 15:48:40,511 INFO exited: composer (exit status 0; expected)
+2024-11-20 01:36:12,382 INFO Set uid to user 0 succeeded
+2024-11-20 01:36:12,555 INFO supervisord started with pid 8
+2024-11-20 01:36:13,562 INFO spawned: 'composer' with pid 11
+2024-11-20 01:36:13,566 INFO spawned: 'laravel-scheduler' with pid 12
+2024-11-20 01:36:13,785 INFO spawned: 'npm' with pid 14
+2024-11-20 01:36:13,789 INFO spawned: 'qrcode' with pid 15
+2024-11-20 01:36:13,792 INFO spawned: 'queue-worker' with pid 16
+2024-11-20 01:36:14,794 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:36:14,795 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:36:14,795 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:36:14,795 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:36:14,795 INFO success: queue-worker entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:36:38,032 WARN exited: qrcode (exit status 1; not expected)
+2024-11-20 01:36:46,432 INFO exited: npm (exit status 0; expected)
+2024-11-20 01:37:21,559 WARN exited: composer (exit status 1; not expected)
+2024-11-20 01:47:08,212 INFO Set uid to user 0 succeeded
+2024-11-20 01:47:08,215 INFO supervisord started with pid 7
+2024-11-20 01:47:09,245 INFO spawned: 'composer' with pid 10
+2024-11-20 01:47:09,249 INFO spawned: 'laravel-scheduler' with pid 11
+2024-11-20 01:47:09,253 INFO spawned: 'npm' with pid 12
+2024-11-20 01:47:09,257 INFO spawned: 'qrcode' with pid 13
+2024-11-20 01:47:09,260 INFO spawned: 'queue-worker' with pid 15
+2024-11-20 01:47:09,487 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:47:09,487 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:47:09,487 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:47:09,487 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:47:09,487 INFO success: queue-worker entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:47:09,587 WARN exited: qrcode (exit status 1; not expected)
+2024-11-20 01:47:12,491 INFO exited: npm (exit status 0; expected)
+2024-11-20 01:48:20,702 WARN exited: composer (exit status 1; not expected)
+2024-11-20 01:55:47,611 INFO Set uid to user 0 succeeded
+2024-11-20 01:55:47,613 INFO supervisord started with pid 8
+2024-11-20 01:55:48,617 INFO spawned: 'composer' with pid 11
+2024-11-20 01:55:48,621 INFO spawned: 'laravel-scheduler' with pid 12
+2024-11-20 01:55:48,626 INFO spawned: 'npm' with pid 13
+2024-11-20 01:55:48,630 INFO spawned: 'qrcode' with pid 14
+2024-11-20 01:55:48,633 INFO spawned: 'queue-worker' with pid 16
+2024-11-20 01:55:48,855 INFO success: composer entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:55:48,856 INFO success: laravel-scheduler entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:55:48,856 INFO success: npm entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:55:48,856 INFO success: qrcode entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:55:48,857 INFO success: queue-worker entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2024-11-20 01:55:48,961 WARN exited: qrcode (exit status 1; not expected)
+2024-11-20 01:55:51,856 INFO exited: npm (exit status 0; expected)
+2024-11-20 01:56:43,384 WARN exited: composer (exit status 1; not expected)
