@@ -53,10 +53,20 @@ const submit = () => {
         </div>
 
         <div v-if="Oauth_status">
-            <h5 class="font-extrabold text-2xl dark:text-white">
-                Welcome back
-            </h5>
-            <p class="text-slate-500 text-sm">Sign in to your account using:</p>
+           <div class="flex flex-row justify-between">
+                <div>
+                    <h5 class="font-extrabold text-2xl dark:text-white">
+                        Welcome back
+                    </h5>
+                    <p class="text-slate-500 text-sm">
+                        Sign in to your account using:
+                    </p>
+                </div>
+                <div>
+                    <ThemeToggle class="text-black dark:text-white" />
+                </div>
+           </div>
+
             <hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700" />
 
             <PrimaryButton
@@ -84,10 +94,9 @@ const submit = () => {
             <hr
                 class="w-full h-px my-6 bg-gray-200 border-0 dark:bg-gray-700"
             />
-    
         </div>
 
-        <form @submit.prevent="submit" v-if="isLogin" >
+        <form @submit.prevent="submit" v-if="isLogin">
             <div>
                 <InputLabel for="email" value="Email" />
                 <TextInput
