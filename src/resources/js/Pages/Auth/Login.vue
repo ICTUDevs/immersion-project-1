@@ -32,23 +32,30 @@ const handleCredentialResponse = (response) => {
     // Send the token to your backend for verification and login
 
     form1.credential = response.credential;
-    form1.post(route('auth.google.callback'), {
+    form1.post(route("auth.google.callback"), {
         onFinish: () => form1.reset("credential"),
     });
 };
 
 onMounted(() => {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.src = "https://accounts.google.com/gsi/client";
     script.async = true;
     script.onload = () => {
         google.accounts.id.initialize({
-            client_id: "908852665610-0euftd8i58r5j79l2t2d1lehaenrc9ki.apps.googleusercontent.com",
+            client_id:
+                "908852665610-pftqqmtqobrji9s7om0l2aalvapltmf4.apps.googleusercontent.com",
             callback: handleCredentialResponse,
         });
         google.accounts.id.renderButton(
             document.getElementById("buttonDiv"),
-            { theme: "outline", size: "large", 'longtitle': true, 'z-index': 0, display: 'flex', width: '400' } // customization attributes
+            {
+                theme: "outline",
+                size: "large",
+                longtitle: true,
+                "z-index": 0,
+                display: "flex",
+            } // customization attributes
         );
         google.accounts.id.prompt(); // also display the One Tap dialog
     };
@@ -81,7 +88,7 @@ const submit = () => {
         </div>
 
         <div v-if="Oauth_status">
-           <div class="flex flex-row justify-between">
+            <div class="flex flex-row justify-between">
                 <div>
                     <h5 class="font-extrabold text-2xl dark:text-white">
                         Welcome back
@@ -90,14 +97,16 @@ const submit = () => {
                         Sign in to your account using:
                     </p>
                 </div>
-                <div>
-                   
-                </div>
-           </div>
+                <div></div>
+            </div>
 
             <hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700" />
 
-            <div id="buttonDiv"></div>
+            <div class="flex w-full">
+                <div class="mx-auto">
+                    <div id="buttonDiv"></div>
+                </div>
+            </div>
 
             <hr
                 class="w-full h-px my-6 bg-gray-200 border-0 dark:bg-gray-700"
