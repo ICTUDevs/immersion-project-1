@@ -7,8 +7,8 @@
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Favico -->
-        <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.ico') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.ico') }}">
+        <link rel="icon" type="image/svg+xml" href="{{ asset('logo.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('logo.png') }}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
