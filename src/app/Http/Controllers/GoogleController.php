@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Google_Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -18,31 +19,30 @@ class GoogleController extends Controller
         return Socialite::driver(static::GOOGLE_TYPE)->redirect();
     }
 
-    public function handleGoogleCallback()
+    public function handleGoogleCallback(Request $request)
     {
-        try {
-            $user = Socialite::driver(self::GOOGLE_TYPE)->stateless()->user();
+        $client = new Google_Client(['client_id' => env('GOOGLE_CLIENT_ID')]);
+        $payload = $client->verifyIdToken($request->credential);
 
-            // Check if the user already exists using email
-            $userExisted = User::where('email', $user->email)->first();
+        if ($payload) {
+            $user = User::where('email', $payload['email'])->first();
 
-            if ($userExisted) {
-                $userExisted->update([
-                    'oauth_id' => Hash::make($user->id)
+            if ($user) {
+                $user->update([
+                    'oauth_id' => Hash::make($payload['sub'])
                 ]);
 
-                // Check if the user has enabled 2FA
-                if ($userExisted->two_factor_secret) {
-                    session(['login.id' => $userExisted->id]);
+                if ($user->two_factor_secret) {
+                    session(['login.id' => $user->id]);
                     return redirect('/two-factor-challenge');
                 }
 
-                Auth::login($userExisted);
-                return app(LoginResponse::class)->toResponse(request());
+                Auth::login($user);
+                return app(LoginResponse::class)->toResponse($request);
             } else {
                 return redirect()->route('login')->with('error', 'Account not found. Please contact the Administrator.');
             }
-        } catch (\Exception $e) {
+        } else {
             return redirect()->route('login')->with('error', 'Failed to login with Google.');
         }
     }

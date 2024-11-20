@@ -11,11 +11,7 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-Route::controller(GoogleController::class)->group(fn() => [
-    Route::get('/auth/google/redirect', 'handleGoogleRedirect')->name('auth.google.redirect'),
-    Route::get('/auth/google/callback', 'handleGoogleCallback')
-]);
-
+Route::post('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
 
 Route::middleware([

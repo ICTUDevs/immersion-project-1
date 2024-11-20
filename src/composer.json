@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.2",
         "endroid/qr-code": "^6.0",
+        "google/apiclient": "^2.18",
         "inertiajs/inertia-laravel": "^1.0",
         "laravel/framework": "^11.9",
         "laravel/jetstream": "^5.3",
@@ -14,6 +15,7 @@
         "laravel/sanctum": "^4.0",
         "laravel/socialite": "^5.16",
         "laravel/tinker": "^2.9",
+        "lcobucci/jwt": "^5.4",
         "pusher/pusher-php-server": "^7.2",
         "spatie/laravel-permission": "^6.10",
         "tightenco/ziggy": "^2.0",

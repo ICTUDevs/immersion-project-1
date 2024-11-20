@@ -7,7 +7,7 @@ import InputError from "@/Components/InputError.vue";
 import InputLabel from "@/Components/InputLabel.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
 import TextInput from "@/Components/TextInput.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const props = defineProps({
     canResetPassword: Boolean,
@@ -23,9 +23,37 @@ const form = useForm({
     remember: false,
 });
 
-const loginWithGoogle = () => {
-    window.location.href = "/auth/google/redirect";
+const form1 = useForm({
+    credential: "",
+});
+
+const handleCredentialResponse = (response) => {
+    console.log("Encoded JWT ID token: " + response.credential);
+    // Send the token to your backend for verification and login
+
+    form1.credential = response.credential;
+    form1.post(route('auth.google.callback'), {
+        onFinish: () => form1.reset("credential"),
+    });
 };
+
+onMounted(() => {
+    const script = document.createElement('script');
+    script.src = "https://accounts.google.com/gsi/client";
+    script.async = true;
+    script.onload = () => {
+        google.accounts.id.initialize({
+            client_id: "908852665610-0euftd8i58r5j79l2t2d1lehaenrc9ki.apps.googleusercontent.com",
+            callback: handleCredentialResponse,
+        });
+        google.accounts.id.renderButton(
+            document.getElementById("buttonDiv"),
+            { theme: "outline", size: "large", 'longtitle': true, 'z-index': 0, display: 'flex', width: '400' } // customization attributes
+        );
+        google.accounts.id.prompt(); // also display the One Tap dialog
+    };
+    document.head.appendChild(script);
+});
 
 const submit = () => {
     form.transform((data) => ({
@@ -63,37 +91,18 @@ const submit = () => {
                     </p>
                 </div>
                 <div>
-                    <ThemeToggle class="text-black dark:text-white" />
+                   
                 </div>
            </div>
 
             <hr class="my-6 h-px bg-gray-200 border-0 dark:bg-gray-700" />
 
-            <PrimaryButton
-                @click="loginWithGoogle"
-                class="w-full justify-center"
-            >
-                <svg
-                    class="w-5 h-5 me-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M12.037 21.998a10.313 10.313 0 0 1-7.168-3.049 9.888 9.888 0 0 1-2.868-7.118 9.947 9.947 0 0 1 3.064-6.949A10.37 10.37 0 0 1 12.212 2h.176a9.935 9.935 0 0 1 6.614 2.564L16.457 6.88a6.187 6.187 0 0 0-4.131-1.566 6.9 6.9 0 0 0-4.794 1.913 6.618 6.618 0 0 0-2.045 4.657 6.608 6.608 0 0 0 1.882 4.723 6.891 6.891 0 0 0 4.725 2.07h.143c1.41.072 2.8-.354 3.917-1.2a5.77 5.77 0 0 0 2.172-3.41l.043-.117H12.22v-3.41h9.678c.075.617.109 1.238.1 1.859-.099 5.741-4.017 9.6-9.746 9.6l-.215-.002Z"
-                        clip-rule="evenodd"
-                    />
-                </svg>
-                Sign in with Google
-            </PrimaryButton>
+            <div id="buttonDiv"></div>
 
             <hr
                 class="w-full h-px my-6 bg-gray-200 border-0 dark:bg-gray-700"
             />
+            <ThemeToggle class="text-black dark:text-white float-end" />
         </div>
 
         <form @submit.prevent="submit" v-if="isLogin">
