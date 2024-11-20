@@ -227,7 +227,7 @@ const formatTime = (datetime) => {
                         </div>
                     </div>
                     <div class="p-8" v-if="$page.props.isOJT">
-                        <div class="w-full justify-center flex">
+                        <div class="w-full justify-center flex pb-10">
                             <div>
                                 <Link
                                     :href="route('attendance.scanner')"
@@ -237,150 +237,168 @@ const formatTime = (datetime) => {
                                 </Link>
                             </div>
                         </div>
-                        <div v-if="error" class="error">{{ error }}</div>
-                        <div class="pt-10" v-if="$page.props.isOJT">
+                        <div class="max-h-96 overflow-y-auto" v-if="$page.props.isOJT">
                             <div>
-                                <div class="relative overflow-x-auto">
-                                    <table
-                                        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
-                                    >
-                                        <thead
-                                            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
+                                <div
+                                    class="relative overflow-y-auto"
+                                    v-for="(item, index) in user"
+                                    :key="item.id"
+                                >
+                                    <div>
+                                        <!-- AM Table -->
+                                        <table
+                                            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
                                         >
-                                            <tr>
-                                                <th
-                                                    scope="col"
-                                                    class="px-6 py-3 border text-center"
-                                                ></th>
-                                                <th
-                                                    scope="col"
-                                                    colspan="2"
-                                                    class="px-6 py-3 text-center border"
-                                                >
-                                                    AM
-                                                </th>
-                                                <th
-                                                    scope="col"
-                                                    colspan="2"
-                                                    class="px-6 py-3 text-center border"
-                                                >
-                                                    PM
-                                                </th>
-                                                <th
-                                                    scope="col"
-                                                    colspan="2"
-                                                    class="px-6 py-3 text-center border"
-                                                >
-                                                    Undertime / Late
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <th
-                                                    scope="col"
-                                                    class="px-6 py-3 border text-center"
-                                                >
-                                                    Log Date
-                                                </th>
-                                                <th
-                                                    scope="col"
-                                                    class="px-6 py-3 border text-center"
-                                                >
-                                                    Arrival
-                                                </th>
-                                                <th
-                                                    scope="col"
-                                                    class="px-6 py-3 border text-center"
-                                                >
-                                                    Departure
-                                                </th>
-                                                <th
-                                                    scope="col"
-                                                    class="px-6 py-3 border text-center"
-                                                >
-                                                    Arrival
-                                                </th>
-                                                <th
-                                                    scope="col"
-                                                    class="px-6 py-3 border text-center"
-                                                >
-                                                    Departure
-                                                </th>
-                                                <th
-                                                    scope="col"
-                                                    class="px-6 py-3 border text-center"
-                                                >
-                                                    Hours
-                                                </th>
-                                                <th
-                                                    scope="col"
-                                                    class="px-6 py-3 border text-center"
-                                                >
-                                                    Minutes
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr
-                                                v-for="(item, index) in user"
-                                                :key="item.id"
-                                                class="bg-white border dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                                            <thead
+                                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
                                             >
-                                                <td
-                                                    class="px-6 py-4 border text-center"
+                                                <tr>
+                                                    <th
+                                                        scope="col"
+                                                        colspan="2"
+                                                        class="px-6 py-3 text-center border"
+                                                    >
+                                                        AM - {{ item.date }}
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th
+                                                        scope="col"
+                                                        class="px-6 py-3 border text-center"
+                                                    >
+                                                        Arrival
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        class="px-6 py-3 border text-center"
+                                                    >
+                                                        Departure
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    class="bg-white border dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                                                 >
-                                                    {{ item.date }}
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 border text-center"
+                                                    <td
+                                                        class="px-6 py-4 border text-center"
+                                                    >
+                                                        <span
+                                                            v-if="
+                                                                item.am_time_in !=
+                                                                null
+                                                            "
+                                                        >
+                                                            {{
+                                                                formatTime(
+                                                                    item.am_time_in
+                                                                )
+                                                            }}
+                                                        </span>
+                                                        <span v-else>
+                                                            -- -- --
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="px-6 py-4 border text-center"
+                                                    >
+                                                        <span
+                                                            v-if="
+                                                                item.am_time_out !=
+                                                                null
+                                                            "
+                                                        >
+                                                            {{
+                                                                formatTime(
+                                                                    item.am_time_out
+                                                                )
+                                                            }}
+                                                        </span>
+                                                        <span v-else>
+                                                            -- -- --
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <!-- PM Table -->
+                                        <table
+                                            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-8"
+                                        >
+                                            <thead
+                                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
+                                            >
+                                                <tr>
+                                                    <th
+                                                        scope="col"
+                                                        colspan="2"
+                                                        class="px-6 py-3 text-center border"
+                                                    >
+                                                        PM - {{ item.date }}
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th
+                                                        scope="col"
+                                                        class="px-6 py-3 border text-center"
+                                                    >
+                                                        Arrival
+                                                    </th>
+                                                    <th
+                                                        scope="col"
+                                                        class="px-6 py-3 border text-center"
+                                                    >
+                                                        Departure
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr
+                                                    class="bg-white border dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                                                 >
-                                                    {{
-                                                        formatTime(
-                                                            item.am_time_in
-                                                        )
-                                                    }}
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 border text-center"
-                                                >
-                                                    {{
-                                                        formatTime(
-                                                            item.am_time_out
-                                                        )
-                                                    }}
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 border text-center"
-                                                >
-                                                    {{
-                                                        formatTime(
-                                                            item.pm_time_in
-                                                        )
-                                                    }}
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 border text-center"
-                                                >
-                                                    {{
-                                                        formatTime(
-                                                            item.pm_time_out
-                                                        )
-                                                    }}
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 border text-center"
-                                                >
-                                                    {{ item.hours_under_time }}
-                                                </td>
-                                                <td
-                                                    class="px-6 py-4 border text-center"
-                                                >
-                                                    {{
-                                                        item.minutes_under_time
-                                                    }}
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                    <td
+                                                        class="px-6 py-4 border text-center"
+                                                    >
+                                                        <span
+                                                            v-if="
+                                                                item.pm_time_in !=
+                                                                null
+                                                            "
+                                                        >
+                                                            {{
+                                                                formatTime(
+                                                                    item.pm_time_in
+                                                                )
+                                                            }}
+                                                        </span>
+                                                        <span v-else>
+                                                            -- -- --
+                                                        </span>
+                                                    </td>
+                                                    <td
+                                                        class="px-6 py-4 border text-center"
+                                                    >
+                                                        <span
+                                                            v-if="
+                                                                item.pm_time_out !=
+                                                                null
+                                                            "
+                                                        >
+                                                            {{
+                                                                formatTime(
+                                                                    item.pm_time_out
+                                                                )
+                                                            }}
+                                                        </span>
+                                                        <span v-else>
+                                                            -- -- --
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

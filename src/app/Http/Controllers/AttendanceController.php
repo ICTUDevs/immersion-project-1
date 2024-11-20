@@ -36,7 +36,7 @@ class AttendanceController extends Controller
 
         // Fetch users who have a time-in record for today with status 1
         $usersWithTimeIn = attendance::with('user')->where('status', 1)->where('date', $date)->get();
-        $user = attendance::with('user')->where('user_id', auth()->user()->id)->orderBy('date', 'asc')->get();
+        $user = attendance::with('user')->where('user_id', auth()->user()->id)->orderBy('date', 'desc')->get();
 
 
 
