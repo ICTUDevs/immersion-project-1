@@ -5,4 +5,5 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schedule;
 
 
-// Schedule::command('generate:qr-codes')->dailyAt('07:30');
+Schedule::command('generate:qr-codes')->everyTwentySeconds();
+Schedule::command('generate:delete-qr-codes')->everyMinute();

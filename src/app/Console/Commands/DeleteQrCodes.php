@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\qrcode;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 
 class DeleteQrCodes extends Command
@@ -26,13 +27,14 @@ class DeleteQrCodes extends Command
      */
     public function handle()
     {
-        // Delete all QR codes that were created more than 1 day ago
-        $qrcodes = qrcode::where('created_at', '<', now()->subDays(1))->get();
+        $date = Carbon::today();
 
+        $qrcodes = qrcode::where('created_at', '<', $date)->get();
+        
         foreach ($qrcodes as $qrcode) {
             $qrcode->delete();
         }
-
+        
         $this->info('QR codes older than 1 day have been deleted.');
     }
 }
