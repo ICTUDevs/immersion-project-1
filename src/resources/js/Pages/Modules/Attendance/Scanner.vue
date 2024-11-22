@@ -1,10 +1,10 @@
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
-import { QrcodeStream } from "vue3-qrcode-reader";
 import { ref, computed } from "vue";
 import { useForm } from "@inertiajs/vue3";
 import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
+import { QrcodeStream, QrcodeDropZone, QrcodeCapture } from 'qrcode-reader-vue3'
 
 const prop = defineProps({
     users: {
