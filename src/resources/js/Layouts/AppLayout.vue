@@ -475,31 +475,31 @@ const classes = computed(() => {
                     class="sm:hidden"
                 >
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink
+                        <ResponsiveNavLink 
                             :href="route('dashboard')"
                             :active="route().current('dashboard')"
                         >
                             Dashboard
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink
+                        <ResponsiveNavLink v-if="$page.props.isSuperAdmin || $page.props.isAdmin"
                             :href="route('attendance.index')"
                             :active="route().current('attendance.index') || route().current('attendance.profile') || route().current('attendance.log.edit')"
                         >
                             Attendance
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink
+                        <ResponsiveNavLink v-if="$page.props.isSuperAdmin || $page.props.isAdmin"
                             :href="route('system.user')"
                             :active="route().current('system.user') || route().current('system.user.create') || route().current('system.user.edit')"
                         >
                             System Users
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink
+                        <ResponsiveNavLink v-if="$page.props.isSuperAdmin"
                             :href="route('system.permission')"
                             :active="route().current('system.permission') || route().current('system.permission.create') || route().current('system.permission.edit')"
                         >
                             System Permissions
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink
+                        <ResponsiveNavLink v-if="$page.props.isSuperAdmin"
                             :href="route('system.role')"
                             :active="route().current('system.role') || route().current('system.role.create') || route().current('system.role.edit')"
                         >

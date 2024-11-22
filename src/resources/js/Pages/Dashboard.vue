@@ -158,8 +158,8 @@ const formatTime = (datetime) => {
                             </p>
                             <div class="flex justify-center">
                                 <QRCodeVue3
-                                    :width="400"
-                                    :height="400"
+                                    :width="350"
+                                    :height="350"
                                     :value="qrcode.qr_code"
                                     :key="qrcode.qr_code"
                                     :qr-options="{
