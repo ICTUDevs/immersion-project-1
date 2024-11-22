@@ -190,6 +190,8 @@ const formatTime = (datetime) => {
                                             ],
                                         },
                                     }"
+                                    image="logo.png"
+                                    :download="false"
                                 />
                             </div>
                         </div>
