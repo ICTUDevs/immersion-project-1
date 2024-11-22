@@ -16,6 +16,7 @@ const props = defineProps({
 });
 
 const isLogin = ref(false);
+const client_id = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 const form = useForm({
     email: "",
@@ -44,7 +45,7 @@ onMounted(() => {
     script.onload = () => {
         google.accounts.id.initialize({
             client_id:
-                "908852665610-pftqqmtqobrji9s7om0l2aalvapltmf4.apps.googleusercontent.com",
+                client_id,
             callback: handleCredentialResponse,
         });
         google.accounts.id.renderButton(

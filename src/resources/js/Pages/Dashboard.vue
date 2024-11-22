@@ -155,7 +155,7 @@ const formatTime = (datetime) => {
                             >
                                 Scan the QR Code to store your login or logout
                             </p>
-                            <div class="flex justify-center h-52">
+                            <div class="flex justify-center">
                                 <img
                                     :src="
                                         'data:image/png;base64,' + qrcode.code
