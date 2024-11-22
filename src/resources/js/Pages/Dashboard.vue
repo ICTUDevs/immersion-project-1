@@ -6,6 +6,7 @@ import "vue3-toastify/dist/index.css";
 import { format } from "date-fns";
 import { initFlowbite } from "flowbite";
 import { usePage } from "@inertiajs/vue3";
+import QRCodeVue3 from "qrcode-vue3";
 
 const page = usePage();
 
@@ -156,11 +157,39 @@ const formatTime = (datetime) => {
                                 Scan the QR Code to store your login or logout
                             </p>
                             <div class="flex justify-center">
-                                <img
-                                    :src="
-                                        'data:image/png;base64,' + qrcode.code
-                                    "
-                                    :alt="qrcode.type"
+                                <QRCodeVue3
+                                    :width="400"
+                                    :height="400"
+                                    :value="qrcode.qr_code"
+                                    :key="qrcode.qr_code"
+                                    :qr-options="{
+                                        errorCorrectionLevel: 'H',
+                                    }"
+                                    :image-options="{
+                                        hideBackgroundDots: true,
+                                        imageSize: 0.4,
+                                        margin: 10,
+                                    }"
+                                    :corners-square-options="{
+                                        type: 'dot',
+                                        color: '#34495E',
+                                    }"
+                                    :corners-dot-options="{
+                                        type: undefined,
+                                        color: '#41B883',
+                                    }"
+                                    :dots-options="{
+                                        type: 'dots',
+                                        color: '#41B883',
+                                        gradient: {
+                                            type: 'linear',
+                                            rotation: 0,
+                                            colorStops: [
+                                                { offset: 0, color: '#41B883' },
+                                                { offset: 1, color: '#34495E' },
+                                            ],
+                                        },
+                                    }"
                                 />
                             </div>
                         </div>
@@ -237,7 +266,10 @@ const formatTime = (datetime) => {
                                 </Link>
                             </div>
                         </div>
-                        <div class="max-h-96 overflow-y-auto" v-if="$page.props.isOJT">
+                        <div
+                            class="max-h-96 overflow-y-auto"
+                            v-if="$page.props.isOJT"
+                        >
                             <div>
                                 <div
                                     class="relative overflow-y-auto"

@@ -3,9 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\qrcode as qrcodeModel;
-use Endroid\QrCode\Writer\PngWriter;
 use Illuminate\Console\Command;
-use Endroid\QrCode\QrCode;
 
 class GenerateQrCodes extends Command
 {
@@ -28,22 +26,15 @@ class GenerateQrCodes extends Command
      */
     public function handle()
     {
-        $writer = new PngWriter();
         // Generate a random string
         $randomString = $this->generateRandomString(10); // Adjust the length as needed
 
         // Combine the current date with the random string
         $qrCodeContent = now()->toDateString() . '-' . $randomString;
 
-        // Generate the QR code
-        $qrCode = new QrCode($qrCodeContent);
-        $qrCodeData = $writer->write($qrCode)->getString();
-        $encodedQrCodeData = base64_encode($qrCodeData);
-
 
         qrcodeModel::create([
             'type' => now()->toDateString(),
-            'code' => $encodedQrCodeData,
             'qr_code' => $qrCodeContent,
         ]);
 
