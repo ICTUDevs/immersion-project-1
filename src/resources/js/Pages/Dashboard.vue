@@ -7,6 +7,10 @@ import { format } from "date-fns";
 import { initFlowbite } from "flowbite";
 import { usePage } from "@inertiajs/vue3";
 import VueQrcode from "@chenfengyuan/vue-qrcode";
+import ScannerComponent from "@/Components/Scanner.vue";
+import { useForm } from "@inertiajs/vue3";
+import { toast } from "vue3-toastify";
+import "vue3-toastify/dist/index.css";
 
 const page = usePage();
 
@@ -72,7 +76,6 @@ onMounted(() => {
         setExactInterval(fetchUsers, 3000);
         setExactInterval(countUsersWithTimeIn, 3000);
     }
-    
 });
 
 onUnmounted(() => {
@@ -82,6 +85,7 @@ onUnmounted(() => {
 const users = ref(prop.users);
 const qrcode = ref(prop.qrcode);
 const countUser = ref(null);
+const showScanner = ref(false);
 
 const fetchUsers = async () => {
     try {
@@ -128,6 +132,37 @@ const formatTime = (datetime) => {
         return "";
     }
     return format(new Date(datetime), "hh:mm a");
+};
+
+const form = useForm({
+    user_id: prop.users.id,
+    date: "",
+});
+
+const submit = () => {
+    form.post(route("attendance.store"), {
+        preserveScroll: true,
+        onSuccess: (page) => {
+            form.reset();
+            if (page.props.flash.message) {
+                toast.success(page.props.flash.message, {
+                    position: toast.POSITION.TOP_RIGHT,
+                    autoClose: 2000,
+                });
+            }
+            // else {
+            //     toast.error(page.props.flash.error, {
+            //         position: toast.POSITION.TOP_RIGHT,
+            //         autoClose: 2000,
+            //     });
+            // }
+        },
+    });
+};
+
+const handleDetected = (content) => {
+    form.date = content;
+    submit();
 };
 </script>
 
@@ -205,7 +240,7 @@ const formatTime = (datetime) => {
                                     <h5
                                         class="text-xl font-bold leading-none text-green-600 dark:text-white"
                                     >
-                                    {{ countUser }}
+                                        {{ countUser }}
                                     </h5>
                                 </div>
                                 <div class="flow-root">
@@ -258,14 +293,22 @@ const formatTime = (datetime) => {
                         </div>
                     </div>
                     <div class="p-8" v-if="$page.props.isOJT">
+                        <ScannerComponent
+                            v-if="showScanner"
+                            @close="showScanner = false"
+                            @detected="handleDetected"
+                            :users="prop.users"
+                        />
+
                         <div class="w-full justify-center flex pb-10">
                             <div>
-                                <Link
-                                    :href="route('attendance.scanner')"
+                                <button
+                                    @click="showScanner = true"
+                                    v-if="showScanner === false"
                                     class="inline-flex items-end px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 disabled:opacity-50 transition ease-in-out duration-150"
                                 >
                                     Open Scanner
-                                </Link>
+                                </button>
                             </div>
                         </div>
                         <div
@@ -358,7 +401,7 @@ const formatTime = (datetime) => {
 
                                         <!-- PM Table -->
                                         <table
-                                            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-8"
+                                            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-8"
                                         >
                                             <thead
                                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
@@ -432,6 +475,7 @@ const formatTime = (datetime) => {
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <hr class="my-7 bg-slate-400 h-1">
                                     </div>
                                 </div>
                             </div>
