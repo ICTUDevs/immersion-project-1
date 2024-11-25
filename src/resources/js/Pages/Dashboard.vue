@@ -434,14 +434,14 @@ const formatTime = (datetime) => {
 .qrcode__image {
   background-color: #fff;
   border: 0.25rem solid #fff;
-  border-radius: 0.25rem;
+  border-radius: 6rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-  height: 25%;
+  height: 30%;
   left: 50%;
   overflow: hidden;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 25%;
+  width: 30%;
 }
 </style>
