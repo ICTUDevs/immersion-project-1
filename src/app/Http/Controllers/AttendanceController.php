@@ -39,13 +39,14 @@ class AttendanceController extends Controller
         $user = attendance::with('user')->where('user_id', auth()->user()->id)->orderBy('date', 'desc')->get();
 
 
-
+        $userLog = auth()->user();
         // Fetch the latest QR code created today
         $QrCode = QrCode::whereDate('created_at', $date)->latest()->first();
         return inertia('Dashboard', [
             'qrcode' => $QrCode,
             'users' => $usersWithTimeIn,
-            'user' => $user
+            'user' => $user,
+            'userLog' => $userLog,
         ]);
     }
 
@@ -93,7 +94,7 @@ class AttendanceController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect()->route('dashboard')->with('message', $validator->errors());
+            return redirect()->route('dashboard')->with('error', $validator->errors());
         }
 
         $currentDate = Carbon::today()->toDateString();
@@ -101,18 +102,18 @@ class AttendanceController extends Controller
         $latestQRCode = qrcode::whereDate('created_at', $currentDate)->latest()->first();
 
         if ($latestQRCode->qr_code !== $request->date) {
-            return redirect()->route('dashboard')->with('message', 'Invalid QR Code.');
+            return redirect()->route('dashboard')->with('error', 'Invalid QR Code.');
         }
 
         $qrCodeContent = $request->date;
         $dateParts = explode('-', $qrCodeContent);
         if (count($dateParts) < 3) {
-            return redirect()->route('dashboard')->with('message', 'Invalid QR Code format.');
+            return redirect()->route('dashboard')->with('error', 'Invalid QR Code format.');
         }
         $currentDates = implode('-', array_slice($dateParts, 0, 3));
 
         if ($currentDates !== $currentDate) {
-            return redirect()->route('dashboard')->with('message', 'QR Code Expired.');
+            return redirect()->route('dashboard')->with('error', 'QR Code Expired.');
         }
         
 
@@ -128,9 +129,9 @@ class AttendanceController extends Controller
         $formattedTime = $currentTime->format('h:i:s A'); // Format to 12-hour format
 
         // Check if all time-in fields are empty and it's already 5 PM or later
-        // if (is_null($attendance->am_time_in) && is_null($attendance->am_time_out) && is_null($attendance->pm_time_in) && is_null($attendance->pm_time_out) && $currentHour >= 17) {
-        //     return redirect()->route('dashboard')->with('error', 'Cannot insert data after 5 PM if no time-in records exist.');
-        // }
+        if (is_null($attendance->am_time_in) && is_null($attendance->am_time_out) && is_null($attendance->pm_time_in) && is_null($attendance->pm_time_out) && $currentHour >= 17) {
+            return redirect()->route('dashboard')->with('error', 'Cannot insert data after 5 PM if no time-in records exist.');
+        }
 
         if (
             ($attendance->am_time_in && $attendance->am_time_in->diffInMinutes($currentTime) < 15) ||
@@ -138,7 +139,7 @@ class AttendanceController extends Controller
             ($attendance->am_time_out && $attendance->am_time_out->diffInMinutes($currentTime) < 15) ||
             ($attendance->pm_time_out && $attendance->pm_time_out->diffInMinutes($currentTime) < 15)
         ) {
-            return redirect()->route('dashboard')->with('message', 'Wait for at least 15 minutes before scanning again.');
+            return redirect()->route('dashboard')->with('error', 'Wait for at least 15 minutes before scanning again.');
         }
 
         if ($currentHour < 12) {

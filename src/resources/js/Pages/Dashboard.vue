@@ -19,10 +19,11 @@ onMounted(() => {
 });
 
 const prop = defineProps({
-    qrcode: Array,
+    qrcode: Object,
     users: Array,
     user: Array,
     flash: Object,
+    userLog: Object,
 });
 
 const currentDate = ref(new Date());
@@ -136,7 +137,7 @@ const formatTime = (datetime) => {
 };
 
 const form = useForm({
-    user_id: prop.users.id,
+    user_id: prop.userLog.id,
     date: "",
 });
 
@@ -146,17 +147,40 @@ const submit = () => {
         onSuccess: (page) => {
             form.reset();
             if (prop.flash.message) {
-                toast.success(prop.flash.message, {
-                    position: toast.POSITION.TOP_RIGHT,
-                    autoClose: 2000,
-                });
+                if (typeof prop.flash.message === "object") {
+                    Object.keys(prop.flash.message).forEach((key) => {
+                        prop.flash.message[key].forEach((element) => {
+                            toast.error(element, {
+                                position: toast.POSITION.TOP_RIGHT,
+                                autoClose: 2000,
+                            });
+                        });
+                    });
+                } else {
+                    console.log(prop.flash.message);
+                    toast.success(prop.flash.message, {
+                        position: toast.POSITION.TOP_RIGHT,
+                        autoClose: 2000,
+                    });
+                }
             }
-            // else {
-            //     toast.error(page.props.flash.error, {
-            //         position: toast.POSITION.TOP_RIGHT,
-            //         autoClose: 2000,
-            //     });
-            // }
+            else {
+                if (typeof prop.flash.error === "object") {
+                    Object.keys(prop.flash.error).forEach((key) => {
+                        prop.flash.error[key].forEach((element) => {
+                            toast.error(element, {
+                                position: toast.POSITION.TOP_RIGHT,
+                                autoClose: 2000,
+                            });
+                        });
+                    });
+                } else {
+                    toast.error(prop.flash.error, {
+                        position: toast.POSITION.TOP_RIGHT,
+                        autoClose: 2000,
+                    });
+                }
+            }
         },
     });
 };
@@ -218,11 +242,11 @@ const handleDetected = (content) => {
                                             width: 400,
                                         }"
                                     ></vue-qrcode>
-                                    <!-- <img
+                                    <img
                                         class="qrcode__image"
                                         src="ictu.png"
                                         alt="qrcode"
-                                    /> -->
+                                    />
                                 </figure>
                             </div>
                         </div>
@@ -476,7 +500,7 @@ const handleDetected = (content) => {
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <hr class="my-7 bg-slate-400 h-1">
+                                        <hr class="my-7 bg-slate-400 h-1" />
                                     </div>
                                 </div>
                             </div>
@@ -501,12 +525,12 @@ const handleDetected = (content) => {
     border: 0.25rem solid #fff;
     border-radius: 6rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-    height: 30%;
+    height: 25%;
     left: 50%;
     overflow: hidden;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
+    width: 25%;
 }
 </style>
