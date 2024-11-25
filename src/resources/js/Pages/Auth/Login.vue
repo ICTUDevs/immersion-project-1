@@ -29,11 +29,9 @@ const form1 = useForm({
 });
 
 const handleCredentialResponse = (response) => {
-    console.log("Encoded JWT ID token: " + response.credential);
-    // Send the token to your backend for verification and login
-
     form1.credential = response.credential;
     form1.post(route("auth.google.callback"), {
+        preserveState: true,
         onFinish: () => form1.reset("credential"),
     });
 };

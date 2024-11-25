@@ -21,12 +21,12 @@ services:
       - laravel
 
   mysql:
-    image: mysql:latest
+    image: mysql:lts-oracle
     container_name: mysql
     restart: unless-stopped
     tty: true
     ports:
-      - "3306:3306"
+      - "4306:3306"
     environment:
       MYSQL_DATABASE: attendance
       MYSQL_USER: ictudev
@@ -34,6 +34,8 @@ services:
       MYSQL_ROOT_PASSWORD: attendance@2024!
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
+    volumes:
+      - ./mysql:/var/lib/mysql
     networks:
       - laravel
 
