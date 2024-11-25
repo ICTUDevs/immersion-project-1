@@ -6,7 +6,7 @@ import "vue3-toastify/dist/index.css";
 import { format } from "date-fns";
 import { initFlowbite } from "flowbite";
 import { usePage } from "@inertiajs/vue3";
-import QRCodeVue3 from "qrcode-vue3";
+import VueQrcode from "@chenfengyuan/vue-qrcode";
 
 const page = usePage();
 
@@ -157,42 +157,21 @@ const formatTime = (datetime) => {
                                 Scan the QR Code to store your login or logout
                             </p>
                             <div class="flex justify-center">
-                                <QRCodeVue3
-                                    :width="350"
-                                    :height="350"
-                                    :value="qrcode.qr_code"
-                                    :key="qrcode.qr_code"
-                                    :qr-options="{
-                                        errorCorrectionLevel: 'H',
-                                    }"
-                                    :image-options="{
-                                        hideBackgroundDots: true,
-                                        imageSize: 0.4,
-                                        margin: 10,
-                                    }"
-                                    :corners-square-options="{
-                                        type: 'dot',
-                                        color: '#34495E',
-                                    }"
-                                    :corners-dot-options="{
-                                        type: undefined,
-                                        color: '#41B883',
-                                    }"
-                                    :dots-options="{
-                                        type: 'dots',
-                                        color: '#41B883',
-                                        gradient: {
-                                            type: 'linear',
-                                            rotation: 0,
-                                            colorStops: [
-                                                { offset: 0, color: '#41B883' },
-                                                { offset: 1, color: '#34495E' },
-                                            ],
-                                        },
-                                    }"
-                                    image="logo.png"
-                                    :download="false"
-                                />
+                                <figure class="qrcode">
+                                    <vue-qrcode
+                                        :value="qrcode.qr_code"
+                                        tag="svg"
+                                        :options="{
+                                            errorCorrectionLevel: 'Q',
+                                            width: 400,
+                                        }"
+                                    ></vue-qrcode>
+                                    <img
+                                        class="qrcode__image"
+                                        src="ictu.png"
+                                        alt="Chen Fengyuan"
+                                    />
+                                </figure>
                             </div>
                         </div>
                         <div class="p-8 flex justify-center w-full">
@@ -442,3 +421,27 @@ const formatTime = (datetime) => {
         </div>
     </AppLayout>
 </template>
+
+
+<style scoped>
+.qrcode {
+  display: inline-block;
+  font-size: 0;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.qrcode__image {
+  background-color: #fff;
+  border: 0.25rem solid #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  height: 25%;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+}
+</style>

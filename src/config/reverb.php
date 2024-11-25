@@ -34,6 +34,8 @@ return [
             'hostname' => env('REVERB_HOST'),
             'options' => [
                 'tls' => [
+                    'verify_peer' => false,
+                    'allow_self_signed' => true,
                 ],
             ],
             'max_request_size' => env('REVERB_MAX_REQUEST_SIZE', 10_000),

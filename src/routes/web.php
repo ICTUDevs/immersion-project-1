@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\RefreshUser;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
@@ -19,6 +20,12 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+
+    Route::get('/updates', function () {
+        RefreshUser::dispatch(request()->msg);
+
+        return 'done';
+    });
 
     Route::prefix('system')
         ->name('system.')

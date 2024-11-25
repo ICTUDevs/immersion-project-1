@@ -15,7 +15,7 @@ const props = defineProps({
     Oauth_status: Boolean,
 });
 
-const isLogin = ref(false);
+const isLogin = ref(true);
 const client_id = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 const form = useForm({
