@@ -47,3 +47,18 @@ services:
       - php
     networks:
       - laravel
+
+  
+  reverb:
+    build:
+        context: .
+        dockerfile: reverb/Dockerfile
+    container_name: reverb
+    ports:
+        - 4080:80
+    volumes:
+        - ./src:/var/www/html
+    networks:
+        - laravel
+    depends_on:
+        - php
