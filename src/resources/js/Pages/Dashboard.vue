@@ -22,6 +22,7 @@ const prop = defineProps({
     qrcode: Array,
     users: Array,
     user: Array,
+    flash: Object,
 });
 
 const currentDate = ref(new Date());
@@ -144,8 +145,8 @@ const submit = () => {
         preserveScroll: true,
         onSuccess: (page) => {
             form.reset();
-            if (page.props.flash.message) {
-                toast.success(page.props.flash.message, {
+            if (prop.flash.message) {
+                toast.success(prop.flash.message, {
                     position: toast.POSITION.TOP_RIGHT,
                     autoClose: 2000,
                 });
@@ -217,11 +218,11 @@ const handleDetected = (content) => {
                                             width: 400,
                                         }"
                                     ></vue-qrcode>
-                                    <img
+                                    <!-- <img
                                         class="qrcode__image"
                                         src="ictu.png"
-                                        alt="Chen Fengyuan"
-                                    />
+                                        alt="qrcode"
+                                    /> -->
                                 </figure>
                             </div>
                         </div>

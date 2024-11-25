@@ -16,26 +16,6 @@ services:
       - ./nginx-prod/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
-      - mysql
-    networks:
-      - laravel
-
-  mysql:
-    image: mysql:lts-oracle
-    container_name: mysql
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "4306:3306"
-    environment:
-      MYSQL_DATABASE: attendance
-      MYSQL_USER: ictudev
-      MYSQL_PASSWORD: attendance@2024!
-      MYSQL_ROOT_PASSWORD: attendance@2024!
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
-    volumes:
-      - ./mysql:/var/lib/mysql
     networks:
       - laravel
 
@@ -52,19 +32,7 @@ services:
     networks:
       - laravel
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: pmyadmin
-    restart: unless-stopped
-    environment:
-      PMA_HOST: mysql
-      MYSQL_ROOT_PASSWORD: attendance@2024!
-    ports:
-      - "8181:80"
-    networks:
-      - laravel
-
-
+  
   supervisord:
     build:
       context: .

@@ -32,6 +32,9 @@ const handleCredentialResponse = (response) => {
     form1.credential = response.credential;
     form1.post(route("auth.google.callback"), {
         preserveState: true,
+        onSuccess: () => {
+            window.location = route("dashboard");
+        },
         onFinish: () => form1.reset("credential"),
     });
 };

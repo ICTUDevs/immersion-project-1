@@ -26,7 +26,8 @@
                 </button>
             </div>
         </div>
-        <div v-if="error" class="error">{{ error }}</div>
+        <div v-if="error" class="text-red-500 pt-5">{{ error }}</div>
+        <div v-if="error" class="text-red-500 pt-5">{{ $page.props.flash.error }}</div>
     </div>
 </template>
 
@@ -57,10 +58,6 @@ const onDetect = async (detectedCodes) => {
     try {
         const result = await detectedCodes;
         emit("detected", result.content);
-
-        this.paused = true;
-        await this.timeout(500);
-        this.paused = false;
     } catch (err) {
         error.value = "Error detecting codes";
     }
