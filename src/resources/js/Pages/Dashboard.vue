@@ -70,7 +70,9 @@ onMounted(() => {
     if (page.props.isSuperAdmin || page.props.isTimeKeeper) {
         setExactInterval(fetchQRCode, 20000);
         setExactInterval(fetchUsers, 3000);
+        setExactInterval(countUsersWithTimeIn, 3000);
     }
+    
 });
 
 onUnmounted(() => {
@@ -79,6 +81,7 @@ onUnmounted(() => {
 
 const users = ref(prop.users);
 const qrcode = ref(prop.qrcode);
+const countUser = ref(null);
 
 const fetchUsers = async () => {
     try {
@@ -98,10 +101,23 @@ const fetchQRCode = async () => {
     }
 };
 
+const countUsersWithTimeIn = async () => {
+    try {
+        const response = await axios.get("attendance/countUsersWithTimeIn");
+        countUser.value = response.data;
+    } catch (error) {
+        console.error("Error counting users with time in:", error);
+    }
+};
+
+countUsersWithTimeIn();
+
 Echo.private("updates")
     .listen("RefreshUser", (e) => {
         console.log("RefreshUser event received:", e);
         fetchUsers();
+        fetchQRCode();
+        countUsersWithTimeIn();
     })
     .error((error) => {
         console.error("Error listening to channel:", error);
@@ -184,7 +200,12 @@ const formatTime = (datetime) => {
                                     <h5
                                         class="text-xl font-bold leading-none text-gray-900 dark:text-white"
                                     >
-                                        On Duty
+                                        OJT on Duty:
+                                    </h5>
+                                    <h5
+                                        class="text-xl font-bold leading-none text-green-600 dark:text-white"
+                                    >
+                                    {{ countUser }}
                                     </h5>
                                 </div>
                                 <div class="flow-root">
@@ -422,26 +443,25 @@ const formatTime = (datetime) => {
     </AppLayout>
 </template>
 
-
 <style scoped>
 .qrcode {
-  display: inline-block;
-  font-size: 0;
-  margin-bottom: 0;
-  position: relative;
+    display: inline-block;
+    font-size: 0;
+    margin-bottom: 0;
+    position: relative;
 }
 
 .qrcode__image {
-  background-color: #fff;
-  border: 0.25rem solid #fff;
-  border-radius: 0.25rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-  height: 25%;
-  left: 50%;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 25%;
+    background-color: #fff;
+    border: 0.25rem solid #fff;
+    border-radius: 6rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+    height: 30%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
 }
 </style>

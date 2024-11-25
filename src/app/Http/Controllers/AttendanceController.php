@@ -67,6 +67,16 @@ class AttendanceController extends Controller
         return response()->json($usersWithTimeIn);
     }
 
+    public function countUsersWithTimeIn()
+    {
+        $date = Carbon::today()->toDateString();
+
+        // Count users who have a time-in record for today with status 0
+        $count = Attendance::where('status', 1)->where('date', $date)->count();
+
+        return response()->json($count);
+    }
+
     public function fetchQrcode(){
         $date = Carbon::today()->toDateString();
 

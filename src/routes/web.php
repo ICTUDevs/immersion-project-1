@@ -78,6 +78,7 @@ Route::middleware([
             ]),
             Route::get('scanner', 'scanner')->name('scanner'),
             Route::get('fetchUser', 'fetchUser')->name('fetchUser'),
+            Route::get('countUsersWithTimeIn', 'countUsersWithTimeIn')->name('countUsersWithTimeIn'),
             Route::get('profile/{hashedId}', 'profile')->name('profile'),
             Route::get('manage/log/{hashedId}', 'editProfile')->name('log.edit'),
             Route::get('fetchQRCode', 'fetchQrcode')->name('fetchQrcode'),
