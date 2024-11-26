@@ -188,6 +188,8 @@ const submit = () => {
 const handleDetected = (content) => {
     form.date = content;
     submit();
+
+    showScanner.value = false;
 };
 </script>
 
@@ -258,12 +260,12 @@ const handleDetected = (content) => {
                                     class="flex items-center justify-between mb-4"
                                 >
                                     <h5
-                                        class="text-xl font-bold leading-none text-gray-900 dark:text-white"
+                                        class="text-2xl font-bold leading-none text-gray-900 dark:text-white"
                                     >
-                                        OJT on Duty:
+                                        On Duty:
                                     </h5>
                                     <h5
-                                        class="text-xl font-bold leading-none text-green-600 dark:text-white"
+                                        class="text-2xl font-bold leading-none text-green-600 dark:text-white"
                                     >
                                         {{ countUser }}
                                     </h5>
