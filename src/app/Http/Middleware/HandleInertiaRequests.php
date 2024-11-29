@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Inertia\Middleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -37,6 +38,8 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request): array
     {
         return array_merge(parent::share($request), [
+            // 'profile_photo_path' => Storage::url(Auth::user()->profile_photo_path),
+
             'isSuperAdmin' => fn() => Auth::check() ? (function () {
                 $user = Auth::user();
 
