@@ -338,12 +338,13 @@ const handleDetected = (content) => {
                                 <div
                                     class="relative overflow-y-auto"
                                     v-for="(item, index) in user"
-                                    :key="item.id"
+                                    :key="item.id"  
                                 >
                                     <div>
                                         <!-- AM Table -->
                                         <table
                                             class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                                             v-if="item.am_time_in != null || item.am_time_out != null"
                                         >
                                             <thead
                                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
@@ -421,7 +422,8 @@ const handleDetected = (content) => {
                                         <!-- PM Table -->
                                         <table
                                             class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-8"
-                                        >
+                                         v-if="item.pm_time_in != null || item.pm_time_out != null"
+                                            >
                                             <thead
                                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
                                             >
