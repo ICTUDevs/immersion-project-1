@@ -207,105 +207,109 @@ const handleDetected = (content) => {
                     class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg"
                 >
                 <div class="w-full">
-                        <div
-                            class="flex flex-col items-center w-full text-center"
-                            v-if="
+                       <div
+                       v-if="
                                 $page.props.isSuperAdmin || $page.props.isTimeKeeper
                             "
-                        >
-                            <div class="w-full flex flex-col  sm:flex-row items-center justify-center">
-                              <div class="px-4 pt-8">
-                                    <h1
-                                        class="mb-4 text-5xl uppercase font-extrabold leading-none tracking-tight text-gray-900 dark:text-white"
-                                    >
-                                        Attendance Tracker
-                                    </h1>
-                                    <p
-                                        class="mb-4 text-xl font-normal text-gray-500 dark:text-gray-400"
-                                    >
-                                        {{ formattedDate }}
-                                    </p>
-                                    <h1
-                                        class="mb-6 text-6xl font-bold text-gray-500 dark:text-gray-400"
-                                    >
-                                        {{ formattedTime }}
-                                    </h1>
-                              </div>
-                               <div class="px-4 pt-8" >
-                                    <p
-                                        class="mb-2 text-1xl font-normal text-gray-500 lg:text-xl dark:text-gray-400"
-                                    >
-                                        Scan the QR Code to store your login or logout
-                                    </p>
-                                    <div class="flex justify-center">
-                                        <figure class="qrcode">
-                                            <vue-qrcode
-                                                :value="qrcode.qr_code"
-                                                tag="svg"
-                                                :options="{
-                                                    errorCorrectionLevel: 'Q',
-                                                    width: 350,
-                                                }"
-                                            ></vue-qrcode>
-                                            <img
-                                                class="qrcode__image"
-                                                src="ictu.png"
-                                                alt="qrcode"
-                                            />
-                                        </figure>
-                                    </div>
-                               </div>
-                            </div>
-                        </div>
-                        <div class="px-8 pb-8 flex justify-center w-full">
+                       >
                             <div
-                                class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+                                class="flex flex-col items-center w-full text-center"
+                               
                             >
-                                <div class="flex items-center gap-4 mb-4">
-                                    <h5
-                                        class="text-2xl font-bold leading-none text-gray-900 dark:text-white"
-                                    >
-                                        On Duty:
-                                    </h5>
-                                    <h5
-                                        class="text-2xl font-bold leading-none text-green-600 dark:text-white"
-                                    >
-                                        {{ countUser }}
-                                    </h5>
-                                </div>
-                                <div
-                                    class="flex flex-wrap items-center flex-row justify-center gap-3"
-                                >
-    
-                                    <div
-                                        class="max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                                        v-for="(item, index) in users"
-                                        :key="item.id"
-                                    >
-                                        <div
-                                            class="flex flex-col items-center"
+                                <div class="w-full flex flex-col  sm:flex-row items-center justify-center">
+                                  <div class="px-4 pt-8">
+                                        <h1
+                                            class="mb-4 text-5xl uppercase font-extrabold leading-none tracking-tight text-gray-900 dark:text-white"
                                         >
-                                            <img
-                                                class="w-24 h-24 mb-3 rounded-full border"
-                                                :src=" item.user.profile_photo_url"
-                                                :alt=" item.user.name"
-                                            />
-                                            <h5
-                                                class="mb-1 text-xl font-bold text-gray-900 dark:text-white"
-                                            >
-                                            {{ item.user.name }}
-                                            </h5>
-                                            <span
-                                                class="text-sm text-gray-500 dark:text-gray-400"
-                                                >{{ item.user.email }}</span
-                                            >
+                                            Attendance Tracker
+                                        </h1>
+                                        <p
+                                            class="mb-4 text-xl font-normal text-gray-500 dark:text-gray-400"
+                                        >
+                                            {{ formattedDate }}
+                                        </p>
+                                        <h1
+                                            class="mb-6 text-6xl font-bold text-gray-500 dark:text-gray-400"
+                                        >
+                                            {{ formattedTime }}
+                                        </h1>
+                                  </div>
+                                   <div class="px-4 pt-8" >
+                                        <p
+                                            class="mb-2 text-1xl font-normal text-gray-500 lg:text-xl dark:text-gray-400"
+                                        >
+                                            Scan the QR Code to store your login or logout
+                                        </p>
+                                        <div class="flex justify-center">
+                                            <figure class="qrcode">
+                                                <vue-qrcode
+                                                    :value="qrcode.qr_code"
+                                                    tag="svg"
+                                                    :options="{
+                                                        errorCorrectionLevel: 'Q',
+                                                        width: 350,
+                                                    }"
+                                                ></vue-qrcode>
+                                                <img
+                                                    class="qrcode__image"
+                                                    src="ictu.png"
+                                                    alt="qrcode"
+                                                />
+                                            </figure>
                                         </div>
-                                    </div>
-                                   
-                                    
+                                   </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="px-8 pb-8 flex justify-center w-full">
+                                <div
+                                    class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+                                >
+                                    <div class="flex items-center gap-4 mb-4">
+                                        <h5
+                                            class="text-2xl font-bold leading-none text-gray-900 dark:text-white"
+                                        >
+                                            On Duty:
+                                        </h5>
+                                        <h5
+                                            class="text-2xl font-bold leading-none text-green-600 dark:text-white"
+                                        >
+                                            {{ countUser }}
+                                        </h5>
+                                    </div>
+                                    <div
+                                        class="flex flex-wrap items-center flex-row justify-center gap-3"
+                                    >
+        
+                                        <div
+                                            class="max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                                            v-for="(item, index) in users"
+                                            :key="item.id"
+                                        >
+                                            <div
+                                                class="flex flex-col items-center"
+                                            >
+                                                <img
+                                                    class="w-24 h-24 mb-3 rounded-full border"
+                                                    :src=" item.user.profile_photo_url"
+                                                    :alt=" item.user.name"
+                                                />
+                                                <h5
+                                                    class="mb-1 text-xl font-bold text-gray-900 dark:text-white"
+                                                >
+                                                {{ item.user.name }}
+                                                </h5>
+                                                <span
+                                                    class="text-sm text-gray-500 dark:text-gray-400"
+                                                    >{{ item.user.email }}</span
+                                                >
+                                            </div>
+                                        </div>
+                                      
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
                 </div>
                     <div class="p-8" v-if="$page.props.isOJT">
                         <ScannerComponent
