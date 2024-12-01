@@ -190,6 +190,50 @@ const handleDetected = (content) => {
 
     showScanner.value = false;
 };
+
+const getDate = (startDate, endDate) => {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    // If dates are the same, return single date
+    if (startDate === endDate) {
+        return start.toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        });
+    }
+
+    // If same month and year
+    if (
+        start.getMonth() === end.getMonth() &&
+        start.getFullYear() === end.getFullYear()
+    ) {
+        return `${start.toLocaleDateString("en-us", {
+            month: "long",
+        })} ${start.getDate()}-${end.getDate()}, ${start.getFullYear()}`;
+    }
+
+    // If different months but same year
+    if (start.getFullYear() === end.getFullYear()) {
+        return `${start.toLocaleDateString("en-us", {
+            month: "long",
+        })} ${start.getDate()} - ${end.toLocaleDateString("en-us", {
+            month: "long",
+        })} ${end.getDate()}, ${start.getFullYear()}`;
+    }
+
+    // If different years
+    return `${start.toLocaleDateString("en-us", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+    })} - ${end.toLocaleDateString("en-us", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+    })}`;
+};
 </script>
 
 <template>
@@ -206,18 +250,20 @@ const handleDetected = (content) => {
                 <div
                     class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg"
                 >
-                <div class="w-full">
-                       <div
-                       v-if="
-                                $page.props.isSuperAdmin || $page.props.isTimeKeeper
+                    <div class="w-full">
+                        <div
+                            v-if="
+                                $page.props.isSuperAdmin ||
+                                $page.props.isTimeKeeper
                             "
-                       >
+                        >
                             <div
                                 class="flex flex-col items-center w-full text-center"
-                               
                             >
-                                <div class="w-full flex flex-col  sm:flex-row items-center justify-center">
-                                  <div class="px-4 pt-8">
+                                <div
+                                    class="w-full flex flex-col sm:flex-row items-center justify-center"
+                                >
+                                    <div class="px-4 pt-8">
                                         <h1
                                             class="mb-4 text-5xl uppercase font-extrabold leading-none tracking-tight text-gray-900 dark:text-white"
                                         >
@@ -233,12 +279,13 @@ const handleDetected = (content) => {
                                         >
                                             {{ formattedTime }}
                                         </h1>
-                                  </div>
-                                   <div class="px-4 pt-8" >
+                                    </div>
+                                    <div class="px-4 pt-8">
                                         <p
                                             class="mb-2 text-1xl font-normal text-gray-500 lg:text-xl dark:text-gray-400"
                                         >
-                                            Scan the QR Code to store your login or logout
+                                            Scan the QR Code to store your login
+                                            or logout
                                         </p>
                                         <div class="flex justify-center">
                                             <figure class="qrcode">
@@ -246,7 +293,8 @@ const handleDetected = (content) => {
                                                     :value="qrcode.qr_code"
                                                     tag="svg"
                                                     :options="{
-                                                        errorCorrectionLevel: 'Q',
+                                                        errorCorrectionLevel:
+                                                            'Q',
                                                         width: 350,
                                                     }"
                                                 ></vue-qrcode>
@@ -257,7 +305,7 @@ const handleDetected = (content) => {
                                                 />
                                             </figure>
                                         </div>
-                                   </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="px-8 pb-8 flex justify-center w-full">
@@ -279,7 +327,6 @@ const handleDetected = (content) => {
                                     <div
                                         class="flex flex-wrap items-center flex-row justify-center gap-3"
                                     >
-        
                                         <div
                                             class="max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
                                             v-for="(item, index) in users"
@@ -290,13 +337,16 @@ const handleDetected = (content) => {
                                             >
                                                 <img
                                                     class="w-24 h-24 mb-3 rounded-full border"
-                                                    :src=" item.user.profile_photo_url"
-                                                    :alt=" item.user.name"
+                                                    :src="
+                                                        item.user
+                                                            .profile_photo_url
+                                                    "
+                                                    :alt="item.user.name"
                                                 />
                                                 <h5
                                                     class="mb-1 text-xl font-bold text-gray-900 dark:text-white"
                                                 >
-                                                {{ item.user.name }}
+                                                    {{ item.user.name }}
                                                 </h5>
                                                 <span
                                                     class="text-sm text-gray-500 dark:text-gray-400"
@@ -304,13 +354,11 @@ const handleDetected = (content) => {
                                                 >
                                             </div>
                                         </div>
-                                      
-                                        
                                     </div>
                                 </div>
                             </div>
-                       </div>
-                </div>
+                        </div>
+                    </div>
                     <div class="p-8" v-if="$page.props.isOJT">
                         <ScannerComponent
                             v-if="showScanner"
@@ -338,13 +386,22 @@ const handleDetected = (content) => {
                                 <div
                                     class="relative overflow-y-auto"
                                     v-for="(item, index) in user"
-                                    :key="item.id"  
+                                    :key="item.id"
                                 >
+                                    <div
+                                        class="text-xs uppercase font-bold py-2 text-gray-700 dark:text-gray-400"
+                                    >
+                                        {{ getDate(item.date) }}
+                                    </div>
                                     <div>
                                         <!-- AM Table -->
+
                                         <table
                                             class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
-                                             v-if="item.am_time_in != null || item.am_time_out != null"
+                                            v-if="
+                                                item.am_time_in != null ||
+                                                item.am_time_out != null
+                                            "
                                         >
                                             <thead
                                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
@@ -355,7 +412,7 @@ const handleDetected = (content) => {
                                                         colspan="2"
                                                         class="px-6 py-3 text-center border"
                                                     >
-                                                        AM - {{ item.date }}
+                                                        MORNING
                                                     </th>
                                                 </tr>
                                                 <tr>
@@ -422,8 +479,11 @@ const handleDetected = (content) => {
                                         <!-- PM Table -->
                                         <table
                                             class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-8"
-                                         v-if="item.pm_time_in != null || item.pm_time_out != null"
-                                            >
+                                            v-if="
+                                                item.pm_time_in != null ||
+                                                item.pm_time_out != null
+                                            "
+                                        >
                                             <thead
                                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
                                             >
@@ -433,7 +493,7 @@ const handleDetected = (content) => {
                                                         colspan="2"
                                                         class="px-6 py-3 text-center border"
                                                     >
-                                                        PM - {{ item.date }}
+                                                        AFTERNOON
                                                     </th>
                                                 </tr>
                                                 <tr>
