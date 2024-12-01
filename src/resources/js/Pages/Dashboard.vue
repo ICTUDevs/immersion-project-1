@@ -336,7 +336,7 @@ const getDate = (startDate, endDate) => {
                                                 class="flex flex-col items-center"
                                             >
                                                 <img
-                                                    class="w-24 h-24 mb-3 rounded-full border"
+                                                    class="w-32 h-32 mb-3 rounded-md border"
                                                     :src="
                                                         item.user
                                                             .profile_photo_url
