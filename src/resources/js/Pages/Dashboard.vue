@@ -391,7 +391,7 @@ const getDate = (startDate, endDate) => {
                                     <div
                                         class="text-xs uppercase font-bold py-2 text-gray-700 dark:text-gray-400"
                                     >
-                                        {{ getDate(item.date) }}
+                                        {{ getDate(item.date, item.date) }}
                                     </div>
                                     <div>
                                         <!-- AM Table -->
