@@ -74,7 +74,7 @@ const setExactInterval = (callback, interval) => {
 onMounted(() => {
     intervalId = setInterval(updateDateTime, 1000);
     if (page.props.isSuperAdmin || page.props.isTimeKeeper) {
-        setExactInterval(fetchQRCode, 20000);
+        setExactInterval(fetchQRCode, 18000);
         setExactInterval(fetchUsers, 3000);
         setExactInterval(countUsersWithTimeIn, 3000);
     }
@@ -333,7 +333,7 @@ const getDate = (startDate, endDate) => {
                                             :key="item.id"
                                         >
                                             <div
-                                                class="flex flex-col items-center"
+                                                class="flex flex-col overflow-x-hidden items-center"
                                             >
                                                 <img
                                                     class="w-32 h-32 mb-3 rounded-full border"
@@ -349,7 +349,7 @@ const getDate = (startDate, endDate) => {
                                                     {{ item.user.name }}
                                                 </h5>
                                                 <p
-                                                    class="text-sm overflow-hidden truncate text-center text-gray-500 dark:text-gray-400"
+                                                    class="text-sm truncate text-center text-gray-500 dark:text-gray-400"
                                                     >{{ item.user.email }}</p
                                                 >
                                             </div>
