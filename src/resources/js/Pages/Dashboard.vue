@@ -74,7 +74,7 @@ const setExactInterval = (callback, interval) => {
 onMounted(() => {
     intervalId = setInterval(updateDateTime, 1000);
     if (page.props.isSuperAdmin || page.props.isTimeKeeper) {
-        setExactInterval(fetchQRCode, 21000);
+        setExactInterval(fetchQRCode, 5000);
         setExactInterval(fetchUsers, 3000);
         setExactInterval(countUsersWithTimeIn, 3000);
     }
@@ -308,7 +308,9 @@ const getDate = (startDate, endDate) => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="px-8 pb-8 flex justify-center w-full">
+                            <div
+                                class="px-4 sm:px-8 pb-8 flex justify-center w-full"
+                            >
                                 <div
                                     class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
                                 >
@@ -325,34 +327,43 @@ const getDate = (startDate, endDate) => {
                                         </h5>
                                     </div>
                                     <div
-                                        class="flex flex-wrap items-center flex-row justify-center gap-3"
+                                        class="flex sm:flex-wrap items-center sm:flex-row flex-col justify-center gap-3 overflow-hidden"
                                     >
                                         <div
-                                            class="w-1/4 p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                                            v-for="(item, index) in users"
-                                            :key="item.id"
+                                            class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800"
                                         >
-                                            <div
-                                                class="flex flex-col items-center"
+                                            <figure
+                                                v-for="(item, index) in users"
+                                                :key="item.id"
+                                                class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700"
                                             >
-                                                <img
-                                                    class="w-32 h-32 mb-3 rounded-full border"
-                                                    :src="
-                                                        item.user
-                                                            .profile_photo_url
-                                                    "
-                                                    :alt="item.user.name"
-                                                />
-                                                <h5
-                                                    class="mb-1 text-wrap text-center text-xl font-bold text-gray-900 dark:text-white break-words"
+                                                <figcaption
+                                                    class="flex flex-col items-center justify-center"
                                                 >
-                                                    {{ item.user.name }}
-                                                </h5>
-                                                <p
-                                                    class="text-sm truncate text-center text-gray-500 dark:text-gray-400"
-                                                    >{{ item.user.email }}</p
-                                                >
-                                            </div>
+                                                    <img
+                                                        class="rounded-full w-32 h-32"
+                                                        :src="
+                                                            item.user
+                                                                .profile_photo_url
+                                                        "
+                                                        :alt="item.user.name"
+                                                    />
+                                                    <div
+                                                        class="space-y-0.5 text-center font-medium dark:text-white text-left rtl:text-right ms-3"
+                                                    >
+                                                        <div class="font-bold text-2xl">
+                                                            {{ item.user.name }}
+                                                        </div>
+                                                        <div
+                                                            class="text-sm text-gray-500 dark:text-gray-400"
+                                                        >
+                                                            {{
+                                                                item.user.email
+                                                            }}
+                                                        </div>
+                                                    </div>
+                                                </figcaption>
+                                            </figure>
                                         </div>
                                     </div>
                                 </div>
