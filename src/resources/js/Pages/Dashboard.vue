@@ -328,7 +328,7 @@ const getDate = (startDate, endDate) => {
                                         class="flex flex-wrap items-center flex-row justify-center gap-3"
                                     >
                                         <div
-                                            class="max-w-sm p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                                            class="w-1/4 p-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
                                             v-for="(item, index) in users"
                                             :key="item.id"
                                         >
@@ -336,7 +336,7 @@ const getDate = (startDate, endDate) => {
                                                 class="flex flex-col items-center"
                                             >
                                                 <img
-                                                    class="w-32 h-32 mb-3 rounded-md border"
+                                                    class="w-32 h-32 mb-3 rounded-full border"
                                                     :src="
                                                         item.user
                                                             .profile_photo_url
@@ -344,12 +344,12 @@ const getDate = (startDate, endDate) => {
                                                     :alt="item.user.name"
                                                 />
                                                 <h5
-                                                    class="mb-1 text-xl font-bold text-gray-900 dark:text-white"
+                                                    class="mb-1 text-xl font-bold text-gray-900 dark:text-white break-words"
                                                 >
                                                     {{ item.user.name }}
                                                 </h5>
                                                 <span
-                                                    class="text-sm text-gray-500 dark:text-gray-400"
+                                                    class="text-sm text-gray-500 dark:text-gray-400 break-words"
                                                     >{{ item.user.email }}</span
                                                 >
                                             </div>
