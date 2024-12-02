@@ -344,12 +344,12 @@ const getDate = (startDate, endDate) => {
                                                     :alt="item.user.name"
                                                 />
                                                 <h5
-                                                    class="mb-1 text-xl font-bold text-gray-900 dark:text-white break-words"
+                                                    class="mb-1 text-wrap text-center text-xl font-bold text-gray-900 dark:text-white break-words"
                                                 >
                                                     {{ item.user.name }}
                                                 </h5>
                                                 <span
-                                                    class="text-sm text-gray-500 dark:text-gray-400 break-words"
+                                                    class="text-sm text-wrap text-center text-gray-500 dark:text-gray-400 break-words"
                                                     >{{ item.user.email }}</span
                                                 >
                                             </div>
