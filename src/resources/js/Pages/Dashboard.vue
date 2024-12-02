@@ -348,9 +348,9 @@ const getDate = (startDate, endDate) => {
                                                 >
                                                     {{ item.user.name }}
                                                 </h5>
-                                                <span
-                                                    class="text-sm text-wrap text-center text-gray-500 dark:text-gray-400 break-words"
-                                                    >{{ item.user.email }}</span
+                                                <p
+                                                    class="text-sm truncate text-center text-gray-500 dark:text-gray-400"
+                                                    >{{ item.user.email }}</p
                                                 >
                                             </div>
                                         </div>
