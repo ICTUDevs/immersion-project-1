@@ -26,7 +26,10 @@
                                     class="w-1/4"
                                 >
                                 </v-select>
-                                <DangerButton class="" @click="generatePdf(selectedOption)">
+                                <DangerButton
+                                    class=""
+                                    @click="generatePdf(selectedOption)"
+                                >
                                     Generate PDF
                                 </DangerButton>
                             </div>
@@ -253,18 +256,14 @@ const generatePdf = async (selectedOption) => {
         ],
     ];
 
-    const doc = new jsPDF({
-        orientation: "portrait",
-        unit: "in",
-        format: "a4",
-    });
-
-    const pageWidth = doc.internal.pageSize.getWidth();
-    const margin = 0.1; // Margin on each side of the page
-    const spacing = 0.0001; // Spacing between the tables
-    const tableWidth = (pageWidth - 2 * margin - spacing) / 2; // Adjust the width of each table to fit with spacing
-
-    const addHeader = (startX, startY, userName, monthYear) => {
+    const addHeader = (
+        doc,
+        startX,
+        startY,
+        userName,
+        monthYear,
+        tableWidth
+    ) => {
         doc.setFont("helvetica", "bold")
             .setFontSize(12)
             .text(
@@ -324,11 +323,14 @@ const generatePdf = async (selectedOption) => {
         return new Date(year, month, 0).getDate();
     };
 
-    const generateTable = (startX, startY, user) => {
+    const generateTable = (doc, startX, startY, user, tableWidth) => {
         const userName = `${user.name.toUpperCase()}`;
-        const monthYear = format(new Date(selectedMonth), "MMMM yyyy").toUpperCase();
+        const monthYear = format(
+            new Date(selectedMonth),
+            "MMMM yyyy"
+        ).toUpperCase();
 
-        addHeader(startX, startY, userName, monthYear);
+        addHeader(doc, startX, startY, userName, monthYear, tableWidth);
 
         const daysInMonth = getDaysInMonth(selectedMonth);
         const attendanceMap = new Map(
@@ -547,7 +549,7 @@ const generatePdf = async (selectedOption) => {
             body: body,
             didDrawPage: function (data) {
                 if (data.pageNumber > 1) {
-                    addHeader(startX, startY, userName, monthYear);
+                    addHeader(doc, startX, startY, userName, monthYear);
                 }
             },
             startY: startY + 1.1,
@@ -570,8 +572,22 @@ const generatePdf = async (selectedOption) => {
             format: "a4",
         });
 
-        // Generate the table for the user
-        generateTable(margin, 0.5, user);
+        const pageWidth = doc.internal.pageSize.getWidth();
+        const margin = 0.1; // Margin on each side of the page
+        const spacing = 0.0001; // Spacing between the tables
+        const tableWidth = (pageWidth - 2 * margin - spacing) / 2; // Adjust the width of each table to fit with spacing
+
+        // Generate the first table for the user
+        generateTable(doc, margin, 0.5, user, tableWidth);
+
+        // Generate the second table for the user
+        generateTable(
+            doc,
+            margin + tableWidth + spacing,
+            0.5,
+            user,
+            tableWidth
+        );
 
         // Save the PDF with the user's name
         doc.save(`${user.name}.pdf`);
