@@ -75,7 +75,6 @@ const formatTime = (datetime) => {
     return format(new Date(datetime), "hh:mm");
 };
 
-console.log(props.users[0].attendances[0]);
 
 const options = computed(() => {
     if (
