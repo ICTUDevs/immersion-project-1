@@ -11,7 +11,7 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div
-                    class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg"
+                    class="bg-white dark:bg-gray-800 shadow-xl sm:rounded-lg"
                 >
                     <div class="relative overflow-x-auto p-5">
                         <div
@@ -76,10 +76,13 @@ const options = computed(() => {
         Array.isArray(props.users) &&
         Array.isArray(props.users[0].attendances)
     ) {
-        return props.users[0].attendances.map((dtr) => ({
-            label: format(new Date(dtr.date), "MMMM yyyy").toUpperCase(),
-            id: dtr.id,
-            date: dtr.date,
+        const uniqueMonths = new Set(
+            props.users[0].attendances.map((dtr) => dtr.date.slice(0, 7))
+        );
+
+        return Array.from(uniqueMonths).map((month) => ({
+            label: format(new Date(month + "-01"), "MMMM yyyy").toUpperCase(),
+            date: month,
         }));
     }
     return [];
@@ -131,6 +134,11 @@ const generatePdf = async (selectedOption) => {
             title: "Minute(s)",
             styles: { halign: "center" },
         },
+        {
+            dataKey: "remarks",
+            title: "Remarks",
+            styles: { halign: "center" },
+        }
     ];
 
     const head = [
@@ -146,7 +154,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 8,
+                    fontSize: 6,
                 },
             },
             {
@@ -158,7 +166,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 8,
+                    fontSize: 6,
                 },
             },
             {
@@ -170,7 +178,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 8,
+                    fontSize: 6,
                 },
             },
             {
@@ -182,7 +190,21 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 8,
+                    fontSize: 6,
+                },
+            },
+            {
+                content: "Remarks",
+                colSpan: 1,
+                rowSpan: 2,
+                styles: {
+                    halign: "center",
+                    valign: "middle",
+                    fillColor: [255, 255, 255],
+                    lineColor: 0.9,
+                    textColor: [0, 0, 0],
+                    lineWidth: 0.001,
+                    fontSize: 6,
                 },
             },
         ],
@@ -195,7 +217,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 7,
+                    fontSize: 6,
                 },
             },
             {
@@ -206,7 +228,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 7,
+                    fontSize: 6,
                 },
             },
             {
@@ -217,7 +239,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 7,
+                    fontSize: 6,
                 },
             },
             {
@@ -228,7 +250,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 7,
+                    fontSize: 6,
                 },
             },
             {
@@ -239,7 +261,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 7,
+                    fontSize: 6,
                 },
             },
             {
@@ -250,7 +272,7 @@ const generatePdf = async (selectedOption) => {
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
-                    fontSize: 7,
+                    fontSize: 6,
                 },
             },
         ],
@@ -340,6 +362,16 @@ const generatePdf = async (selectedOption) => {
 
             totalHoursUnderTime += hoursUnderTime;
             totalMinutesUnderTime += minutesUnderTime;
+
+            const date = new Date(selectedMonth + '-' + String(day).padStart(2, '0'));
+            const dayOfWeek = date.getDay();
+            let remarks = item.remarks || "";
+
+            if (dayOfWeek === 6) {
+                remarks = "Saturday";
+            } else if (dayOfWeek === 0) {
+                remarks = "Sunday";
+            }
 
             body.push({
                 name: {
@@ -433,6 +465,19 @@ const generatePdf = async (selectedOption) => {
                         valign: "middle",
                     },
                 },
+                remarks: {
+                    content: remarks,
+                    styles: {
+                        halign: "center",
+                        fontSize: 8,
+                        fillColor: [255, 255, 255],
+                        lineColor: 0.9,
+                        textColor: [150, 150, 150],
+                        lineWidth: 0.001,
+                        cellPadding: 0.05,
+                        valign: "middle",
+                    },
+                },
             });
         }
 
@@ -471,6 +516,19 @@ const generatePdf = async (selectedOption) => {
             },
             minutes_under_time: {
                 content: totalMinutesUnderTime.toString(),
+                styles: {
+                    halign: "center",
+                    fontSize: 8,
+                    fillColor: [255, 255, 255],
+                    lineColor: 0.9,
+                    textColor: [150, 150, 150],
+                    lineWidth: 0.001,
+                    cellPadding: 0.05,
+                    valign: "middle",
+                },
+            },
+            remarks: {
+                content: "",
                 styles: {
                     halign: "center",
                     fontSize: 8,
