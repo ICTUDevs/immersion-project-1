@@ -524,7 +524,7 @@ const generatePdf = async (selectedOption) => {
                 colSpan: 5, // Merge the first 5 columns
             },
             hours_under_time: {
-                content: totalHoursUnderTime.toString(),
+                content: "",//totalHoursUnderTime.toString()
                 styles: {
                     halign: "center",
                     fontSize: 8,
@@ -537,7 +537,7 @@ const generatePdf = async (selectedOption) => {
                 },
             },
             minutes_under_time: {
-                content: totalMinutesUnderTime.toString(),
+                content: "", //totalMinutesUnderTime.toString()
                 styles: {
                     halign: "center",
                     fontSize: 8,
