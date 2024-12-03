@@ -256,14 +256,7 @@ const generatePdf = async (selectedOption) => {
         ],
     ];
 
-    const addHeader = (
-        doc,
-        startX,
-        startY,
-        userName,
-        monthYear,
-        tableWidth
-    ) => {
+    const addHeader = (doc, startX, startY, userName, monthYear, tableWidth) => {
         doc.setFont("helvetica", "bold")
             .setFontSize(12)
             .text(
@@ -325,10 +318,7 @@ const generatePdf = async (selectedOption) => {
 
     const generateTable = (doc, startX, startY, user, tableWidth) => {
         const userName = `${user.name.toUpperCase()}`;
-        const monthYear = format(
-            new Date(selectedMonth),
-            "MMMM yyyy"
-        ).toUpperCase();
+        const monthYear = format(new Date(selectedMonth), "MMMM yyyy").toUpperCase();
 
         addHeader(doc, startX, startY, userName, monthYear, tableWidth);
 
@@ -445,6 +435,10 @@ const generatePdf = async (selectedOption) => {
                 },
             });
         }
+
+        // Convert total minutes to hours if they exceed 60
+        totalHoursUnderTime += Math.floor(totalMinutesUnderTime / 60);
+        totalMinutesUnderTime = totalMinutesUnderTime % 60;
 
         // Add total row
         body.push({
