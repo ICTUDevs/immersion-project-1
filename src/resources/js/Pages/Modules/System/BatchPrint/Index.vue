@@ -4,28 +4,33 @@
             <h2
                 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight"
             >
-                Daily Time Record:
+                Batch Generation of Daily Time Records
             </h2>
         </template>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div
-                    class="bg-white dark:bg-gray-800 shadow-xl sm:rounded-lg"
-                >
-                    <div class="relative overflow-x-auto p-5">
+                <div class="bg-white dark:bg-gray-800 shadow-xl sm:rounded-lg">
+                    <div class="relative p-5">
                         <div
-                            class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4"
+                            class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center pb-4"
                         >
                             <div
-                                class="flex flex-row items-center w-full mb-1 gap-2"
+                                class="flex flex-col md:flex-row md:items-end w-full mb-1 gap-2"
                             >
-                                <v-select
-                                    :options="options"
-                                    v-model="selectedOption"
-                                    class="w-1/4"
-                                >
-                                </v-select>
+                                <div class="w-full md:w-1/4">
+                                    <label
+                                        for="name"
+                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                        >Select a month</label
+                                    >
+                                    <v-select
+                                        :options="options"
+                                        v-model="selectedOption"
+                                        class="w-full"
+                                    >
+                                    </v-select>
+                                </div>
                                 <DangerButton
                                     class=""
                                     @click="generatePdf(selectedOption)"
@@ -46,6 +51,7 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import { onMounted, computed, ref } from "vue";
 import { initFlowbite } from "flowbite";
 import { format } from "date-fns";
+import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
 import DangerButton from "@/Components/DangerButton.vue";
 import { jsPDF } from "jspdf";
@@ -96,7 +102,7 @@ onMounted(() => {
 
 const generatePdf = async (selectedOption) => {
     if (!selectedOption || !selectedOption.date) {
-        console.error("No option selected or date is missing");
+        toast.error("Please select a month to generate the PDF");
         return;
     }
 
@@ -138,7 +144,7 @@ const generatePdf = async (selectedOption) => {
             dataKey: "remarks",
             title: "Remarks",
             styles: { halign: "center" },
-        }
+        },
     ];
 
     const head = [
@@ -150,7 +156,7 @@ const generatePdf = async (selectedOption) => {
                 styles: {
                     halign: "center",
                     valign: "middle",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -162,7 +168,7 @@ const generatePdf = async (selectedOption) => {
                 colSpan: 2,
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -174,7 +180,7 @@ const generatePdf = async (selectedOption) => {
                 colSpan: 2,
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -186,7 +192,7 @@ const generatePdf = async (selectedOption) => {
                 colSpan: 2,
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -200,7 +206,7 @@ const generatePdf = async (selectedOption) => {
                 styles: {
                     halign: "center",
                     valign: "middle",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -213,7 +219,7 @@ const generatePdf = async (selectedOption) => {
                 content: "Arrival",
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -224,7 +230,7 @@ const generatePdf = async (selectedOption) => {
                 content: "Departure",
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -235,7 +241,7 @@ const generatePdf = async (selectedOption) => {
                 content: "Arrival",
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -246,7 +252,7 @@ const generatePdf = async (selectedOption) => {
                 content: "Departure",
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -257,7 +263,7 @@ const generatePdf = async (selectedOption) => {
                 content: "Hour(s)",
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -268,7 +274,7 @@ const generatePdf = async (selectedOption) => {
                 content: "Minute(s)",
                 styles: {
                     halign: "center",
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -278,9 +284,18 @@ const generatePdf = async (selectedOption) => {
         ],
     ];
 
-    const addHeader = (doc, startX, startY, userName, monthYear, tableWidth) => {
+    const addHeader = (
+        doc,
+        startX,
+        startY,
+        userName,
+        monthYear,
+        tableWidth
+    ) => {
         doc.setFont("helvetica", "bold")
             .setFontSize(12)
+            .setTextColor(0, 0, 0)
+
             .text(
                 "DAILY TIME RECORD",
                 startX +
@@ -290,6 +305,7 @@ const generatePdf = async (selectedOption) => {
             );
 
         doc.setFont("helvetica", "normal")
+        .setTextColor(0, 0, 0)
             .setFontSize(8)
             .text(
                 "-----oOo-----",
@@ -297,7 +313,8 @@ const generatePdf = async (selectedOption) => {
                 startY + 0.2
             );
 
-        doc.setFontSize(9).text(
+        doc.setTextColor(0, 0, 0).setFontSize(9).text(
+            
             userName,
             startX + tableWidth / 2 - doc.getTextWidth(userName) / 2,
             startY + 0.4
@@ -311,13 +328,13 @@ const generatePdf = async (selectedOption) => {
             startY + 0.48
         );
 
-        doc.setFontSize(8).text(
+        doc.setTextColor(0, 0, 0).setFontSize(8).text(
             "NAME",
             startX + tableWidth / 2 - doc.getTextWidth("NAME") / 2,
             startY + 0.6
         );
 
-        doc.setFontSize(8).text(
+        doc.setTextColor(0, 0, 0).setFontSize(8).text(
             "For the month of  " + monthYear,
             startX + 0.09, // Adjust the margin as needed
             startY + 0.9,
@@ -340,7 +357,10 @@ const generatePdf = async (selectedOption) => {
 
     const generateTable = (doc, startX, startY, user, tableWidth) => {
         const userName = `${user.name.toUpperCase()}`;
-        const monthYear = format(new Date(selectedMonth), "MMMM yyyy").toUpperCase();
+        const monthYear = format(
+            new Date(selectedMonth),
+            "MMMM yyyy"
+        ).toUpperCase();
 
         addHeader(doc, startX, startY, userName, monthYear, tableWidth);
 
@@ -363,7 +383,9 @@ const generatePdf = async (selectedOption) => {
             totalHoursUnderTime += hoursUnderTime;
             totalMinutesUnderTime += minutesUnderTime;
 
-            const date = new Date(selectedMonth + '-' + String(day).padStart(2, '0'));
+            const date = new Date(
+                selectedMonth + "-" + String(day).padStart(2, "0")
+            );
             const dayOfWeek = date.getDay();
             let remarks = item.remarks || "";
 
@@ -379,7 +401,7 @@ const generatePdf = async (selectedOption) => {
                     styles: {
                         halign: "center",
                         fontSize: 8,
-                        fillColor: [255, 255, 255],
+                        fillColor: null,
                         lineColor: 0.9,
                         textColor: [150, 150, 150],
                         lineWidth: 0.001,
@@ -392,7 +414,7 @@ const generatePdf = async (selectedOption) => {
                     styles: {
                         halign: "center",
                         fontSize: 8,
-                        fillColor: [255, 255, 255],
+                        fillColor: null,
                         lineColor: 0.9,
                         textColor: [150, 150, 150],
                         lineWidth: 0.001,
@@ -405,7 +427,7 @@ const generatePdf = async (selectedOption) => {
                     styles: {
                         halign: "center",
                         fontSize: 8,
-                        fillColor: [255, 255, 255],
+                        fillColor: null,
                         lineColor: 0.9,
                         textColor: [150, 150, 150],
                         lineWidth: 0.001,
@@ -418,7 +440,7 @@ const generatePdf = async (selectedOption) => {
                     styles: {
                         halign: "center",
                         fontSize: 8,
-                        fillColor: [255, 255, 255],
+                        fillColor: null,
                         lineColor: 0.9,
                         textColor: [150, 150, 150],
                         lineWidth: 0.001,
@@ -431,7 +453,7 @@ const generatePdf = async (selectedOption) => {
                     styles: {
                         halign: "center",
                         fontSize: 8,
-                        fillColor: [255, 255, 255],
+                        fillColor: null,
                         lineColor: 0.9,
                         textColor: [150, 150, 150],
                         lineWidth: 0.001,
@@ -444,7 +466,7 @@ const generatePdf = async (selectedOption) => {
                     styles: {
                         halign: "center",
                         fontSize: 8,
-                        fillColor: [255, 255, 255],
+                        fillColor: null,
                         lineColor: 0.9,
                         textColor: [150, 150, 150],
                         lineWidth: 0.001,
@@ -457,7 +479,7 @@ const generatePdf = async (selectedOption) => {
                     styles: {
                         halign: "center",
                         fontSize: 8,
-                        fillColor: [255, 255, 255],
+                        fillColor: null,
                         lineColor: 0.9,
                         textColor: [150, 150, 150],
                         lineWidth: 0.001,
@@ -470,7 +492,7 @@ const generatePdf = async (selectedOption) => {
                     styles: {
                         halign: "center",
                         fontSize: 8,
-                        fillColor: [255, 255, 255],
+                        fillColor: null,
                         lineColor: 0.9,
                         textColor: [150, 150, 150],
                         lineWidth: 0.001,
@@ -492,7 +514,7 @@ const generatePdf = async (selectedOption) => {
                 styles: {
                     halign: "right",
                     fontSize: 8,
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [0, 0, 0],
                     lineWidth: 0.001,
@@ -506,7 +528,7 @@ const generatePdf = async (selectedOption) => {
                 styles: {
                     halign: "center",
                     fontSize: 8,
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [150, 150, 150],
                     lineWidth: 0.001,
@@ -519,7 +541,7 @@ const generatePdf = async (selectedOption) => {
                 styles: {
                     halign: "center",
                     fontSize: 8,
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [150, 150, 150],
                     lineWidth: 0.001,
@@ -532,7 +554,7 @@ const generatePdf = async (selectedOption) => {
                 styles: {
                     halign: "center",
                     fontSize: 8,
-                    fillColor: [255, 255, 255],
+                    fillColor: null,
                     lineColor: 0.9,
                     textColor: [150, 150, 150],
                     lineWidth: 0.001,
@@ -629,8 +651,34 @@ const generatePdf = async (selectedOption) => {
         const spacing = 0.0001; // Spacing between the tables
         const tableWidth = (pageWidth - 2 * margin - spacing) / 2; // Adjust the width of each table to fit with spacing
 
+        // Add watermark to the first table
+        doc.setFontSize(40);
+        doc.setTextColor("#ebecec");
+        doc.text(
+            "SYSTEM GENERATED",
+            doc.internal.pageSize.getWidth() / 2.3,
+            8.1,
+            {
+                angle: 60,
+                align: "center",
+            }
+        );
+
         // Generate the first table for the user
         generateTable(doc, margin, 0.5, user, tableWidth);
+
+        // Add watermark to the second table
+        doc.setFontSize(40);
+        doc.setTextColor("#ebecec");
+        doc.text(
+            "SYSTEM GENERATED",
+            doc.internal.pageSize.getWidth() / 2.3 + tableWidth + spacing,
+            8.1,
+            {
+                angle: 60,
+                align: "center",
+            }
+        );
 
         // Generate the second table for the user
         generateTable(
