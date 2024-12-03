@@ -89,8 +89,8 @@ onMounted(() => {
 });
 
 const generatePdf = async (selectedOption) => {
-    if (!selectedOption) {
-        console.error("No option selected");
+    if (!selectedOption || !selectedOption.date) {
+        console.error("No option selected or date is missing");
         return;
     }
 
@@ -326,10 +326,7 @@ const generatePdf = async (selectedOption) => {
 
     const generateTable = (startX, startY, user) => {
         const userName = `${user.name.toUpperCase()}`;
-        const monthYear = format(
-            new Date(selectedMonth),
-            "MMMM yyyy"
-        ).toUpperCase();
+        const monthYear = format(new Date(selectedMonth), "MMMM yyyy").toUpperCase();
 
         addHeader(startX, startY, userName, monthYear);
 
@@ -566,12 +563,17 @@ const generatePdf = async (selectedOption) => {
 
     // Loop through each user and generate the PDF
     for (const user of props.users) {
-        // Generate the first table
+        // Create a new document for each user
+        const doc = new jsPDF({
+            orientation: "portrait",
+            unit: "in",
+            format: "a4",
+        });
+
+        // Generate the table for the user
         generateTable(margin, 0.5, user);
 
-        // Generate the second table
-        generateTable(margin + tableWidth + spacing, 0.5, user);
-
+        // Save the PDF with the user's name
         doc.save(`${user.name}.pdf`);
     }
 };
