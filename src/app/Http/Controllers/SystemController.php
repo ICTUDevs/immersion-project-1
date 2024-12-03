@@ -252,4 +252,10 @@ class SystemController extends Controller
         $role->delete();
         return redirect()->route('system.role')->with('message', 'Role deleted.');
     }
+
+    public function batchPrint(){
+        $users = User::role('ojt')->with('attendances')->get();
+
+        return inertia('Modules/System/BatchPrint/Index', compact('users'));
+    }
 }

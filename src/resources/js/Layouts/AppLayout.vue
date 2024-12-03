@@ -423,8 +423,20 @@ const classes = computed(() => {
                     class="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600"
                 >
                     <div
-                        class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-3 md:grid-cols-3 md:px-6"
+                        class="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-4 md:grid-cols-3 md:px-6"
                     >
+                        <ul aria-labelledby="modules-menu-full-dropdown-button" v-if="$page.props.isSuperAdmin || $page.props.isAdmin">
+                            <NavLinkMenu
+                                :href="route('system.batchprint')"
+                                :active="route().current('system.batchprint')"
+                            >
+                                <div class="font-semibold">Generate DTR</div>
+                                <span
+                                    class="text-sm text-gray-500 dark:text-gray-400"
+                                    >Batch Generation of DTR's.</span
+                                >
+                            </NavLinkMenu>
+                        </ul>   
                         <ul aria-labelledby="modules-menu-full-dropdown-button" v-if="$page.props.isSuperAdmin || $page.props.isAdmin">
                             <NavLinkMenu
                                 :href="route('system.user')"

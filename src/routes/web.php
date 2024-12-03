@@ -63,6 +63,8 @@ Route::middleware([
 
 
                 Route::delete('role/{hashedId}', 'destroyRole')->name('role.delete'),
+
+                Route::get('batchprint', 'batchPrint')->name('batchprint'),
             ]),
 
         ]);

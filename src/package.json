@@ -29,6 +29,8 @@
         "dotenv": "^16.4.5",
         "flowbite": "^2.5.2",
         "html5-qrcode": "^2.3.8",
+        "jspdf": "^2.5.2",
+        "jspdf-autotable": "^3.8.4",
         "lodash": "^4.17.21",
         "luxon": "^3.5.0",
         "qrcode": "^1.5.4",

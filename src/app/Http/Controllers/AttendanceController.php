@@ -217,17 +217,15 @@ class AttendanceController extends Controller
     public function profile($hashedId)
     {
         $id = Hashids::decode($hashedId)[0];
-        $user = User::with('attendances')->findOrFail($id);
+        $users = User::with('attendances')->findOrFail($id);
 
-        $user->hashed_id = $hashedId;
-        $user->attendances->transform(function ($attendance) {
+        $users->hashed_id = $hashedId;
+        $users->attendances->transform(function ($attendance) {
             $attendance->hashed_id = Hashids::encode($attendance->id);
             return $attendance;
         });
 
-        return inertia('Modules/Attendance/Profile', [
-            'users' => $user,
-        ]);
+        return inertia('Modules/Attendance/Profile', compact('users'));
     }
 
 

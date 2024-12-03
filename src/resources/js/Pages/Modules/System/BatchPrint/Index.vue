@@ -5,10 +5,6 @@
                 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight"
             >
                 Daily Time Record:
-                <span
-                    class="font-bold ms-1 uppercase text-blue-500 dark:text-gray-50"
-                    >{{ users.name }}</span
-                >
             </h2>
         </template>
 
@@ -24,198 +20,44 @@
                             <div
                                 class="flex flex-row items-center w-full mb-1 gap-2"
                             >
-                                <v-select :options="options" class="w-1/4">
-                                </v-select>
-                                <DangerButton
-                                    class=""
-                                    :class="{ 'opacity-25': form.processing }"
-                                    @click="generatePdf"
+                                <v-select
+                                    :options="options"
+                                    v-model="selectedOption"
+                                    class="w-1/4"
                                 >
+                                </v-select>
+                                <DangerButton class="" @click="generatePdf(selectedOption)">
                                     Generate PDF
                                 </DangerButton>
                             </div>
                         </div>
-
-                        <table
-                            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
-                        >
-                            <thead
-                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 border"
-                            >
-                                <tr>
-                                    <th scope="col" class="px-6 py-3"></th>
-                                    <th
-                                        scope="col"
-                                        colspan="2"
-                                        class="px-6 py-3 text-center border"
-                                    >
-                                        AM
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        colspan="2"
-                                        class="px-6 py-3 text-center border"
-                                    >
-                                        PM
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        colspan="2"
-                                        class="px-6 py-3 text-center border"
-                                    >
-                                        Undertime / Late
-                                    </th>
-                                    <th
-                                        v-if="$page.props.isSuperAdmin"
-                                        scope="col"
-                                        colspan="2"
-                                        class="px-6 py-3 text-center border"
-                                    ></th>
-                                </tr>
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 border">
-                                        Log Date
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        class="px-6 py-3 border text-center"
-                                    >
-                                        Arrival
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        class="px-6 py-3 border text-center"
-                                    >
-                                        Departure
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        class="px-6 py-3 border text-center"
-                                    >
-                                        Arrival
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        class="px-6 py-3 border text-center"
-                                    >
-                                        Departure
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        class="px-6 py-3 border text-center"
-                                    >
-                                        Hour(s)
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        class="px-6 py-3 border text-center"
-                                    >
-                                        Minute(s)
-                                    </th>
-                                    <th
-                                        v-if="$page.props.isSuperAdmin"
-                                        scope="col"
-                                        class="px-6 py-3 border text-center"
-                                    >
-                                        Action
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr
-                                    v-for="user in users.attendances"
-                                    :key="user.id"
-                                    class="bg-white border dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-                                >
-                                    <td class="px-6 py-4 border">
-                                        {{ getDate(user.date) }}
-                                    </td>
-                                    <td class="px-6 py-4 border text-center">
-                                        {{ formatTime(user.am_time_in) }}
-                                    </td>
-                                    <td class="px-6 py-4 border text-center">
-                                        {{ formatTime(user.am_time_out) }}
-                                    </td>
-                                    <td class="px-6 py-4 border text-center">
-                                        {{ formatTime(user.pm_time_in) }}
-                                    </td>
-                                    <td class="px-6 py-4 border text-center">
-                                        {{ formatTime(user.pm_time_out) }}
-                                    </td>
-                                    <td class="px-6 py-4 border text-center">
-                                        {{ user.hours_under_time }}
-                                    </td>
-                                    <td class="px-6 py-4 border text-center">
-                                        {{ user.minutes_under_time }}
-                                    </td>
-                                    <td
-                                        class="px-6 py-4 border text-center"
-                                        v-if="$page.props.isSuperAdmin"
-                                    >
-                                        <Link
-                                            class="text-blue-600 hover:underline mx-1 dark:text-blue-400 dark:hover:text-blue-600"
-                                            :href="
-                                                route(
-                                                    'attendance.log.edit',
-                                                    user.hashed_id
-                                                )
-                                            "
-                                        >
-                                            Edit
-                                        </Link>
-                                        <a
-                                            role="button"
-                                            class="text-red-600 hover:underline mx-1 dark:text-red-400 dark:hover:text-red-600"
-                                            @click="confirmDeletion"
-                                        >
-                                            Delete
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Delete Time Log Confirmation Modal -->
-        <DialogModal :show="confirmingDeletion" @close="closeModal">
-            <template #title> Delete Time Log </template>
-
-            <template #content>
-                Are you sure you want to delete this Time Log?
-            </template>
-
-            <template #footer>
-                <SecondaryButton @click="closeModal"> Cancel </SecondaryButton>
-
-                <DangerButton
-                    class="ms-3"
-                    :class="{ 'opacity-25': form.processing }"
-                    :disabled="form.processing"
-                    @click="destroy"
-                >
-                    Delete Time Log
-                </DangerButton>
-            </template>
-        </DialogModal>
     </AppLayout>
 </template>
 
 <script setup>
 import AppLayout from "@/Layouts/AppLayout.vue";
-import { onMounted, ref, computed } from "vue";
+import { onMounted, computed, ref } from "vue";
 import { initFlowbite } from "flowbite";
 import { format } from "date-fns";
-import { toast } from "vue3-toastify";
 import "vue3-toastify/dist/index.css";
-import { useForm } from "@inertiajs/vue3";
-import DialogModal from "@/Components/DialogModal.vue";
-import SecondaryButton from "@/Components/SecondaryButton.vue";
 import DangerButton from "@/Components/DangerButton.vue";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable";
+
+const props = defineProps({
+    users: {
+        type: Array,
+        required: true,
+    },
+    flash: {
+        type: Object,
+        required: true,
+    },
+});
 
 const formatTime = (datetime) => {
     if (!datetime) {
@@ -224,90 +66,36 @@ const formatTime = (datetime) => {
     return format(new Date(datetime), "hh:mm");
 };
 
+console.log(props.users[0].attendances[0]);
+
 const options = computed(() => {
     if (
-        Array.isArray(props.users.attendances) &&
-        Array.isArray(props.users.attendances)
+        Array.isArray(props.users) &&
+        Array.isArray(props.users[0].attendances)
     ) {
-        return props.users.attendances.map((dtr) => ({
-            label:  format(
-                    new Date(dtr.date),
-                    "MMMM yyyy"
-                ).toUpperCase(),
+        return props.users[0].attendances.map((dtr) => ({
+            label: format(new Date(dtr.date), "MMMM yyyy").toUpperCase(),
             id: dtr.id,
+            date: dtr.date,
         }));
     }
     return [];
 });
 
+const selectedOption = ref(null);
+
 onMounted(() => {
     initFlowbite();
 });
 
-const props = defineProps({
-    users: {
-        type: Object,
-        required: true,
-    },
-    flash: {
-        type: Object,
-        required: true,
-    },
-    logo: {
-        type: String,
-        required: true,
-        default: "/logo.png",
-    },
-});
+const generatePdf = async (selectedOption) => {
+    if (!selectedOption) {
+        console.error("No option selected");
+        return;
+    }
 
-const getDate = (date) =>
-    new Date(date).toLocaleDateString("en-us", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-    });
+    const selectedMonth = selectedOption.date.slice(0, 7);
 
-if (props.flash.message !== null) {
-    toast.success(props.flash.message, {
-        position: toast.POSITION.TOP_RIGHT,
-        autoClose: 2000,
-    });
-}
-
-const confirmingDeletion = ref(false);
-
-const confirmDeletion = () => {
-    confirmingDeletion.value = true;
-};
-
-const closeModal = () => {
-    confirmingDeletion.value = false;
-};
-
-const form = useForm({ id: "" });
-
-const destroy = () => {
-    form.delete(
-        route("attendance.delete", {
-            hashedId: props.users.attendances[0].hashed_id,
-            hashed_id: props.users.hashed_id,
-        }),
-        {
-            preserveScroll: true,
-            onSuccess: () => {
-                closeModal();
-                toast.success("Time Log deleted successfully", {
-                    position: toast.POSITION.TOP_RIGHT,
-                    autoClose: 2000,
-                });
-            },
-        }
-    );
-};
-
-
-
-const generatePdf = async () => {
     const columns = [
         { dataKey: "name", title: "Name", text: "center" },
         {
@@ -476,9 +264,7 @@ const generatePdf = async () => {
     const spacing = 0.0001; // Spacing between the tables
     const tableWidth = (pageWidth - 2 * margin - spacing) / 2; // Adjust the width of each table to fit with spacing
 
-    const userName = `${props.users.name.toUpperCase()}`;
-
-    const addHeader = (startX, startY) => {
+    const addHeader = (startX, startY, userName, monthYear) => {
         doc.setFont("helvetica", "bold")
             .setFontSize(12)
             .text(
@@ -518,11 +304,7 @@ const generatePdf = async () => {
         );
 
         doc.setFontSize(8).text(
-            "For the month of  " +
-                format(
-                    new Date(props.users.attendances[0].date),
-                    "MMMM yyyy"
-                ).toUpperCase(),
+            "For the month of  " + monthYear,
             startX + 0.09, // Adjust the margin as needed
             startY + 0.9,
             { align: "left" }
@@ -542,15 +324,20 @@ const generatePdf = async () => {
         return new Date(year, month, 0).getDate();
     };
 
-    const generateTable = (startX, startY) => {
-        addHeader(startX, startY);
+    const generateTable = (startX, startY, user) => {
+        const userName = `${user.name.toUpperCase()}`;
+        const monthYear = format(
+            new Date(selectedMonth),
+            "MMMM yyyy"
+        ).toUpperCase();
 
-        const daysInMonth = getDaysInMonth(props.users.attendances[0].date);
+        addHeader(startX, startY, userName, monthYear);
+
+        const daysInMonth = getDaysInMonth(selectedMonth);
         const attendanceMap = new Map(
-            props.users.attendances.map((item) => [
-                new Date(item.date).getDate(),
-                item,
-            ])
+            user.attendances
+                .filter((item) => item.date.startsWith(selectedMonth))
+                .map((item) => [new Date(item.date).getDate(), item])
         );
 
         const body = [];
@@ -720,11 +507,10 @@ const generatePdf = async () => {
             doc.setFont("helvetica", "normal")
                 .setFontSize(9)
                 .text(
-                    `${props.users.name.toUpperCase()}`,
+                    `${userName}`,
                     startX +
                         tableWidth / 2 -
-                        doc.getTextWidth(`${props.users.name.toUpperCase()}`) /
-                            2,
+                        doc.getTextWidth(`${userName}`) / 2,
                     doc.internal.pageSize.height - 1.6
                 );
 
@@ -764,7 +550,7 @@ const generatePdf = async () => {
             body: body,
             didDrawPage: function (data) {
                 if (data.pageNumber > 1) {
-                    addHeader(startX, startY);
+                    addHeader(startX, startY, userName, monthYear);
                 }
             },
             startY: startY + 1.1,
@@ -778,12 +564,15 @@ const generatePdf = async () => {
         });
     };
 
-    // Generate the first table
-    generateTable(margin, 0.5);
+    // Loop through each user and generate the PDF
+    for (const user of props.users) {
+        // Generate the first table
+        generateTable(margin, 0.5, user);
 
-    // Generate the second table
-    generateTable(margin + tableWidth + spacing, 0.5);
+        // Generate the second table
+        generateTable(margin + tableWidth + spacing, 0.5, user);
 
-    doc.save(`${props.users.name}.pdf`);
+        doc.save(`${user.name}.pdf`);
+    }
 };
 </script>
