@@ -85,7 +85,10 @@
                                         ></th>
                                     </tr>
                                     <tr>
-                                        <th scope="col" class="px-6 py-3 border">
+                                        <th
+                                            scope="col"
+                                            class="px-6 py-3 border"
+                                        >
                                             Log Date
                                         </th>
                                         <th
@@ -142,22 +145,34 @@
                                         <td class="px-6 py-4 border">
                                             {{ getDate(user.date) }}
                                         </td>
-                                        <td class="px-6 py-4 border text-center">
+                                        <td
+                                            class="px-6 py-4 border text-center"
+                                        >
                                             {{ formatTime(user.am_time_in) }}
                                         </td>
-                                        <td class="px-6 py-4 border text-center">
+                                        <td
+                                            class="px-6 py-4 border text-center"
+                                        >
                                             {{ formatTime(user.am_time_out) }}
                                         </td>
-                                        <td class="px-6 py-4 border text-center">
+                                        <td
+                                            class="px-6 py-4 border text-center"
+                                        >
                                             {{ formatTime(user.pm_time_in) }}
                                         </td>
-                                        <td class="px-6 py-4 border text-center">
+                                        <td
+                                            class="px-6 py-4 border text-center"
+                                        >
                                             {{ formatTime(user.pm_time_out) }}
                                         </td>
-                                        <td class="px-6 py-4 border text-center">
+                                        <td
+                                            class="px-6 py-4 border text-center"
+                                        >
                                             {{ user.hours_under_time }}
                                         </td>
-                                        <td class="px-6 py-4 border text-center">
+                                        <td
+                                            class="px-6 py-4 border text-center"
+                                        >
                                             {{ user.minutes_under_time }}
                                         </td>
                                         <td
@@ -603,18 +618,18 @@ const generatePdf = async () => {
         { date: "12-30", name: "Rizal Day" },
     ];
 
-    const generateTable = (doc, startX, startY, user, tableWidth) => {
-        const userName = `${user.name.toUpperCase()}`;
+    const generateTable = (startX, startY) => {
+        const userName = `${props.users.name.toUpperCase()}`;
         const monthYear = format(
             new Date(selectedMonth),
             "MMMM yyyy"
         ).toUpperCase();
 
-        addHeader(doc, startX, startY, userName, monthYear, tableWidth);
+        addHeader(startX, startY);
 
         const daysInMonth = getDaysInMonth(selectedMonth);
         const attendanceMap = new Map(
-            user.attendances
+            props.users.attendances
                 .filter((item) => item.date.startsWith(selectedMonth))
                 .map((item) => [new Date(item.date).getDate(), item])
         );
@@ -781,7 +796,7 @@ const generatePdf = async () => {
                 colSpan: 5, // Merge the first 5 columns
             },
             hours_under_time: {
-                content: "", //totalHoursUnderTime.toString()
+                content: totalHoursUnderTime.toString(),
                 styles: {
                     halign: "center",
                     fontSize: 8,
@@ -794,7 +809,7 @@ const generatePdf = async () => {
                 },
             },
             minutes_under_time: {
-                content: "", //totalMinutesUnderTime.toString()
+                content: totalMinutesUnderTime.toString(),
                 styles: {
                     halign: "center",
                     fontSize: 8,
@@ -881,14 +896,7 @@ const generatePdf = async () => {
             body: body,
             didDrawPage: function (data) {
                 if (data.pageNumber > 1) {
-                    addHeader(
-                        doc,
-                        startX,
-                        startY,
-                        userName,
-                        monthYear,
-                        tableWidth
-                    );
+                    addHeader(doc, startX, startY, userName, monthYear);
                 }
             },
             startY: startY + 1.1,
@@ -932,5 +940,4 @@ const generatePdf = async () => {
     // Save the PDF with the user's name
     doc.save(`${props.users.name}.pdf`);
 };
-
 </script>
