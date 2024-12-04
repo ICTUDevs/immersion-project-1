@@ -576,7 +576,7 @@ const generatePdf = async (selectedOption) => {
                     doc.internal.pageSize.height - 2.1
                 );
 
-            doc.setFont("helvetica", "normal")
+            doc.setTextColor(0, 0, 0).setFont("helvetica", "normal")
                 .setFontSize(9)
                 .text(
                     `${userName}`,
