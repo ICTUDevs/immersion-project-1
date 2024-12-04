@@ -75,7 +75,6 @@ const formatTime = (datetime) => {
     return format(new Date(datetime), "hh:mm");
 };
 
-
 const options = computed(() => {
     if (
         Array.isArray(props.users) &&
@@ -304,7 +303,7 @@ const generatePdf = async (selectedOption) => {
             );
 
         doc.setFont("helvetica", "normal")
-        .setTextColor(0, 0, 0)
+            .setTextColor(0, 0, 0)
             .setFontSize(8)
             .text(
                 "-----oOo-----",
@@ -312,12 +311,13 @@ const generatePdf = async (selectedOption) => {
                 startY + 0.2
             );
 
-        doc.setTextColor(0, 0, 0).setFontSize(9).text(
-            
-            userName,
-            startX + tableWidth / 2 - doc.getTextWidth(userName) / 2,
-            startY + 0.4
-        );
+        doc.setTextColor(0, 0, 0)
+            .setFontSize(9)
+            .text(
+                userName,
+                startX + tableWidth / 2 - doc.getTextWidth(userName) / 2,
+                startY + 0.4
+            );
 
         doc.setDrawColor(150, 150, 150);
         doc.setLineWidth(0.01).line(
@@ -327,18 +327,22 @@ const generatePdf = async (selectedOption) => {
             startY + 0.48
         );
 
-        doc.setTextColor(0, 0, 0).setFontSize(8).text(
-            "NAME",
-            startX + tableWidth / 2 - doc.getTextWidth("NAME") / 2,
-            startY + 0.6
-        );
+        doc.setTextColor(0, 0, 0)
+            .setFontSize(8)
+            .text(
+                "NAME",
+                startX + tableWidth / 2 - doc.getTextWidth("NAME") / 2,
+                startY + 0.6
+            );
 
-        doc.setTextColor(0, 0, 0).setFontSize(8).text(
-            "For the month of  " + monthYear,
-            startX + 0.09, // Adjust the margin as needed
-            startY + 0.9,
-            { align: "left" }
-        );
+        doc.setTextColor(0, 0, 0)
+            .setFontSize(8)
+            .text(
+                "For the month of  " + monthYear,
+                startX + 0.09, // Adjust the margin as needed
+                startY + 0.9,
+                { align: "left" }
+            );
 
         doc.setDrawColor(150, 150, 150);
         doc.setLineWidth(0.01).line(
@@ -353,6 +357,22 @@ const generatePdf = async (selectedOption) => {
         const [year, month] = dateString.split("-").map(Number);
         return new Date(year, month, 0).getDate();
     };
+
+    const holidays = [
+        { date: "01-01", name: "New Year's Day" },
+        { date: "02-25", name: "EDSA Revolution" },
+        { date: "04-09", name: "Araw ng Kagitingan" },
+        { date: "05-01", name: "Labor Day" },
+        { date: "06-12", name: "Independence Day" },
+        { date: "08-23", name: "Ninoy Aquino Day" },
+        { date: "08-28", name: "National Heroes Day" },
+        { date: "11-01", name: "All Saints' Day" },
+        { date: "11-02", name: "All Souls Day" },
+        { date: "11-30", name: "Bonifacio Day" },
+        { date: "12-8", name: "Feast of the Immaculate Conception of the Blessed Virgin Mary" },
+        { date: "12-25", name: "Christmas Day" },
+        { date: "12-30", name: "Rizal Day" },
+    ];
 
     const generateTable = (doc, startX, startY, user, tableWidth) => {
         const userName = `${user.name.toUpperCase()}`;
@@ -392,6 +412,15 @@ const generatePdf = async (selectedOption) => {
                 remarks = "Saturday";
             } else if (dayOfWeek === 0) {
                 remarks = "Sunday";
+            }
+
+            // Check if the date is a holiday
+            const formattedDate = format(date, "MM-dd");
+            const holiday = holidays.find(
+                (holiday) => holiday.date === formattedDate
+            );
+            if (holiday) {
+                remarks = "Holiday";
             }
 
             body.push({
@@ -523,7 +552,7 @@ const generatePdf = async (selectedOption) => {
                 colSpan: 5, // Merge the first 5 columns
             },
             hours_under_time: {
-                content: "",//totalHoursUnderTime.toString()
+                content: "", //totalHoursUnderTime.toString()
                 styles: {
                     halign: "center",
                     fontSize: 8,
@@ -576,7 +605,8 @@ const generatePdf = async (selectedOption) => {
                     doc.internal.pageSize.height - 2.1
                 );
 
-            doc.setTextColor(0, 0, 0).setFont("helvetica", "normal")
+            doc.setTextColor(0, 0, 0)
+                .setFont("helvetica", "normal")
                 .setFontSize(9)
                 .text(
                     `${userName}`,
@@ -622,7 +652,14 @@ const generatePdf = async (selectedOption) => {
             body: body,
             didDrawPage: function (data) {
                 if (data.pageNumber > 1) {
-                    addHeader(doc, startX, startY, userName, monthYear);
+                    addHeader(
+                        doc,
+                        startX,
+                        startY,
+                        userName,
+                        monthYear,
+                        tableWidth
+                    );
                 }
             },
             startY: startY + 1.1,

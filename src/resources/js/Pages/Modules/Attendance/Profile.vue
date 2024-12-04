@@ -587,18 +587,34 @@ const generatePdf = async () => {
         return new Date(year, month, 0).getDate();
     };
 
-    const generateTable = (startX, startY) => {
-        const userName = `${props.users.name.toUpperCase()}`;
+    const holidays = [
+        { date: "01-01", name: "New Year's Day" },
+        { date: "02-25", name: "EDSA Revolution" },
+        { date: "04-09", name: "Araw ng Kagitingan" },
+        { date: "05-01", name: "Labor Day" },
+        { date: "06-12", name: "Independence Day" },
+        { date: "08-23", name: "Ninoy Aquino Day" },
+        { date: "08-28", name: "National Heroes Day" },
+        { date: "11-01", name: "All Saints' Day" },
+        { date: "11-02", name: "All Souls Day" },
+        { date: "11-30", name: "Bonifacio Day" },
+        { date: "12-8", name: "Feast of the Immaculate Conception of the Blessed Virgin Mary" },
+        { date: "12-25", name: "Christmas Day" },
+        { date: "12-30", name: "Rizal Day" },
+    ];
+
+    const generateTable = (doc, startX, startY, user, tableWidth) => {
+        const userName = `${user.name.toUpperCase()}`;
         const monthYear = format(
             new Date(selectedMonth),
             "MMMM yyyy"
         ).toUpperCase();
 
-        addHeader(startX, startY);
+        addHeader(doc, startX, startY, userName, monthYear, tableWidth);
 
         const daysInMonth = getDaysInMonth(selectedMonth);
         const attendanceMap = new Map(
-            props.users.attendances
+            user.attendances
                 .filter((item) => item.date.startsWith(selectedMonth))
                 .map((item) => [new Date(item.date).getDate(), item])
         );
@@ -625,6 +641,15 @@ const generatePdf = async () => {
                 remarks = "Saturday";
             } else if (dayOfWeek === 0) {
                 remarks = "Sunday";
+            }
+
+            // Check if the date is a holiday
+            const formattedDate = format(date, "MM-dd");
+            const holiday = holidays.find(
+                (holiday) => holiday.date === formattedDate
+            );
+            if (holiday) {
+                remarks = "Holiday";
             }
 
             body.push({
@@ -756,7 +781,7 @@ const generatePdf = async () => {
                 colSpan: 5, // Merge the first 5 columns
             },
             hours_under_time: {
-                content: totalHoursUnderTime.toString(),
+                content: "", //totalHoursUnderTime.toString()
                 styles: {
                     halign: "center",
                     fontSize: 8,
@@ -769,7 +794,7 @@ const generatePdf = async () => {
                 },
             },
             minutes_under_time: {
-                content: totalMinutesUnderTime.toString(),
+                content: "", //totalMinutesUnderTime.toString()
                 styles: {
                     halign: "center",
                     fontSize: 8,
@@ -809,7 +834,8 @@ const generatePdf = async () => {
                     doc.internal.pageSize.height - 2.1
                 );
 
-            doc.setTextColor(0, 0, 0).setFont("helvetica", "normal")
+            doc.setTextColor(0, 0, 0)
+                .setFont("helvetica", "normal")
                 .setFontSize(9)
                 .text(
                     `${userName}`,
@@ -855,7 +881,14 @@ const generatePdf = async () => {
             body: body,
             didDrawPage: function (data) {
                 if (data.pageNumber > 1) {
-                    addHeader(doc, startX, startY, userName, monthYear);
+                    addHeader(
+                        doc,
+                        startX,
+                        startY,
+                        userName,
+                        monthYear,
+                        tableWidth
+                    );
                 }
             },
             startY: startY + 1.1,
