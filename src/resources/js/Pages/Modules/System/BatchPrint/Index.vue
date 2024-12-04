@@ -654,7 +654,7 @@ const generatePdf = async (selectedOption) => {
         doc.setFontSize(40);
         doc.setTextColor("#ebecec");
         doc.text(
-            "SYSTEM GENERATED",
+            "SYSTEM-GENERATED",
             doc.internal.pageSize.getWidth() / 2.3,
             8.1,
             {
@@ -670,7 +670,7 @@ const generatePdf = async (selectedOption) => {
         doc.setFontSize(40);
         doc.setTextColor("#ebecec");
         doc.text(
-            "SYSTEM GENERATED",
+            "SYSTEM-GENERATED",
             doc.internal.pageSize.getWidth() / 2.3 + tableWidth + spacing,
             8.1,
             {
