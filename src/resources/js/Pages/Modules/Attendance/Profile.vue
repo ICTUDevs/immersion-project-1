@@ -869,7 +869,7 @@ const generatePdf = async () => {
                 doc.internal.pageSize.height - 1.5
             );
 
-            doc.setFont("helvetica", "italic")
+            doc.setTextColor(150, 150, 150).setFont("helvetica", "italic")
                 .setFontSize(6)
                 .text(
                     "VERIFIED as to the prescribed office hours :",
