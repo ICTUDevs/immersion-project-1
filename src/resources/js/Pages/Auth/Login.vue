@@ -15,7 +15,7 @@ const props = defineProps({
     Oauth_status: Boolean,
 });
 
-const isLogin = ref(false);
+const isLogin = import.meta.env.VITE_LOGIN;
 const client_id = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 const form = useForm({
@@ -116,7 +116,7 @@ const submit = () => {
             <ThemeToggle class="text-black dark:text-white float-end" />
         </div>
 
-        <form @submit.prevent="submit" v-if="isLogin">
+        <form @submit.prevent="submit" v-if="isLogin === true">
             <div>
                 <InputLabel for="email" value="Email" />
                 <TextInput
