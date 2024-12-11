@@ -42,7 +42,7 @@ return [
         // 'redirect' => 'https://attendance.antiquespride.dev/auth/google/callback',
         // 'redirect' => 'https://attendance.ictudev.tech/auth/google/callback',
         // 'redirect' => 'http://localhost:8080/auth/google/callback',
-        'redirect' => 'https://attendance.dev/auth/google/callback',
+        'redirect' => 'https://ats.ictudev.tech/auth/google/callback',
     ],
 
 ];
