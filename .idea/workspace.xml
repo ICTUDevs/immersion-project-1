@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0aff162-323b-4904-8c7c-e854c2656c23" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731936855156</updated>
       <workItem from="1731936858376" duration="9000" />
-      <workItem from="1736170209361" duration="1897000" />
+      <workItem from="1736170209361" duration="2419000" />
     </task>
     <servers />
   </component>

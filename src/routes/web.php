@@ -8,9 +8,6 @@ use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\SystemController;
 use App\Http\Controllers\AttendanceController;
 
-Route::get('/', function () {
-    return redirect()->route('login');
-});
 
 Route::post('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
