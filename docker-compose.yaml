@@ -92,4 +92,4 @@ services:
     depends_on:
       - php
     networks:
-      - laravel
+      - attendance-network
