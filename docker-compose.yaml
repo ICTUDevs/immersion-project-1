@@ -47,7 +47,7 @@ services:
   db:
     image: mysql:latest
     platform: linux/amd64
-    container_name: db_kiosk_prod
+    container_name: db_attendance
     ports:
       - "4307:3306"
     restart: always
@@ -65,7 +65,7 @@ services:
   redis:
     image: bitnami/redis:7.2
     platform: linux/amd64
-    container_name: redis_kiosk_prod
+    container_name: redis_attendance
     ports:
       - "6372:6379"
     restart: always
