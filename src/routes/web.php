@@ -100,3 +100,5 @@ Route::middleware([
         Route::get('/dashboard', 'dashboard')->name('dashboard'),
     ]);
 });
+
+require_once __DIR__ . '/fortify.php';
