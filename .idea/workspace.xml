@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e0aff162-323b-4904-8c7c-e854c2656c23" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Providers/AppServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731936855156</updated>
       <workItem from="1731936858376" duration="9000" />
-      <workItem from="1736170209361" duration="3345000" />
+      <workItem from="1736170209361" duration="4458000" />
     </task>
     <servers />
   </component>
