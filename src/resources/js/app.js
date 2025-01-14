@@ -15,13 +15,17 @@ createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
     setup({el, App, props, plugin}) {
-        return createApp({render: () => h(App, props)})
+        const application = createApp({render: () => h(App, props)})
             .use(plugin)
             .use(ZiggyVue)
             .component('Link', Link)
             .component('ThemeToggle', ThemeToggle)
             .component("v-select", VueSelect)
             .mount(el);
+
+        delete el.dataset.page;
+
+        return application;
     },
     progress: {
         color: '#4B5563',
