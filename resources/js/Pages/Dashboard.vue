@@ -77,7 +77,6 @@ onMounted(() => {
     intervalId = setInterval(updateDateTime, 1000);
     Echo.private(`App.Models.User.${page.props.auth.user.id}`)
         .listen("RefreshUser", (e) => {
-            console.log("RefreshUser event received:", e);
             fetchUsers();
             fetchQRCode();
             countUsersWithTimeIn();

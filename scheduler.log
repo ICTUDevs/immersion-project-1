@@ -1,0 +1,883 @@
+
+   INFO  Running scheduled tasks.  
+
+Could not open input file: artisan
+Could not open input file: artisan
+Could not open input file: artisan
+Could not open input file: artisan
+
+   INFO  Running scheduled tasks.  
+
+Could not open input file: artisan
+Could not open input file: artisan
+Could not open input file: artisan
+Could not open input file: artisan
+
+  2025-02-05 14:07:10 Running ['artisan' generate:qr-codes] .... 614.18ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:07:11 Running ['artisan' generate:delete-qr-codes]  7m 50s DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:15:02 Running ['artisan' generate:qr-codes] .... 562.74ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:15:03 Running ['artisan' generate:delete-qr-codes]  360.55ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:15:22 Running ['artisan' generate:qr-codes] .... 555.46ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:15:42 Running ['artisan' generate:qr-codes] .... 600.12ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:16:01 Running ['artisan' generate:qr-codes] .... 511.83ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:16:01 Running ['artisan' generate:delete-qr-codes]  350.14ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:16:21 Running ['artisan' generate:qr-codes] .... 554.51ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:16:41 Running ['artisan' generate:qr-codes] .... 669.11ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:17:01 Running ['artisan' generate:qr-codes] .... 597.95ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:17:02 Running ['artisan' generate:delete-qr-codes]  399.58ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:17:21 Running ['artisan' generate:qr-codes] .... 565.99ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:17:41 Running ['artisan' generate:qr-codes] .... 517.67ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:18:01 Running ['artisan' generate:qr-codes] .... 596.32ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:18:02 Running ['artisan' generate:delete-qr-codes]  358.23ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:18:21 Running ['artisan' generate:qr-codes] .... 526.35ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:18:41 Running ['artisan' generate:qr-codes] .... 541.05ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:19:01 Running ['artisan' generate:qr-codes] .... 550.93ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:19:01 Running ['artisan' generate:delete-qr-codes]  358.25ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:19:21 Running ['artisan' generate:qr-codes] .... 546.20ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:19:41 Running ['artisan' generate:qr-codes] .... 470.80ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:20:01 Running ['artisan' generate:qr-codes] .... 559.40ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:20:01 Running ['artisan' generate:delete-qr-codes]  358.05ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:20:21 Running ['artisan' generate:qr-codes] .... 563.40ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:20:41 Running ['artisan' generate:qr-codes] .... 521.55ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:21:01 Running ['artisan' generate:qr-codes] .... 610.73ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:21:02 Running ['artisan' generate:delete-qr-codes]  357.19ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:21:21 Running ['artisan' generate:qr-codes] .... 627.33ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:21:41 Running ['artisan' generate:qr-codes] .... 559.24ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:22:01 Running ['artisan' generate:qr-codes] .... 511.94ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:22:01 Running ['artisan' generate:delete-qr-codes]  358.68ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:22:02 Running ['artisan' dispatch:refresh-user-event]  360.71ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:22:21 Running ['artisan' generate:qr-codes] .... 562.09ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:22:22 Running ['artisan' dispatch:refresh-user-event]  368.38ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:22:41 Running ['artisan' generate:qr-codes] .... 552.04ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:22:42 Running ['artisan' dispatch:refresh-user-event]  362.65ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:23:01 Running ['artisan' generate:qr-codes] .... 864.89ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:23:02 Running ['artisan' generate:delete-qr-codes]  370.93ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:23:02 Running ['artisan' dispatch:refresh-user-event]  362.48ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:23:21 Running ['artisan' generate:qr-codes] .... 618.24ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:23:22 Running ['artisan' dispatch:refresh-user-event]  363.35ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:23:41 Running ['artisan' generate:qr-codes] .... 541.16ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:23:42 Running ['artisan' dispatch:refresh-user-event]  361.42ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:24:01 Running ['artisan' generate:qr-codes] .... 650.13ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:24:02 Running ['artisan' generate:delete-qr-codes]  466.02ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:24:02 Running ['artisan' dispatch:refresh-user-event]  362.34ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:24:21 Running ['artisan' generate:qr-codes] .... 576.82ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:24:22 Running ['artisan' dispatch:refresh-user-event]  362.88ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:24:41 Running ['artisan' generate:qr-codes] .... 539.69ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:24:42 Running ['artisan' dispatch:refresh-user-event]  363.20ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:25:01 Running ['artisan' generate:qr-codes] .... 569.66ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:25:02 Running ['artisan' generate:delete-qr-codes]  357.45ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:25:02 Running ['artisan' dispatch:refresh-user-event]  360.60ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:25:21 Running ['artisan' generate:qr-codes] .... 534.08ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:25:22 Running ['artisan' dispatch:refresh-user-event]  362.39ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:25:41 Running ['artisan' generate:qr-codes] .... 730.45ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:25:42 Running ['artisan' dispatch:refresh-user-event]  363.00ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:26:01 Running ['artisan' generate:qr-codes] .... 571.84ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:26:02 Running ['artisan' generate:delete-qr-codes]  359.66ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:26:02 Running ['artisan' dispatch:refresh-user-event]  361.14ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:26:21 Running ['artisan' generate:qr-codes] .... 672.00ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:26:22 Running ['artisan' dispatch:refresh-user-event]  361.80ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:26:41 Running ['artisan' generate:qr-codes] .... 629.67ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:26:42 Running ['artisan' dispatch:refresh-user-event]  412.21ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:27:01 Running ['artisan' generate:qr-codes] .... 566.94ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:27:01 Running ['artisan' generate:delete-qr-codes]  358.81ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:27:02 Running ['artisan' dispatch:refresh-user-event]  360.95ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:27:21 Running ['artisan' generate:qr-codes] .... 614.40ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:27:22 Running ['artisan' dispatch:refresh-user-event]  362.16ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:27:41 Running ['artisan' generate:qr-codes] .... 571.42ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:27:42 Running ['artisan' dispatch:refresh-user-event]  363.77ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+  2025-02-05 14:27:47 Running ['artisan' generate:qr-codes] .... 526.12ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:27:48 Running ['artisan' generate:delete-qr-codes]  452.53ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:27:48 Running ['artisan' dispatch:refresh-user-event]  374.38ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:28:01 Running ['artisan' generate:qr-codes] .... 711.14ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:28:02 Running ['artisan' generate:delete-qr-codes]  359.29ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:28:02 Running ['artisan' dispatch:refresh-user-event]  350.17ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:28:21 Running ['artisan' generate:qr-codes] .... 535.28ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:28:22 Running ['artisan' dispatch:refresh-user-event]  364.08ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:28:41 Running ['artisan' generate:qr-codes] .... 537.59ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:28:42 Running ['artisan' dispatch:refresh-user-event]  361.19ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:29:01 Running ['artisan' generate:qr-codes] .... 564.53ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:29:02 Running ['artisan' generate:delete-qr-codes]  370.71ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:29:02 Running ['artisan' dispatch:refresh-user-event]  350.87ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:29:21 Running ['artisan' generate:qr-codes] .... 572.44ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:29:22 Running ['artisan' dispatch:refresh-user-event]  363.70ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:29:41 Running ['artisan' generate:qr-codes] .... 609.54ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:29:42 Running ['artisan' dispatch:refresh-user-event]  362.77ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' dispatch:refresh-user-event > '/dev/null' 2>&1  
+
+  2025-02-05 14:29:44 Running ['artisan' generate:qr-codes] .... 507.70ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:29:45 Running ['artisan' generate:delete-qr-codes]  358.76ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:29:45 Running ['artisan' app:dispatch-refresh-user-event]  357.94ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:30:01 Running ['artisan' generate:qr-codes] .... 542.41ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:30:01 Running ['artisan' generate:delete-qr-codes]  359.57ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:30:02 Running ['artisan' app:dispatch-refresh-user-event]  356.47ms FAIL
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:30:21 Running ['artisan' generate:qr-codes] .... 461.30ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:30:22 Running ['artisan' app:dispatch-refresh-user-event]  545.66ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:30:41 Running ['artisan' generate:qr-codes] .... 526.00ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:30:42 Running ['artisan' app:dispatch-refresh-user-event]  601.45ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:31:01 Running ['artisan' generate:qr-codes] .... 582.24ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:31:02 Running ['artisan' generate:delete-qr-codes]  466.66ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:31:02 Running ['artisan' app:dispatch-refresh-user-event]  553.20ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:31:21 Running ['artisan' generate:qr-codes] .... 558.65ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:31:22 Running ['artisan' app:dispatch-refresh-user-event]  557.54ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:31:41 Running ['artisan' generate:qr-codes] .... 562.89ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:31:42 Running ['artisan' app:dispatch-refresh-user-event]  610.11ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:32:01 Running ['artisan' generate:qr-codes] .... 519.31ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:32:01 Running ['artisan' generate:delete-qr-codes]  370.68ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:32:02 Running ['artisan' app:dispatch-refresh-user-event]  518.90ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:32:21 Running ['artisan' generate:qr-codes] .... 510.65ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:32:22 Running ['artisan' app:dispatch-refresh-user-event]  642.87ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:32:41 Running ['artisan' generate:qr-codes] .... 592.24ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:32:42 Running ['artisan' app:dispatch-refresh-user-event]  798.01ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:33:01 Running ['artisan' generate:qr-codes] .......... 1s DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:33:02 Running ['artisan' generate:delete-qr-codes]  371.30ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:33:02 Running ['artisan' app:dispatch-refresh-user-event]  529.02ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:33:21 Running ['artisan' generate:qr-codes] .... 505.81ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:33:22 Running ['artisan' app:dispatch-refresh-user-event]  568.47ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:33:41 Running ['artisan' generate:qr-codes] .... 508.50ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:33:42 Running ['artisan' app:dispatch-refresh-user-event]  598.30ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:34:01 Running ['artisan' generate:qr-codes] .... 608.55ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:34:02 Running ['artisan' generate:delete-qr-codes]  361.05ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:34:02 Running ['artisan' app:dispatch-refresh-user-event]  597.75ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:34:21 Running ['artisan' generate:qr-codes] .... 514.04ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:34:22 Running ['artisan' app:dispatch-refresh-user-event]  551.65ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:34:41 Running ['artisan' generate:qr-codes] .... 565.01ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:34:42 Running ['artisan' app:dispatch-refresh-user-event]  564.25ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:35:01 Running ['artisan' generate:qr-codes] .... 502.65ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:35:01 Running ['artisan' generate:delete-qr-codes]  361.76ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:35:02 Running ['artisan' app:dispatch-refresh-user-event]  595.09ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:35:21 Running ['artisan' generate:qr-codes] .... 535.80ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:35:22 Running ['artisan' app:dispatch-refresh-user-event]  811.97ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:35:41 Running ['artisan' generate:qr-codes] .... 544.73ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:35:42 Running ['artisan' app:dispatch-refresh-user-event]  741.44ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:36:01 Running ['artisan' generate:qr-codes] .... 982.42ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:36:02 Running ['artisan' generate:delete-qr-codes]  361.21ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:36:02 Running ['artisan' app:dispatch-refresh-user-event]  636.32ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:36:21 Running ['artisan' generate:qr-codes] .... 608.66ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:36:22 Running ['artisan' app:dispatch-refresh-user-event]  633.71ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:36:41 Running ['artisan' generate:qr-codes] .... 630.63ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:36:42 Running ['artisan' app:dispatch-refresh-user-event]  564.11ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:37:01 Running ['artisan' generate:qr-codes] .... 761.38ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:37:02 Running ['artisan' generate:delete-qr-codes]  371.19ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:37:02 Running ['artisan' app:dispatch-refresh-user-event]  589.30ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:37:21 Running ['artisan' generate:qr-codes] .... 543.79ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:37:22 Running ['artisan' app:dispatch-refresh-user-event]  595.92ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:37:41 Running ['artisan' generate:qr-codes] .... 610.37ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:37:42 Running ['artisan' app:dispatch-refresh-user-event]  676.09ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:38:01 Running ['artisan' generate:qr-codes] .... 728.40ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:38:02 Running ['artisan' generate:delete-qr-codes]  371.65ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:38:02 Running ['artisan' app:dispatch-refresh-user-event]  589.70ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:38:21 Running ['artisan' generate:qr-codes] .... 574.78ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:38:22 Running ['artisan' app:dispatch-refresh-user-event]  598.68ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:38:41 Running ['artisan' generate:qr-codes] .... 567.25ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:38:42 Running ['artisan' app:dispatch-refresh-user-event]  499.45ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:39:01 Running ['artisan' generate:qr-codes] .... 604.46ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:39:02 Running ['artisan' generate:delete-qr-codes]  361.60ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:39:02 Running ['artisan' app:dispatch-refresh-user-event]  565.70ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:39:21 Running ['artisan' generate:qr-codes] .... 581.64ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:39:22 Running ['artisan' app:dispatch-refresh-user-event]  601.88ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:39:41 Running ['artisan' generate:qr-codes] .... 532.74ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:39:42 Running ['artisan' app:dispatch-refresh-user-event]  572.75ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:40:01 Running ['artisan' generate:qr-codes] .... 531.13ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:40:02 Running ['artisan' generate:delete-qr-codes]  375.19ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:40:02 Running ['artisan' app:dispatch-refresh-user-event]  624.18ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:40:21 Running ['artisan' generate:qr-codes] .... 549.83ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:40:22 Running ['artisan' app:dispatch-refresh-user-event]  522.59ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:40:41 Running ['artisan' generate:qr-codes] .... 527.61ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:40:42 Running ['artisan' app:dispatch-refresh-user-event]  536.84ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:41:01 Running ['artisan' generate:qr-codes] .... 526.13ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:41:01 Running ['artisan' generate:delete-qr-codes]  358.57ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:41:02 Running ['artisan' app:dispatch-refresh-user-event]  552.70ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:41:21 Running ['artisan' generate:qr-codes] .... 584.31ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:41:22 Running ['artisan' app:dispatch-refresh-user-event]  674.16ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:41:41 Running ['artisan' generate:qr-codes] .... 585.47ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:41:42 Running ['artisan' app:dispatch-refresh-user-event]  522.92ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:42:01 Running ['artisan' generate:qr-codes] .... 515.88ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:42:01 Running ['artisan' generate:delete-qr-codes]  361.14ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:42:02 Running ['artisan' app:dispatch-refresh-user-event]  648.39ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:42:21 Running ['artisan' generate:qr-codes] .... 760.32ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:42:22 Running ['artisan' app:dispatch-refresh-user-event]  590.53ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:42:41 Running ['artisan' generate:qr-codes] .... 594.33ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:42:42 Running ['artisan' app:dispatch-refresh-user-event]  563.70ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:43:01 Running ['artisan' generate:qr-codes] .... 630.88ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:43:02 Running ['artisan' generate:delete-qr-codes]  360.76ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:43:02 Running ['artisan' app:dispatch-refresh-user-event]  626.78ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:43:21 Running ['artisan' generate:qr-codes] .... 558.03ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:43:22 Running ['artisan' app:dispatch-refresh-user-event]  626.41ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:43:41 Running ['artisan' generate:qr-codes] .... 634.04ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:43:42 Running ['artisan' app:dispatch-refresh-user-event]  532.32ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:44:01 Running ['artisan' generate:qr-codes] .... 551.00ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:44:02 Running ['artisan' generate:delete-qr-codes]  370.51ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:44:02 Running ['artisan' app:dispatch-refresh-user-event]  910.72ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:44:21 Running ['artisan' generate:qr-codes] .... 734.61ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:44:22 Running ['artisan' app:dispatch-refresh-user-event]  555.89ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:44:41 Running ['artisan' generate:qr-codes] .... 534.22ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:44:42 Running ['artisan' app:dispatch-refresh-user-event]  560.01ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:45:01 Running ['artisan' generate:qr-codes] .... 525.72ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:45:01 Running ['artisan' generate:delete-qr-codes]  354.06ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:45:02 Running ['artisan' app:dispatch-refresh-user-event]  777.93ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:45:21 Running ['artisan' generate:qr-codes] .... 506.84ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:45:22 Running ['artisan' app:dispatch-refresh-user-event]  648.69ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:45:41 Running ['artisan' generate:qr-codes] .... 609.62ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:45:42 Running ['artisan' app:dispatch-refresh-user-event]  570.63ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:46:01 Running ['artisan' generate:qr-codes] .... 540.07ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:46:01 Running ['artisan' generate:delete-qr-codes]  371.98ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:46:02 Running ['artisan' app:dispatch-refresh-user-event]  566.63ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:46:21 Running ['artisan' generate:qr-codes] .... 526.50ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:46:22 Running ['artisan' app:dispatch-refresh-user-event]  560.52ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:46:41 Running ['artisan' generate:qr-codes] .... 572.00ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:46:42 Running ['artisan' app:dispatch-refresh-user-event]  568.99ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:47:01 Running ['artisan' generate:qr-codes] .... 512.38ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:47:01 Running ['artisan' generate:delete-qr-codes]  369.57ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:47:02 Running ['artisan' app:dispatch-refresh-user-event]  599.47ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:47:21 Running ['artisan' generate:qr-codes] .... 594.28ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:47:22 Running ['artisan' app:dispatch-refresh-user-event]  770.93ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:47:41 Running ['artisan' generate:qr-codes] .... 561.99ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:47:42 Running ['artisan' app:dispatch-refresh-user-event]  637.04ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:48:01 Running ['artisan' generate:qr-codes] .... 677.95ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:48:02 Running ['artisan' generate:delete-qr-codes]  360.68ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:48:02 Running ['artisan' app:dispatch-refresh-user-event]  656.63ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:48:21 Running ['artisan' generate:qr-codes] .... 558.79ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:48:22 Running ['artisan' app:dispatch-refresh-user-event]  872.54ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:48:41 Running ['artisan' generate:qr-codes] .... 545.02ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:48:42 Running ['artisan' app:dispatch-refresh-user-event]  571.62ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:49:01 Running ['artisan' generate:qr-codes] .... 559.89ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:49:02 Running ['artisan' generate:delete-qr-codes]  356.96ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:49:02 Running ['artisan' app:dispatch-refresh-user-event]  711.97ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:49:21 Running ['artisan' generate:qr-codes] .... 551.16ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:49:22 Running ['artisan' app:dispatch-refresh-user-event]  662.74ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:49:41 Running ['artisan' generate:qr-codes] .... 563.17ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:49:42 Running ['artisan' app:dispatch-refresh-user-event]  612.40ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:50:01 Running ['artisan' generate:qr-codes] .... 661.91ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:50:02 Running ['artisan' generate:delete-qr-codes]  351.96ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:50:02 Running ['artisan' app:dispatch-refresh-user-event]  551.62ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:50:21 Running ['artisan' generate:qr-codes] .... 590.73ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:50:22 Running ['artisan' app:dispatch-refresh-user-event]  826.08ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:50:41 Running ['artisan' generate:qr-codes] .... 470.72ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:50:42 Running ['artisan' app:dispatch-refresh-user-event]  596.38ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:51:01 Running ['artisan' generate:qr-codes] .... 569.35ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:51:02 Running ['artisan' generate:delete-qr-codes]  370.94ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:51:02 Running ['artisan' app:dispatch-refresh-user-event]  515.67ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:51:21 Running ['artisan' generate:qr-codes] .... 565.39ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:51:22 Running ['artisan' app:dispatch-refresh-user-event]  568.74ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:51:41 Running ['artisan' generate:qr-codes] .... 583.69ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:51:42 Running ['artisan' app:dispatch-refresh-user-event]  599.43ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:52:01 Running ['artisan' generate:qr-codes] .... 562.46ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:52:01 Running ['artisan' generate:delete-qr-codes]  357.96ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:52:02 Running ['artisan' app:dispatch-refresh-user-event]  544.59ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:52:21 Running ['artisan' generate:qr-codes] .... 535.99ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:52:22 Running ['artisan' app:dispatch-refresh-user-event]  522.82ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:52:41 Running ['artisan' generate:qr-codes] .... 635.96ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:52:42 Running ['artisan' app:dispatch-refresh-user-event]  660.80ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:53:01 Running ['artisan' generate:qr-codes] .... 672.42ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:53:02 Running ['artisan' generate:delete-qr-codes]  359.57ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:53:02 Running ['artisan' app:dispatch-refresh-user-event]  527.01ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:53:21 Running ['artisan' generate:qr-codes] .... 655.41ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:53:22 Running ['artisan' app:dispatch-refresh-user-event]  537.20ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:53:41 Running ['artisan' generate:qr-codes] .... 576.41ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:53:42 Running ['artisan' app:dispatch-refresh-user-event]  569.15ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:54:01 Running ['artisan' generate:qr-codes] .... 547.69ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:54:01 Running ['artisan' generate:delete-qr-codes]  362.70ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:54:02 Running ['artisan' app:dispatch-refresh-user-event]  606.12ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:54:21 Running ['artisan' generate:qr-codes] .... 530.26ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:54:22 Running ['artisan' app:dispatch-refresh-user-event]  537.59ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:54:41 Running ['artisan' generate:qr-codes] .... 747.76ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:54:42 Running ['artisan' app:dispatch-refresh-user-event]  549.75ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:55:01 Running ['artisan' generate:qr-codes] .... 507.39ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:55:01 Running ['artisan' generate:delete-qr-codes]  359.96ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:55:02 Running ['artisan' app:dispatch-refresh-user-event]  755.28ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:55:21 Running ['artisan' generate:qr-codes] .... 560.89ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:55:22 Running ['artisan' app:dispatch-refresh-user-event]  590.72ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:55:41 Running ['artisan' generate:qr-codes] .... 571.94ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:55:42 Running ['artisan' app:dispatch-refresh-user-event]  581.81ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 14:56:01 Running ['artisan' generate:qr-codes] .... 524.54ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:56:01 Running ['artisan' generate:delete-qr-codes]  360.24ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:56:02 Running ['artisan' app:dispatch-refresh-user-event]  638.68ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 14:56:21 Running ['artisan' generate:qr-codes] .... 560.11ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 14:56:22 Running ['artisan' app:dispatch-refresh-user-event]  559.11ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:schedule:interrupt))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+39 vendor frames [22m
+
+  40  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: delete from `cache` where `key` in (illuminate:schedule:interrupt, illuminate:cache:flexible:created:illuminate:schedule:interrupt))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+34 vendor frames [22m
+
+  35  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: delete from `cache` where `key` in (illuminate:schedule:interrupt, illuminate:cache:flexible:created:illuminate:schedule:interrupt))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+34 vendor frames [22m
+
+  35  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: delete from `cache` where `key` in (illuminate:schedule:interrupt, illuminate:cache:flexible:created:illuminate:schedule:interrupt))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+34 vendor frames [22m
+
+  35  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: delete from `cache` where `key` in (illuminate:schedule:interrupt, illuminate:cache:flexible:created:illuminate:schedule:interrupt))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+34 vendor frames [22m
+
+  35  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+  2025-02-05 15:41:24 Running ['artisan' generate:qr-codes] .... 568.41ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:41:25 Running ['artisan' generate:delete-qr-codes]  421.12ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:41:25 Running ['artisan' app:dispatch-refresh-user-event]  581.05ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:41:44 Running ['artisan' generate:qr-codes] .... 618.38ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:41:45 Running ['artisan' app:dispatch-refresh-user-event]  568.69ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 15:42:01 Running ['artisan' generate:qr-codes] .... 486.39ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:42:01 Running ['artisan' generate:delete-qr-codes]  367.19ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:42:02 Running ['artisan' app:dispatch-refresh-user-event]  520.61ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:42:21 Running ['artisan' generate:qr-codes] .... 572.76ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:42:22 Running ['artisan' app:dispatch-refresh-user-event]  596.89ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:42:41 Running ['artisan' generate:qr-codes] .... 504.32ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:42:42 Running ['artisan' app:dispatch-refresh-user-event]  502.76ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 15:43:01 Running ['artisan' generate:qr-codes] .... 556.35ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:43:02 Running ['artisan' generate:delete-qr-codes]  360.30ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:43:02 Running ['artisan' app:dispatch-refresh-user-event]  563.77ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:43:21 Running ['artisan' generate:qr-codes] .... 500.26ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:43:22 Running ['artisan' app:dispatch-refresh-user-event]  600.28ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:43:41 Running ['artisan' generate:qr-codes] .... 537.76ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:43:42 Running ['artisan' app:dispatch-refresh-user-event]  490.77ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 15:44:01 Running ['artisan' generate:qr-codes] .... 479.32ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:44:01 Running ['artisan' generate:delete-qr-codes]  362.48ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:44:02 Running ['artisan' app:dispatch-refresh-user-event]  665.13ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:44:21 Running ['artisan' generate:qr-codes] .... 620.08ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:44:22 Running ['artisan' app:dispatch-refresh-user-event]  539.95ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:44:41 Running ['artisan' generate:qr-codes] .... 800.33ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:44:42 Running ['artisan' app:dispatch-refresh-user-event]  587.00ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 15:45:01 Running ['artisan' generate:qr-codes] .... 559.18ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:45:01 Running ['artisan' generate:delete-qr-codes]  361.89ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:45:02 Running ['artisan' app:dispatch-refresh-user-event]  573.35ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:45:21 Running ['artisan' generate:qr-codes] .... 547.47ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:45:22 Running ['artisan' app:dispatch-refresh-user-event]  567.08ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:45:41 Running ['artisan' generate:qr-codes] .... 502.82ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:45:42 Running ['artisan' app:dispatch-refresh-user-event]  576.82ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 15:46:01 Running ['artisan' generate:qr-codes] .... 518.75ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:46:01 Running ['artisan' generate:delete-qr-codes]  360.64ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:46:02 Running ['artisan' app:dispatch-refresh-user-event]  583.07ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:46:21 Running ['artisan' generate:qr-codes] .... 509.07ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:46:22 Running ['artisan' app:dispatch-refresh-user-event]  633.02ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:46:41 Running ['artisan' generate:qr-codes] .... 542.48ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:46:42 Running ['artisan' app:dispatch-refresh-user-event]  856.11ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 15:47:01 Running ['artisan' generate:qr-codes] .... 578.98ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:47:02 Running ['artisan' generate:delete-qr-codes]  363.82ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:47:02 Running ['artisan' app:dispatch-refresh-user-event]  629.27ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:47:21 Running ['artisan' generate:qr-codes] .... 516.99ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:47:22 Running ['artisan' app:dispatch-refresh-user-event]  702.21ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-02-05 15:47:41 Running ['artisan' generate:qr-codes] .... 692.40ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:47:42 Running ['artisan' app:dispatch-refresh-user-event]  648.36ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-02-05 15:48:01 Running ['artisan' generate:qr-codes] .... 600.55ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:48:02 Running ['artisan' generate:delete-qr-codes]  361.18ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-02-05 15:48:02 Running ['artisan' app:dispatch-refresh-user-event]  498.92ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  

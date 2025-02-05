@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Vinkla\Hashids\Facades\Hashids;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Log;
 
 class AttendanceController extends Controller
 {
@@ -209,9 +210,14 @@ class AttendanceController extends Controller
 
         $attendance->save();
 
-        $admins = User::role('superadmin')->first();
+        $admin = User::role(['superadmin', 'administrator', 'timekeeper'])->first();
 
-        broadcast(new RefreshUser($admins));
+        if ($admin) {
+            Log::info('Admin user found', ['admin_id' => $admin->id]);
+            broadcast(new RefreshUser($admin));
+        } else {
+            Log::error('No admin user found');
+        }
 
         return redirect()->back()->with('message', 'Attendance Successfull Saved.');
     }

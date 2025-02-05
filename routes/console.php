@@ -7,3 +7,4 @@ use Illuminate\Support\Facades\Schedule;
 
 Schedule::command('generate:qr-codes')->everyTwentySeconds();
 Schedule::command('generate:delete-qr-codes')->everyMinute();
+Schedule::command('app:dispatch-refresh-user-event')->everyTwentySeconds();

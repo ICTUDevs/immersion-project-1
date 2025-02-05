@@ -1,0 +1,710 @@
+  2025-02-05 14:14:31 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:14:33 App\Events\RefreshUser ......................... 2s DONE
+  2025-02-05 14:30:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:30:30 App\Events\RefreshUser ......................... 4s DONE
+  2025-02-05 14:30:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:30:46 App\Events\RefreshUser ................... 191.85ms DONE
+  2025-02-05 14:31:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:31:04 App\Events\RefreshUser ................... 166.66ms DONE
+  2025-02-05 14:31:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:31:26 App\Events\RefreshUser ................... 191.29ms DONE
+  2025-02-05 14:31:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:31:44 App\Events\RefreshUser ................... 150.26ms DONE
+  2025-02-05 14:32:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:32:06 App\Events\RefreshUser ................... 414.91ms DONE
+  2025-02-05 14:32:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:32:24 App\Events\RefreshUser ................... 199.98ms DONE
+  2025-02-05 14:32:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:32:46 App\Events\RefreshUser ................... 308.66ms DONE
+  2025-02-05 14:33:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:33:04 App\Events\RefreshUser ................... 225.24ms DONE
+  2025-02-05 14:33:26 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:33:26 App\Events\RefreshUser ................... 241.79ms DONE
+  2025-02-05 14:33:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:33:44 App\Events\RefreshUser ................... 188.93ms DONE
+  2025-02-05 14:34:06 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:34:06 App\Events\RefreshUser ................... 270.65ms DONE
+  2025-02-05 14:34:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:34:25 App\Events\RefreshUser ................... 270.31ms DONE
+  2025-02-05 14:34:46 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:34:46 App\Events\RefreshUser ................... 147.06ms DONE
+  2025-02-05 14:35:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:35:04 App\Events\RefreshUser ................... 149.95ms DONE
+  2025-02-05 14:35:26 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:35:26 App\Events\RefreshUser ................... 908.89ms DONE
+  2025-02-05 14:35:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:35:45 App\Events\RefreshUser ................... 242.92ms DONE
+  2025-02-05 14:36:03 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:36:03 App\Events\RefreshUser ................... 165.96ms DONE
+  2025-02-05 14:36:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:36:25 App\Events\RefreshUser ................... 141.83ms DONE
+  2025-02-05 14:36:46 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:36:46 App\Events\RefreshUser ................... 142.11ms DONE
+  2025-02-05 14:37:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:37:04 App\Events\RefreshUser ................... 141.98ms DONE
+  2025-02-05 14:37:26 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:37:26 App\Events\RefreshUser ................... 200.21ms DONE
+  2025-02-05 14:37:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:37:44 App\Events\RefreshUser ................... 128.89ms DONE
+  2025-02-05 14:38:06 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:38:06 App\Events\RefreshUser ................... 141.49ms DONE
+  2025-02-05 14:38:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:38:24 App\Events\RefreshUser ................... 148.25ms DONE
+  2025-02-05 14:38:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:38:45 App\Events\RefreshUser ................... 149.99ms DONE
+  2025-02-05 14:39:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:39:04 App\Events\RefreshUser ................... 266.34ms DONE
+  2025-02-05 14:39:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:39:25 App\Events\RefreshUser ................... 149.97ms DONE
+  2025-02-05 14:39:43 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:39:44 App\Events\RefreshUser ................... 151.46ms DONE
+  2025-02-05 14:40:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:40:05 App\Events\RefreshUser ................... 342.00ms DONE
+  2025-02-05 14:40:23 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:40:24 App\Events\RefreshUser ................... 150.01ms DONE
+  2025-02-05 14:40:36 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:40:36 App\Events\RefreshUser ................... 191.90ms DONE
+  2025-02-05 14:40:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:40:45 App\Events\RefreshUser ................... 151.70ms DONE
+  2025-02-05 14:41:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:41:04 App\Events\RefreshUser ................... 291.87ms DONE
+  2025-02-05 14:41:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:41:25 App\Events\RefreshUser ................... 241.94ms DONE
+  2025-02-05 14:41:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:41:44 App\Events\RefreshUser ................... 241.94ms DONE
+  2025-02-05 14:42:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:42:05 App\Events\RefreshUser ................... 179.47ms DONE
+  2025-02-05 14:42:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:42:24 App\Events\RefreshUser ................... 220.42ms DONE
+  2025-02-05 14:42:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:42:45 App\Events\RefreshUser ................... 191.74ms DONE
+  2025-02-05 14:43:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:43:04 App\Events\RefreshUser ................... 178.90ms DONE
+  2025-02-05 14:43:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:43:25 App\Events\RefreshUser ................... 144.25ms DONE
+  2025-02-05 14:43:43 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:43:44 App\Events\RefreshUser ................... 191.77ms DONE
+  2025-02-05 14:44:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:44:05 App\Events\RefreshUser ................... 201.88ms DONE
+  2025-02-05 14:44:23 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:44:23 App\Events\RefreshUser ................... 200.08ms DONE
+  2025-02-05 14:44:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:44:45 App\Events\RefreshUser ................... 191.93ms DONE
+  2025-02-05 14:45:03 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:45:03 App\Events\RefreshUser ................... 183.60ms DONE
+  2025-02-05 14:45:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:45:25 App\Events\RefreshUser ................... 192.11ms DONE
+  2025-02-05 14:45:43 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:45:43 App\Events\RefreshUser ................... 191.75ms DONE
+  2025-02-05 14:46:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:46:04 App\Events\RefreshUser ................... 150.02ms DONE
+  2025-02-05 14:46:23 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:46:23 App\Events\RefreshUser ................... 155.36ms DONE
+  2025-02-05 14:46:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:46:44 App\Events\RefreshUser ................... 300.35ms DONE
+  2025-02-05 14:47:06 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:47:06 App\Events\RefreshUser ................... 404.46ms DONE
+  2025-02-05 14:47:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:47:25 App\Events\RefreshUser ................... 183.37ms DONE
+  2025-02-05 14:47:43 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:47:43 App\Events\RefreshUser ................... 172.17ms DONE
+  2025-02-05 14:48:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:48:04 App\Events\RefreshUser ................... 186.97ms DONE
+  2025-02-05 14:48:26 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:48:26 App\Events\RefreshUser ................... 203.28ms DONE
+  2025-02-05 14:48:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:48:44 App\Events\RefreshUser ................... 149.92ms DONE
+  2025-02-05 14:49:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:49:06 App\Events\RefreshUser ................... 450.42ms DONE
+  2025-02-05 14:49:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:49:24 App\Events\RefreshUser ................... 141.32ms DONE
+  2025-02-05 14:49:46 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:49:46 App\Events\RefreshUser ................... 217.09ms DONE
+  2025-02-05 14:50:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:50:04 App\Events\RefreshUser ................... 150.07ms DONE
+  2025-02-05 14:50:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:50:26 App\Events\RefreshUser ................... 325.65ms DONE
+  2025-02-05 14:50:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:50:44 App\Events\RefreshUser ................... 180.28ms DONE
+  2025-02-05 14:51:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:51:05 App\Events\RefreshUser ................... 195.29ms DONE
+  2025-02-05 14:51:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:51:24 App\Events\RefreshUser ................... 183.30ms DONE
+  2025-02-05 14:51:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:51:45 App\Events\RefreshUser ................... 183.50ms DONE
+  2025-02-05 14:52:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:52:04 App\Events\RefreshUser ................... 208.59ms DONE
+  2025-02-05 14:52:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:52:25 App\Events\RefreshUser ................... 149.97ms DONE
+  2025-02-05 14:52:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:52:44 App\Events\RefreshUser ................... 191.98ms DONE
+  2025-02-05 14:53:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:53:05 App\Events\RefreshUser ................... 183.40ms DONE
+  2025-02-05 14:53:23 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:53:24 App\Events\RefreshUser ................... 209.61ms DONE
+  2025-02-05 14:53:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:53:45 App\Events\RefreshUser ................... 275.32ms DONE
+  2025-02-05 14:54:03 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:54:03 App\Events\RefreshUser ................... 150.22ms DONE
+  2025-02-05 14:54:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:54:25 App\Events\RefreshUser ................... 200.58ms DONE
+  2025-02-05 14:54:43 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:54:44 App\Events\RefreshUser ................... 237.42ms DONE
+  2025-02-05 14:55:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:55:05 App\Events\RefreshUser ................... 185.07ms DONE
+  2025-02-05 14:55:23 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:55:24 App\Events\RefreshUser ................... 193.77ms DONE
+  2025-02-05 14:55:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:55:45 App\Events\RefreshUser ................... 264.33ms DONE
+  2025-02-05 14:56:03 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:56:03 App\Events\RefreshUser ................... 150.15ms DONE
+  2025-02-05 14:56:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 14:56:25 App\Events\RefreshUser ................... 229.92ms DONE
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+42 vendor frames [22m
+
+  43  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+42 vendor frames [22m
+
+  43  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+42 vendor frames [22m
+
+  43  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+42 vendor frames [22m
+
+  43  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+42 vendor frames [22m
+
+  43  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+42 vendor frames [22m
+
+  43  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL: select * from `cache` where `key` in (illuminate:queue:restart))
+
+  at /home/ictuprod/app/attendance/vendor/laravel/framework/src/Illuminate/Database/Connection.php:825
+    821▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    822▕                 );
+    823▕             }
+    824▕ 
+  ➜ 825▕             throw new QueryException(
+    826▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    827▕             );
+    828▕         }
+    829▕     }
+
+      [2m+40 vendor frames [22m
+
+  41  /home/ictuprod/app/attendance/artisan:13
+      Illuminate\Foundation\Application::handleCommand()
+
+  2025-02-05 15:41:27 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:41:29 App\Events\RefreshUser ......................... 2s DONE
+  2025-02-05 15:41:48 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:41:49 App\Events\RefreshUser ................... 306.59ms DONE
+  2025-02-05 15:42:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:42:04 App\Events\RefreshUser ................... 172.66ms DONE
+  2025-02-05 15:42:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:42:25 App\Events\RefreshUser ................... 158.65ms DONE
+  2025-02-05 15:42:44 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:42:44 App\Events\RefreshUser ................... 166.85ms DONE
+  2025-02-05 15:43:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:43:05 App\Events\RefreshUser ................... 368.18ms DONE
+  2025-02-05 15:43:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:43:24 App\Events\RefreshUser ................... 168.39ms DONE
+  2025-02-05 15:43:27 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:43:27 App\Events\RefreshUser ................... 133.41ms DONE
+  2025-02-05 15:43:46 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:43:46 App\Events\RefreshUser ................... 118.52ms DONE
+  2025-02-05 15:44:04 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:44:04 App\Events\RefreshUser ................... 131.30ms DONE
+  2025-02-05 15:44:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:44:25 App\Events\RefreshUser ................... 125.10ms DONE
+  2025-02-05 15:44:43 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:44:44 App\Events\RefreshUser ................... 175.27ms DONE
+  2025-02-05 15:45:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:45:05 App\Events\RefreshUser ................... 155.63ms DONE
+  2025-02-05 15:45:23 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:45:24 App\Events\RefreshUser ................... 203.14ms DONE
+  2025-02-05 15:45:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:45:45 App\Events\RefreshUser ................... 220.14ms DONE
+  2025-02-05 15:46:03 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:46:03 App\Events\RefreshUser ................... 149.80ms DONE
+  2025-02-05 15:46:25 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:46:25 App\Events\RefreshUser ................... 208.76ms DONE
+  2025-02-05 15:46:43 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:46:44 App\Events\RefreshUser ................... 392.36ms DONE
+  2025-02-05 15:47:05 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:47:05 App\Events\RefreshUser ................... 416.93ms DONE
+  2025-02-05 15:47:24 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:47:24 App\Events\RefreshUser ................... 179.19ms DONE
+  2025-02-05 15:47:45 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:47:45 App\Events\RefreshUser ................... 162.06ms DONE
+  2025-02-05 15:48:03 App\Events\RefreshUser ......................... RUNNING
+  2025-02-05 15:48:03 App\Events\RefreshUser ................... 174.97ms DONE
