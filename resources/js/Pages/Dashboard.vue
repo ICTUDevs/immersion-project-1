@@ -84,6 +84,14 @@ onMounted(() => {
         .error((error) => {
             console.error("Error listening to channel:", error);
         });
+
+    Echo.private(`App.Models.User.${page.props.auth.user.id}`)
+        .listen("RefreshData", (e) => {
+            fetchQRCode();
+        })
+        .error((error) => {
+            console.error("Error listening to channel:", error);
+        });
 });
 
 onUnmounted(() => {

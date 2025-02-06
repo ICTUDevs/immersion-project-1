@@ -2,12 +2,13 @@
 
 namespace App\Console\Commands;
 
-use App\Events\RefreshUser;
 use App\Models\User;
-use App\Models\qrcode;
+use App\Models\qrcode as QrCode;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
+use App\Events\RefreshData;
+
 
 class DispatchRefreshUserEvent extends Command
 {
@@ -37,12 +38,11 @@ class DispatchRefreshUserEvent extends Command
 
         if ($qrCode) {
             Log::info('QR Code fetched', ['qr_code' => $qrCode]);
-
             // Find the admin user
             $admins = User::role(['superadmin', 'administrator', 'timekeeper'])->get();
 
             if ($admins->isNotEmpty()) {
-                broadcast(new RefreshUser($admins->all()));
+                broadcast(new RefreshData($admins->all()));
             } else {
                 Log::error('No admin user found');
             }
