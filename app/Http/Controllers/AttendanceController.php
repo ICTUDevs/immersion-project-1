@@ -210,11 +210,10 @@ class AttendanceController extends Controller
 
         $attendance->save();
 
-        $admin = User::role(['superadmin', 'administrator', 'timekeeper'])->first();
+        $admins = User::role(['superadmin', 'administrator', 'timekeeper'])->get();
 
-        if ($admin) {
-            Log::info('Admin user found', ['admin_id' => $admin->id]);
-            broadcast(new RefreshUser($admin));
+        if ($admins->isNotEmpty()) {
+            broadcast(new RefreshUser($admins->all()));
         } else {
             Log::error('No admin user found');
         }

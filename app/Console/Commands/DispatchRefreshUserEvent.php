@@ -39,14 +39,12 @@ class DispatchRefreshUserEvent extends Command
             Log::info('QR Code fetched', ['qr_code' => $qrCode]);
 
             // Find the admin user
-            $admin = User::role(['superadmin', 'administrator', 'timekeeper'])->first();
+            $admins = User::role(['superadmin', 'administrator', 'timekeeper'])->get();
 
-            if ($admin) {
-                // Dispatch the RefreshUser event
-                broadcast(new RefreshUser($admin));
-                $this->info('RefreshUser event dispatched.');
+            if ($admins->isNotEmpty()) {
+                broadcast(new RefreshUser($admins->all()));
             } else {
-                $this->error('No admin user found.');
+                Log::error('No admin user found');
             }
         } else {
             $this->error('No QR code found for today.');
