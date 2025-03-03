@@ -22201,3 +22201,34 @@ Could not open input file: artisan
   ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
   2025-02-06 13:58:22 Running ['artisan' app:dispatch-refresh-user-event]  672.82ms DONE
   ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+  2025-03-03 10:29:01 Running ['artisan' generate:qr-codes] .... 491.33ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-03-03 10:29:01 Running ['artisan' generate:delete-qr-codes]  366.57ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-03-03 10:29:02 Running ['artisan' app:dispatch-refresh-user-event]  545.45ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-03-03 10:29:21 Running ['artisan' generate:qr-codes] .... 568.55ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-03-03 10:29:22 Running ['artisan' app:dispatch-refresh-user-event]  729.20ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-03-03 10:29:41 Running ['artisan' generate:qr-codes] .... 598.73ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-03-03 10:29:42 Running ['artisan' app:dispatch-refresh-user-event]  559.71ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+
+
+  2025-03-03 10:30:00 Running ['artisan' generate:qr-codes] .... 483.19ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-03-03 10:30:01 Running ['artisan' generate:delete-qr-codes]  371.57ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:delete-qr-codes > '/dev/null' 2>&1  
+  2025-03-03 10:30:01 Running ['artisan' app:dispatch-refresh-user-event]  493.21ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-03-03 10:30:20 Running ['artisan' generate:qr-codes] .......... 1s DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-03-03 10:30:22 Running ['artisan' app:dispatch-refresh-user-event]  542.46ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
+  2025-03-03 10:30:40 Running ['artisan' generate:qr-codes] .... 589.60ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' generate:qr-codes > '/dev/null' 2>&1  
+  2025-03-03 10:30:42 Running ['artisan' app:dispatch-refresh-user-event]  533.68ms DONE
+  ⇂ '/usr/bin/php8.3' 'artisan' app:dispatch-refresh-user-event > '/dev/null' 2>&1  
