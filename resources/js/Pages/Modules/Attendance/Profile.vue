@@ -341,6 +341,7 @@ const generatePdf = async () => {
 
     const selectedMonth = selectedOption.value.id;
 
+
     const columns = [
         { dataKey: "name", title: "Name", text: "center" },
         {
@@ -580,7 +581,7 @@ const generatePdf = async () => {
             .text(
                 "For the month of  " +
                     format(
-                        new Date(props.users.attendances[0].date),
+                        new Date(selectedMonth),
                         "MMMM yyyy"
                     ).toUpperCase(),
                 startX + 0.09, // Adjust the margin as needed

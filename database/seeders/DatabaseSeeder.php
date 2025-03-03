@@ -6,6 +6,7 @@ use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,9 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        Role::create([
+            "name"=> "superadmin",
+        ]);
+
         User::factory()->create([
             'name' => 'Web Support',
-            'email' => 'support.web@antiquespride.edu.ph',
+            'email' => 'dev.admin@antiquespride.edu.ph',
             'password' => bcrypt('Shinra23'),
         ]);
 
