@@ -315,8 +315,6 @@ class AttendanceController extends Controller
         $attendance = attendance::findOrFail($id);
         $attendance->delete();
 
-        broadcast(new RefreshUser('new data received...'));
-
         return redirect()->route('attendance.profile', $hashed_id)->with('message', 'Attendance Log Deleted.');
     }
 }

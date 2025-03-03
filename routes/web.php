@@ -9,7 +9,7 @@ use App\Http\Controllers\SystemController;
 use App\Http\Controllers\AttendanceController;
 
 
-Route::post('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback'])->name('auth.google.callback');
+Route::post('/', [GoogleController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
 
 Route::middleware([
@@ -18,11 +18,11 @@ Route::middleware([
     'verified',
 ])->group(function () {
 
-    Route::get('/updates', function () {
-        RefreshUser::dispatch(request()->msg);
+    // Route::get('/updates', function () {
+    //     RefreshUser::dispatch(request()->msg);
 
-        return 'done';
-    });
+    //     return 'done';
+    // });
 
     Route::prefix('system')
         ->name('system.')
