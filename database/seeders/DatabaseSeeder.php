@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'name' => 'Web Support',
-            'email' => 'dev.admin@antiquespride.edu.ph',
+            'email' => 'your_antiquespride_email@antiquespride.edu.ph',
             'password' => bcrypt('Shinra23'),
         ]);
 
