@@ -213,7 +213,9 @@ class AttendanceController extends Controller
         $admins = User::role(['superadmin', 'administrator', 'timekeeper'])->get();
 
         if ($admins->isNotEmpty()) {
-            broadcast(new RefreshUser($admins->all()));
+            foreach ($admins as $admin) {
+                broadcast(new RefreshUser($admin));
+            }
         } else {
             Log::error('No admin user found');
         }
