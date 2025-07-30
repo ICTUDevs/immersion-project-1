@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\RefreshUser;
 use Carbon\Carbon;
 use App\Models\qrcode;
 use App\Models\attendance;
-use App\Events\RefreshUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Vinkla\Hashids\Facades\Hashids;
@@ -121,7 +121,7 @@ class AttendanceController extends Controller
 
         $currentTime = now(); // This will use the configured timezone (Asia/Manila)
         $currentHour = $currentTime->hour;
-        $formattedTime = $currentTime->format('H:i:s A');
+//        $formattedTime = $currentTime->format('H:i:s A');
 
         $attendance = Attendance::firstOrNew([
             'user_id' => $request->user_id,
