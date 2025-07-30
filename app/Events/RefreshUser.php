@@ -19,7 +19,7 @@ class RefreshUser implements ShouldBroadcast
     /**
      * Create a new event instance.
      */
-    public function __construct($user)
+    public function __construct(User $user)
     {
         $this->user = $user;
         Log::info('RefreshUser event created', ['user_id' => $this->user->id]);
