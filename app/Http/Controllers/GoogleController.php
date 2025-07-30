@@ -27,7 +27,7 @@ class GoogleController extends Controller
 
                 if ($user->two_factor_secret) {
                     session(['login.id' => $user->id]);
-                    return redirect('/two-factor-challenge');
+                    return route('two-factor.login');
                 }
 
                 Auth::login($user);
